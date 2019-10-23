@@ -36,7 +36,7 @@
     
     
       
-        <title>Использование магического числа - BSL Language Server</title>
+        <title>Неиспользуемый локальный метод - BSL Language Server</title>
       
     
     
@@ -136,7 +136,7 @@
             </span>
             <span class="md-header-nav__topic">
               
-                Использование магического числа
+                Неиспользуемый локальный метод
               
             </span>
           
@@ -328,31 +328,13 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/1c-syntax/bsl-language-server/edit/develop/docs/diagnostics/MagicNumber.md" title="Редактировать страницу" class="md-icon md-content__icon">&#xE3C9;</a>
+                  <a href="https://github.com/1c-syntax/bsl-language-server/edit/develop/docs/diagnostics/UnusedLocalMethod.md" title="Редактировать страницу" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                <h1 id="_1">Использование магического числа</h1>
-<p>Магические числа - это любое число в вашем коде, которое не сразу становится очевидным без погружения в контекст.</p>
-<p>Плохо</p>
-<div class="codehilite"><pre><span></span><span class="k">Функция</span> <span class="nv">ПопадаетВИнтервал</span><span class="p">(</span><span class="nv">Длительность</span><span class="p">)</span>
-
-    <span class="k">Возврат</span> <span class="nv">Длительность</span> <span class="o">&lt;</span> <span class="m">10</span> <span class="o">*</span> <span class="m">60</span> <span class="o">*</span> <span class="m">60</span><span class="p">;</span> 
-
-<span class="k">КонецФункции</span>
-</pre></div>
-
-
-<p>Хорошо</p>
-<div class="codehilite"><pre><span></span><span class="k">Функция</span> <span class="nv">ПопадаетВИнтервал</span><span class="p">(</span><span class="nv">ДлительностьВСекундах</span><span class="p">)</span>
-
-    <span class="nv">МинутВЧасе</span>      <span class="o">=</span> <span class="m">60</span><span class="p">;</span>
-    <span class="nv">СекундВМинуте</span>   <span class="o">=</span> <span class="m">60</span><span class="p">;</span>
-    <span class="nv">СекундВЧасе</span>     <span class="o">=</span> <span class="nv">СекундВМинуте</span> <span class="o">*</span> <span class="nv">МинутВЧасе</span><span class="p">;</span>
-    <span class="nv">ЧасовВИнтервале</span> <span class="o">=</span> <span class="m">10</span><span class="p">;</span>
-    <span class="k">Возврат</span> <span class="nv">Длительность</span> <span class="o">&lt;</span> <span class="nv">ЧасовВИнтервале</span> <span class="o">*</span> <span class="nv">СекундВЧасе</span><span class="p">;</span> 
-
-<span class="k">КонецФункции</span>
-</pre></div>
+                <h1 id="_1">Неиспользуемый локальный метод</h1>
+<p>Только для OneScript </p>
+<p>Программные модули не должны иметь неиспользуемых процедур и функций.</p>
+<p>Источник: <a href="https://its.1c.ru/db/v8std#content:456:hdoc">Стандарт: Тексты модулей</a></p>
                 
                   
                 
