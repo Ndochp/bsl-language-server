@@ -11,6 +11,8 @@
       <meta http-equiv="x-ua-compatible" content="ie=edge">
       
       
+        <link rel="canonical" href="https://1c-syntax.github.io/bsl-language-server/">
+      
       
       
         <meta name="lang:clipboard.copy" content="Copy to clipboard">
@@ -63,6 +65,8 @@
     <link rel="stylesheet" href="assets/fonts/material-icons.css">
     
     
+      <link rel="stylesheet" href="assets/stylesheets/extra.css">
+    
     
       
         
@@ -72,7 +76,7 @@
   }
   ga.l = +new Date
   /* Setup integration and send page view */
-  ga("create", "UA-150754232-1", "1c-syntax.github.io/bsl-language-server")
+  ga("create", "UA-150754232-1", "1c-syntax.github.io")
   ga("set", "anonymizeIp", true)
   ga("send", "pageview")
   /* Register handler to log search on blur */
@@ -119,7 +123,7 @@
   <nav class="md-header-nav md-grid">
     <div class="md-flex">
       <div class="md-flex__cell md-flex__cell--shrink">
-        <a href="." title="BSL Language Server" class="md-header-nav__button md-logo">
+        <a href="https://1c-syntax.github.io/bsl-language-server" title="BSL Language Server" class="md-header-nav__button md-logo">
           
             <img src="assets/images/logo.png" width="24" height="24">
           
@@ -211,7 +215,7 @@
                   <div class="md-sidebar__inner">
                     <nav class="md-nav md-nav--primary" data-md-level="0">
   <label class="md-nav__title md-nav__title--site" for="__drawer">
-    <a href="." title="BSL Language Server" class="md-nav__button md-logo">
+    <a href="https://1c-syntax.github.io/bsl-language-server" title="BSL Language Server" class="md-nav__button md-logo">
       
         <img src="assets/images/logo.png" width="48" height="48">
       
@@ -455,7 +459,7 @@
                   <a href="https://github.com/1c-syntax/bsl-language-server/edit/develop/docs/en/index.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                <h1 id="bsl-language-server">BSL Language Server</h1>
+                <h1 id="bsl-language-server">BSL Language Server<a class="headerlink" href="#bsl-language-server" title="Permanent link">Link</a></h1>
 <p><a href="https://travis-ci.org/1c-syntax/bsl-language-server"><img alt="Build Status" src="https://travis-ci.org/1c-syntax/bsl-language-server.svg?branch=master" /></a>
 <a href="https://github.com/1c-syntax/bsl-language-server/releases/latest"><img alt="Download" src="https://img.shields.io/github/release/1c-syntax/bsl-language-server.svg?label=download&amp;style=flat-square" /></a>
 <a href="https://jitpack.io/#1c-syntax/bsl-language-server"><img alt="JitPack" src="https://jitpack.io/v/1c-syntax/bsl-language-server.svg" /></a>
@@ -475,7 +479,7 @@
 <li><a href="#thanks">Special thanks</a></li>
 </ul>
 <p><a id="capabilities"></a></p>
-<h2 id="capabilities">Capabilities</h2>
+<h2 id="capabilities">Capabilities<a class="headerlink" href="#capabilities" title="Permanent link">Link</a></h2>
 <ul>
 <li>File formatting</li>
 <li>Selected region formatting</li>
@@ -488,7 +492,7 @@
 <li>Run formatter engine from command line</li>
 </ul>
 <p><a id="cli"></a></p>
-<h2 id="run-from-command-line">Run from command line</h2>
+<h2 id="run-from-command-line">Run from command line<a class="headerlink" href="#run-from-command-line" title="Permanent link">Link</a></h2>
 <p>jar-files run through <code>java -jar path/to/file.jar</code>.</p>
 <div class="codehilite"><pre><span></span>java -jar bsl-language-server.jar --help
 
@@ -507,7 +511,7 @@ usage: BSL language server <span class="o">[</span>-a<span class="o">]</span> <s
 <p>Starting BSL Language Server in standard mode will run the Language Server communicating via <a href="[language server protocol](https://microsoft.github.io/language-server-protocol/)">LSP</a>. stdin and stdout are used for communication.</p>
 <p>By default diagnostics texts are displayed in Russian. To switch the diagnostics text language you need to set parameter <code>diagnosticLanguage</code> in configuration file or raise an event <code>workspace/didChangeConfiguration</code>:</p>
 <p><a id="analyze"></a></p>
-<h2 id="run-in-analyzer-mode">Run in analyzer mode</h2>
+<h2 id="run-in-analyzer-mode">Run in analyzer mode<a class="headerlink" href="#run-in-analyzer-mode" title="Permanent link">Link</a></h2>
 <p>To run in analyzer mode use parameter <code>--analyze</code> (short <code>-a</code>). To set source code folder for analysis use parameter
 <code>--srcDir</code> (short <code>-s</code>) followed by the path (relative or absolute) to the source code folder.</p>
 <p>To generate an analysis report you need to specify one or more reporters. To specify reporter use parameter <code>--reporter</code> or <code>-r</code>, followed by reporter key. You may specify several reporters. The list of reporters see in section  <strong>Reporters</strong>.</p>
@@ -524,7 +528,7 @@ usage: BSL language server <span class="o">[</span>-a<span class="o">]</span> <s
 
 
 <p><a id="format"></a></p>
-<h2 id="run-in-formatter-mode">Run in formatter mode</h2>
+<h2 id="run-in-formatter-mode">Run in formatter mode<a class="headerlink" href="#run-in-formatter-mode" title="Permanent link">Link</a></h2>
 <p>To run in formatter mode use parameter <code>--format</code> (short <code>-f</code>). To set source code folder for formatting use parameter <code>--srcDir</code> (short <code>-s</code>) followed by the path (relative or absolute) to the source code folder.</p>
 <p>Command line example to run formatting:</p>
 <div class="codehilite"><pre><span></span>java -jar bsl-language-server.jar --format --srcDir ./src/cf
@@ -532,7 +536,7 @@ usage: BSL language server <span class="o">[</span>-a<span class="o">]</span> <s
 
 
 <p><a id="configuration"></a></p>
-<h2 id="configuration-file">Configuration file</h2>
+<h2 id="configuration-file">Configuration file<a class="headerlink" href="#configuration-file" title="Permanent link">Link</a></h2>
 <p>Configuration file is a file in JSON format. The file can contain the following blocks:</p>
 <ul>
 <li><code>diagnosticLanguage</code> - <code>String</code> - diagnostics text language. Valid values: <code>en</code> or <code>ru</code>. By default set to <code>ru</code>.</li>
@@ -574,7 +578,7 @@ usage: BSL language server <span class="o">[</span>-a<span class="o">]</span> <s
 
 
 <p><a id="thanks"></a></p>
-<h2 id="special-thanks">Special thanks</h2>
+<h2 id="special-thanks">Special thanks<a class="headerlink" href="#special-thanks" title="Permanent link">Link</a></h2>
 <p>Many thanks to all <a href="https://github.com/1c-syntax/bsl-language-server/graphs/contributors">contributors</a> to the project, to all who participated in the discussions, who helped with the testing.
 You are awesome!</p>
 <p>Powered by <a href="https://www.yourkit.com"><img alt="YourKit" src="https://www.yourkit.com/images/yklogo.png" /></a></p>

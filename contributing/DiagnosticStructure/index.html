@@ -11,6 +11,8 @@
       <meta http-equiv="x-ua-compatible" content="ie=edge">
       
       
+        <link rel="canonical" href="https://1c-syntax.github.io/bsl-language-server/contributing/DiagnosticStructure/">
+      
       
       
         <meta name="lang:clipboard.copy" content="Копировать в буфер">
@@ -63,6 +65,8 @@
     <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
     
     
+      <link rel="stylesheet" href="../../assets/stylesheets/extra.css">
+    
     
       
         
@@ -72,7 +76,7 @@
   }
   ga.l = +new Date
   /* Setup integration and send page view */
-  ga("create", "UA-150754232-1", "1c-syntax.github.io/bsl-language-server")
+  ga("create", "UA-150754232-1", "1c-syntax.github.io")
   ga("set", "anonymizeIp", true)
   ga("send", "pageview")
   /* Register handler to log search on blur */
@@ -119,7 +123,7 @@
   <nav class="md-header-nav md-grid">
     <div class="md-flex">
       <div class="md-flex__cell md-flex__cell--shrink">
-        <a href="../.." title="BSL Language Server" class="md-header-nav__button md-logo">
+        <a href="https://1c-syntax.github.io/bsl-language-server" title="BSL Language Server" class="md-header-nav__button md-logo">
           
             <img src="../../assets/images/logo.png" width="24" height="24">
           
@@ -211,7 +215,7 @@
                   <div class="md-sidebar__inner">
                     <nav class="md-nav md-nav--primary" data-md-level="0">
   <label class="md-nav__title md-nav__title--site" for="__drawer">
-    <a href="../.." title="BSL Language Server" class="md-nav__button md-logo">
+    <a href="https://1c-syntax.github.io/bsl-language-server" title="BSL Language Server" class="md-nav__button md-logo">
       
         <img src="../../assets/images/logo.png" width="48" height="48">
       
@@ -436,7 +440,7 @@
                   <a href="https://github.com/1c-syntax/bsl-language-server/edit/develop/docs/contributing/DiagnosticStructure.md" title="Редактировать страницу" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                <h1 id="_1">Структура диагностики, назначение и содержимое файлов</h1>
+                <h1 id="_1">Структура диагностики, назначение и содержимое файлов<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
 <p>В данной статье содержится информация о правилах использования, создания и шаблонах содержимого диагностики.</p>
 <ul>
 <li><a href="#%d0%a1%d1%82%d1%80%d1%83%d0%ba%d1%82%d1%83%d1%80%d0%b0-%d0%b4%d0%b8%d0%b0%d0%b3%d0%bd%d0%be%d1%81%d1%82%d0%b8%d0%ba%d0%b8-%d0%bd%d0%b0%d0%b7%d0%bd%d0%b0%d1%87%d0%b5%d0%bd%d0%b8%d0%b5-%d0%b8-%d1%81%d0%be%d0%b4%d0%b5%d1%80%d0%b6%d0%b8%d0%bc%d0%be%d0%b5-%d1%84%d0%b0%d0%b9%d0%bb%d0%be%d0%b2">Структура диагностики, назначение и содержимое файлов</a></li>
@@ -457,7 +461,7 @@
 <li><a href="#%d0%a0%d0%b5%d1%81%d1%83%d1%80%d1%81%d1%8b-%d1%82%d0%b5%d1%81%d1%82%d0%b0-%d0%b4%d0%b8%d0%b0%d0%b3%d0%bd%d0%be%d1%81%d1%82%d0%b8%d0%ba%d0%b8">Ресурсы теста диагностики</a></li>
 <li><a href="#%d0%9e%d0%bf%d0%b8%d1%81%d0%b0%d0%bd%d0%b8%d0%b5-%d0%b4%d0%b8%d0%b0%d0%b3%d0%bd%d0%be%d1%81%d1%82%d0%b8%d0%ba%d0%b8">Описание диагностики</a></li>
 </ul>
-<h2 id="_2">Состав диагностики</h2>
+<h2 id="_2">Состав диагностики<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <p>Диагностика состоит из набора файлов, подробное описание которых приведено в разделах ниже.<br />
 Необходимый набор файлов в составе диагностики на момент написания статьи и правила их именования</p>
 <ul>
@@ -471,7 +475,7 @@
 </ul>
 <p><strong>Примечание:</strong><br />
 Для создания нужных файлов в нужных местах, необходимо выполнить команду <code>gradlew newDiagnostic --key="KeyDiagnostic"</code>, вместо <code>KeyDiagnostic</code> необходимо указть ключ своей диагностики. Подробная информация в справке <code>gradlew -q help --task newDiagnostic</code>.</p>
-<h2 id="_3">Класс реализации диагностики</h2>
+<h2 id="_3">Класс реализации диагностики<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
 <p>Диагностика реализуется посредством добавления java-класса в пакет <code>com.github._1c_syntax.bsl.languageserver.diagnostics</code> в каталоге <code>src/main/java</code>.  </p>
 <p>В теле файла, нужно указать пакет, в который добавлен класс и блок импорта <em>(при использовании ide список импорта обновляется автоматически)</em>. Необходимо следить за тем, чтобы импортировались <strong>только</strong> то, что необходимо для реализации, все неиспользуемое должно быть <strong>удалено</strong> <em>(если <a href="../EnvironmentSetting/">настройки</a> выполнены верно, то ide сделает все автоматически)</em>.</p>
 <p>Каждый класс диагностики должен иметь аннотацию <code>@DiagnosticMetadata</code>, содержащую метаданные диагностики. Актуальное содержимое всегда можно получить изучив <a href="src/main/java/org/github/_1c_syntax/bsl/languageserver/diagnostics/metadata/DiagnosticMetadata.java">файл</a>.</p>
@@ -532,7 +536,7 @@
 
 <p>После объявления класса, для параметрирезуемых диагностик располагается блок с их параметрами. Подробно о параметрах диагностик написано в <a href="../DiagnostcAddSettings/">статье</a>.</p>
 <p>Ниже приведены отличия в реализации классов диагностик.</p>
-<h3 id="bsldiagnostic">Класс диагностики, реализующий интерфейс BSLDiagnostic</h3>
+<h3 id="bsldiagnostic">Класс диагностики, реализующий интерфейс BSLDiagnostic<a class="headerlink" href="#bsldiagnostic" title="Permanent link">&para;</a></h3>
 <p>В классе необходимо определить защищенное поле <code>diagnosticStorage</code> типа <code>DiagnosticStorage</code>, которое будет хранилищем обнаруженных замечний.</p>
 <div class="codehilite"><pre><span></span><span class="kd">protected</span> <span class="n">DiagnosticStorage</span> <span class="n">diagnosticStorage</span> <span class="o">=</span> <span class="k">new</span> <span class="n">DiagnosticStorage</span><span class="o">(</span><span class="k">this</span><span class="o">);</span>
 </pre></div>
@@ -559,7 +563,7 @@
 </pre></div>
 
 
-<h3 id="abstractvisitordiagnostic">Класс диагностики, унаследованный от AbstractVisitorDiagnostic</h3>
+<h3 id="abstractvisitordiagnostic">Класс диагностики, унаследованный от AbstractVisitorDiagnostic<a class="headerlink" href="#abstractvisitordiagnostic" title="Permanent link">&para;</a></h3>
 <p>В классе диагностики необходимо реализовать методы всех соответствующих <code>визитеров AST</code>, в соответствии грамматикой языка, описанной в проекте <a href="https://github.com/1c-syntax/bsl-parser/blob/master/src/main/antlr/BSLParser.g4">BSLParser</a>.  Полный список существующих методов-визитеров находится в классе <code>BSLParserBaseVisitor</code>. Необходимо обратить внимание, что для упрощения добавлены <code>обобщенные</code> визитеры, например вместо реализации <code>visitFunction</code> для функции и <code>visitProcedure</code> для процедуры можно использовать <code>visitSub</code>, обобщающий работу с методами.</p>
 <p>В качестве параметра, в каждый метод визитера передается узел AST соответствующего типа. В теле метода необходимо проанализировать узел и/или его дочерние узлы и принять решение о наличии замечания. При обнаружении проблемы, необходимо добавить замечание в хранилище <code>diagnosticStorage</code> <em>(поле уже определено в абстрактном классе)</em>. Замечания может быть привязано как непосредственно к переданному узлу, так и к его дочерним или родительским узлам, к нужному блоку кода.</p>
 <p>Примерная структура метода</p>
@@ -580,9 +584,9 @@
 <li>Диагностика для метода или файла должна сразу возвращать значение, т.к. вложенных методов / файлов не существует</li>
 <li>Диагностика для блока условия или области должна вызывать <code>super-метод</code>, т.к. они существуют и используются (например <code>return super.visitSub(ctx)</code> для методов)</li>
 </ul>
-<h3 id="abstractlistenerdiagnostic">Класс диагностики, унаследованный от AbstractListenerDiagnostic <strong>(В РАЗРАБОТКЕ)</strong></h3>
+<h3 id="abstractlistenerdiagnostic">Класс диагностики, унаследованный от AbstractListenerDiagnostic <strong>(В РАЗРАБОТКЕ)</strong><a class="headerlink" href="#abstractlistenerdiagnostic" title="Permanent link">&para;</a></h3>
 <p><em><strong>&lt;В разработке&gt;</strong></em></p>
-<h2 id="_4">Класс теста диагностики</h2>
+<h2 id="_4">Класс теста диагностики<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
 <p>При написании тестов используется фреймворк <a href="https://junit.org/junit5/">JUnit5</a>, для утверждений используется библиотека <a href="https://joel-costigliola.github.io/assertj/">AssertJ</a>, предоставляющая <a href="https://ru.wikipedia.org/wiki/Fluent_interface">текучий/fluent-интерфейс</a> "ожиданий", подобно привычной многим библиотеке <a href="https://github.com/oscript-library/asserts">asserts</a> для <a href="http://oscript.io/">OneScript</a>.</p>
 <p>Теста реализуется посредством добавления java-класса в пакет <code>com.github._1c_syntax.bsl.languageserver.diagnostics</code> в каталоге <code>src/test/java</code>.  </p>
 <p>В теле файла, нужно указать пакет, в который добавлен класс и блок импорта <em>(аналогично классу реализации диагностики)</em>.<br />
@@ -614,7 +618,7 @@
 <li>тест метода конфигурирования для параметризованных диагностик</li>
 <li>тест "быстрых замен" при их налиичии</li>
 </ul>
-<h3 id="_5">Тест диагностики</h3>
+<h3 id="_5">Тест диагностики<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
 <p>Упрощенно, тест диагностики состоит из следующих шагов</p>
 <ul>
 <li>получение списка замечаний диагностики</li>
@@ -640,7 +644,7 @@
 </pre></div>
 
 
-<h3 id="_6">Тест метода конфигурирования для параметризованных диагностик</h3>
+<h3 id="_6">Тест метода конфигурирования для параметризованных диагностик<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
 <p>Тесты для метода конфигурирования должны покрывать все возможные варианты настроек и их комбинаций. Тест имеет практически ту же структуру, что и тест диагностики, за исключение установки параметров диагностики перед получением спсика замечаний.<br />
 Перед установкой новых значений параметров диагностики, необходимо получить настройки диагностики по умолчанию методом <code>DiagnosticProvider.getDefaultDiagnosticConfiguration()</code> для текущего объекта диагностики <code>getDiagnosticInstance()</code>. Полученный результат представляет собой соответствие, в котором, методом <code>put</code>, необходимо изменить значения нужных параметров. Применение измененных настроек выполняется методом <code>configure()</code> текущего объекта диагностики <code>getDiagnosticInstance()</code>.</p>
 <p>Пример тестового метода</p>
@@ -664,9 +668,9 @@
 </pre></div>
 
 
-<h3 id="_7">Тест "быстрых замен" <strong>(В РАЗРАБОТКЕ)</strong></h3>
+<h3 id="_7">Тест "быстрых замен" <strong>(В РАЗРАБОТКЕ)</strong><a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
 <p><em><strong>&lt;В разработке&gt;</strong></em></p>
-<h2 id="_8">Ресурсы диагностики</h2>
+<h2 id="_8">Ресурсы диагностики<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h2>
 <p>BSL LS поддерживает два языка в диагностиках: русский и английский, поэтому в состав диагностики входит два файла ресурсов, располагаемых в каталоге <code>src/main/resources</code> в пакете <code>com.github._1c_syntax.bsl.languageserver.diagnostics</code>, по одному для каждого языка. Структура файлов одинакова: это текстовый файл в UTF-8 кодировки, каждая строка которого содержит пару "Ключ=Значение".</p>
 <p>Обязательные параметры, используемые при добавлении замечания по диагностике методам <code>diagnosticStorage.addDiagnostic</code></p>
 <ul>
@@ -674,10 +678,10 @@
 <li>diagnosticName - Название диагностики, человекопонятное</li>
 </ul>
 <p>Для <code>быстрых исправлений</code> применяется параметр <code>quickFixMessage</code>, содержащий описание действия-исправления.</p>
-<h2 id="_9">Ресурсы теста диагностики</h2>
+<h2 id="_9">Ресурсы теста диагностики<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h2>
 <p>В качестве фикстур используется содержимое ресурсного файла теста, расположенного в каталоге <code>src/test/resources</code> в пакете <code>diagnostics</code>. Файл должен содержать необходимые примеры кода на языке 1С <em>(или oscript)</em>.<br />
 Необходимо добавлять как ошиочный, так и корректный код, <strong>помечая с помощью комментариев места, где диагностика должна зафиксировать замечания, а где нет</strong>. Лукчше всего, если тестовые примеры будут <code>реальиными</code>, из практики, а не синтетическими, придуманными <code>под диагностику</code>.</p>
-<h2 id="_10">Описание диагностики</h2>
+<h2 id="_10">Описание диагностики<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h2>
 <p>Описание диагностики создается в формате <a href="https://ru.wikipedia.org/wiki/Markdown">Markdown</a> в двух вариантах - для русского и английчского языков. Файлы с описанием располагаются в каталоге <code>docs/diagnostics</code> для русского языка, для английского в <code>docs/diagnostics</code>.<br />
 Файл в общем случае описания имеет следующую структуру</p>
 <ul>

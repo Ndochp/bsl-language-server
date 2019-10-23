@@ -11,6 +11,8 @@
       <meta http-equiv="x-ua-compatible" content="ie=edge">
       
       
+        <link rel="canonical" href="https://1c-syntax.github.io/bsl-language-server/contributing/DiagnosticTypeAndSeverity/">
+      
       
       
         <meta name="lang:clipboard.copy" content="Копировать в буфер">
@@ -63,6 +65,8 @@
     <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
     
     
+      <link rel="stylesheet" href="../../assets/stylesheets/extra.css">
+    
     
       
         
@@ -72,7 +76,7 @@
   }
   ga.l = +new Date
   /* Setup integration and send page view */
-  ga("create", "UA-150754232-1", "1c-syntax.github.io/bsl-language-server")
+  ga("create", "UA-150754232-1", "1c-syntax.github.io")
   ga("set", "anonymizeIp", true)
   ga("send", "pageview")
   /* Register handler to log search on blur */
@@ -119,7 +123,7 @@
   <nav class="md-header-nav md-grid">
     <div class="md-flex">
       <div class="md-flex__cell md-flex__cell--shrink">
-        <a href="../.." title="BSL Language Server" class="md-header-nav__button md-logo">
+        <a href="https://1c-syntax.github.io/bsl-language-server" title="BSL Language Server" class="md-header-nav__button md-logo">
           
             <img src="../../assets/images/logo.png" width="24" height="24">
           
@@ -211,7 +215,7 @@
                   <div class="md-sidebar__inner">
                     <nav class="md-nav md-nav--primary" data-md-level="0">
   <label class="md-nav__title md-nav__title--site" for="__drawer">
-    <a href="../.." title="BSL Language Server" class="md-nav__button md-logo">
+    <a href="https://1c-syntax.github.io/bsl-language-server" title="BSL Language Server" class="md-nav__button md-logo">
       
         <img src="../../assets/images/logo.png" width="48" height="48">
       
@@ -422,34 +426,34 @@
                   <a href="https://github.com/1c-syntax/bsl-language-server/edit/develop/docs/contributing/DiagnosticTypeAndSeverity.md" title="Редактировать страницу" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                <h1 id="_1">Типы и важность диагностик</h1>
+                <h1 id="_1">Типы и важность диагностик<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
 <p>Каждая диагностика относится к определенному типу и имеет определенную важность.<br />
 Для того, чтобы выбрать тип и важность для создаваемой диагностики, ниже приведено их подробное описание.</p>
-<h2 id="_2">Важность</h2>
+<h2 id="_2">Важность<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <p>Важность диагностики указывается в аннотации <code>@DiagnosticMetadata</code> параметром <code>severity</code> и принимает значения типа <code>DiagnosticSeverity</code>.</p>
 <p>Возможные варианты (общие случаи, если не сказано иного):</p>
-<h3 id="blocker">Блокирущий (BLOCKER)</h3>
+<h3 id="blocker">Блокирущий (BLOCKER)<a class="headerlink" href="#blocker" title="Permanent link">&para;</a></h3>
 <p>Ошибки, приводящие приложение в нерабочее состояние. Используется только для <code>Ошибок</code> и <code>Уязвимостей</code>.</p>
-<h3 id="critical">Критичный (CRITICAL)</h3>
+<h3 id="critical">Критичный (CRITICAL)<a class="headerlink" href="#critical" title="Permanent link">&para;</a></h3>
 <p>Неправильно работающая ключевая бизнес-логика, дыры в системе безопасности, проблемы, приводящие к временной неработоспособности приложения или его компонент. Используется только для <code>Ошибок</code> и <code>Уязвимостей</code>.</p>
-<h3 id="major">Важный (MAJOR)</h3>
+<h3 id="major">Важный (MAJOR)<a class="headerlink" href="#major" title="Permanent link">&para;</a></h3>
 <p>Часть основной бизнес-логики работает некорректно, но есть обходные пути либо низкокачественный код, приводящий к проблемам производительности, эффективности, плавающим ошибкам. Используется только для <code>Ошибок</code> и <code>Дефектов кода</code>.</p>
-<h3 id="minor">Незначительный (MINOR)</h3>
+<h3 id="minor">Незначительный (MINOR)<a class="headerlink" href="#minor" title="Permanent link">&para;</a></h3>
 <p>Не нарушается бизнес-логика приложения, плавающая ошибка, низкокачественный, слабоподдерживаемый код, ошибки в редкоиспольземой функциональности. Используется только для <code>Ошибок</code> и <code>Дефектов кода</code>.</p>
-<h3 id="info">Информационный (INFO)</h3>
+<h3 id="info">Информационный (INFO)<a class="headerlink" href="#info" title="Permanent link">&para;</a></h3>
 <p>Тривиальная ошибка, не касающаяся бизнес-логики приложения, плохо воспроизводимая проблема, малозаметная, не оказывающая никакого влияния на общее качество продукта. Используется только для <code>Дефектов кода</code>.</p>
-<h2 id="_3">Тип диагностики</h2>
+<h2 id="_3">Тип диагностики<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
 <p>Тип диагностики указывается в аннотации <code>@DiagnosticMetadata</code> параметром <code>type</code> и принимает значения типа <code>DiagnosticType</code>.</p>
-<h3 id="vulnerability">Уязвимость (VULNERABILITY)</h3>
+<h3 id="vulnerability">Уязвимость (VULNERABILITY)<a class="headerlink" href="#vulnerability" title="Permanent link">&para;</a></h3>
 <p>К этому типу диагностик относятся ошибки безопасности. Они всегда должны иметь важность <code>Блокирующий</code> в случае наличия известного способа компрометации, или <code>Критичный</code> если его нет либо ценность утечки не высока.<br />
 Примеры</p>
 <ul>
 <li>компрометация персональных данных является блокирующей уязвимостью, т.к. кроме нарушения законодальства, полученная информация может быть использована в различных противоправных действиях.</li>
 <li>компрометация настроек отчетов пользователя относится к критичной уязвимости, т.к. может подсказать злоумышленнику как собрать важный отчет, но не дает доступа для выполнения запроса.</li>
 </ul>
-<h3 id="code_smell">Дефект кода (CODE_SMELL)</h3>
+<h3 id="code_smell">Дефект кода (CODE_SMELL)<a class="headerlink" href="#code_smell" title="Permanent link">&para;</a></h3>
 <p><code>Дефект кода</code> не приводит к ошибкам в программе, но усложняет дальнейшую разработку, возможность адаптировать и расширять функционал. Может иметь любую важность, кроме <code>Блокирующий</code> и <code>Критичный</code>. Требует исправления по мере важности в процессе рефакторинга.</p>
-<h3 id="error">Ошибка (ERROR)</h3>
+<h3 id="error">Ошибка (ERROR)<a class="headerlink" href="#error" title="Permanent link">&para;</a></h3>
 <p>К данной категории относятся реальные ошибки при работе пользователя. Они могут быть любой важности, кроме <code>Информационный</code>, при этом:</p>
 <ul>
 <li><code>Блокирующий</code> означает отсутствие известного способа обхода, необходимо срочно исправить. Примером такой ошибки является некомпилиремый код или обращение к несуществующему методу.</li>

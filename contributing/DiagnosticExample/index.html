@@ -11,6 +11,8 @@
       <meta http-equiv="x-ua-compatible" content="ie=edge">
       
       
+        <link rel="canonical" href="https://1c-syntax.github.io/bsl-language-server/contributing/DiagnosticExample/">
+      
       
       
         <meta name="lang:clipboard.copy" content="Копировать в буфер">
@@ -63,6 +65,8 @@
     <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
     
     
+      <link rel="stylesheet" href="../../assets/stylesheets/extra.css">
+    
     
       
         
@@ -72,7 +76,7 @@
   }
   ga.l = +new Date
   /* Setup integration and send page view */
-  ga("create", "UA-150754232-1", "1c-syntax.github.io/bsl-language-server")
+  ga("create", "UA-150754232-1", "1c-syntax.github.io")
   ga("set", "anonymizeIp", true)
   ga("send", "pageview")
   /* Register handler to log search on blur */
@@ -119,7 +123,7 @@
   <nav class="md-header-nav md-grid">
     <div class="md-flex">
       <div class="md-flex__cell md-flex__cell--shrink">
-        <a href="../.." title="BSL Language Server" class="md-header-nav__button md-logo">
+        <a href="https://1c-syntax.github.io/bsl-language-server" title="BSL Language Server" class="md-header-nav__button md-logo">
           
             <img src="../../assets/images/logo.png" width="24" height="24">
           
@@ -211,7 +215,7 @@
                   <div class="md-sidebar__inner">
                     <nav class="md-nav md-nav--primary" data-md-level="0">
   <label class="md-nav__title md-nav__title--site" for="__drawer">
-    <a href="../.." title="BSL Language Server" class="md-nav__button md-logo">
+    <a href="https://1c-syntax.github.io/bsl-language-server" title="BSL Language Server" class="md-nav__button md-logo">
       
         <img src="../../assets/images/logo.png" width="48" height="48">
       
@@ -416,9 +420,9 @@
                   <a href="https://github.com/1c-syntax/bsl-language-server/edit/develop/docs/contributing/DiagnosticExample.md" title="Редактировать страницу" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                <h1 id="_1">Пример добавления своей диагностики</h1>
+                <h1 id="_1">Пример добавления своей диагностики<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
 <p>Диагностика - это класс, выполняющий анализ исходного кода для выявления проблемы или ошибки.</p>
-<h2 id="_2">Содержимое диагностики (кратко)</h2>
+<h2 id="_2">Содержимое диагностики (кратко)<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <p>В общем виде, для реализации диагностики необходимо создать несколько файлов</p>
 <ul>
 <li>Класс, реализующий диагностику</li>
@@ -428,12 +432,12 @@
 <li>Два файла (для английского и русского языка) с описанием диагностики, ее работы и параметров</li>
 </ul>
 <p>Подробное описание содержимого файлов и правил использования находится в <a href="../DiagnosticStructure/">статье</a>.</p>
-<h2 id="_3">Создание диагностики</h2>
+<h2 id="_3">Создание диагностики<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
 <p>Ниже рассмотрен пример создания диагностики по мотивам уже созданной.</p>
-<h3 id="_4">Определение назначения диагностики</h3>
+<h3 id="_4">Определение назначения диагностики<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
 <p>Перед реализацией новой диагностики, необходимо определить ее цель - какую ошибку (или недочет) необходимо обнаружить. В качестве примера напишем диагностику, проверяющую наличие точки с запятой <code>;</code> в конце каждого выражения.<br />
 После определения цели, необходимо придумать уникальный ключ диагностики, под которым она будет добавлена в общий список. Для создаваемой диагностики возьмем имя <code>SemicolonPresence</code>.</p>
-<h3 id="_5">Класс реализации диагностики</h3>
+<h3 id="_5">Класс реализации диагностики<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
 <p>В соответствии с правилами, каталоге <code>src/main/java</code> в пакете <code>com.github._1c_syntax.bsl.languageserver.diagnostics</code> создадим файл <code>SemicolonPresenceDiagnostic.java</code> класса диагностики.<br />
 В файле создаем одноименный класс, унаследованный от класса <code>AbstractVisitorDiagnostic</code>.  В результате имеем следующее</p>
 <div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nn">com.github._1c_syntax.bsl.languageserver.diagnostics</span><span class="o">;</span>
@@ -458,7 +462,7 @@
 </pre></div>
 
 
-<h3 id="_6">Ресурсы класса</h3>
+<h3 id="_6">Ресурсы класса<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
 <p>В соответствии с правилами, в каталоге <code>src/main/resources</code> в пакете <code>com.github._1c_syntax.bsl.languageserver.diagnostics</code> создаем 2 файла ресурсов диагностики, в нашем примере это будут файлы <code>SemicolonPresenceDiagnostic_ru.properties</code> и <code>SemicolonPresenceDiagnostic_en.properties</code>.<br />
 В созданных файлах сохраним название диагностики (параметр <code>diagnosticName</code>) и сообщение замечания (<code>diagnosticMessage</code>).<br />
 В нашем примере содержимое файлов будет следующим</p>
@@ -474,7 +478,7 @@
 </pre></div>
 
 
-<h3 id="_7">Фикстуры для теста</h3>
+<h3 id="_7">Фикстуры для теста<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
 <p>Для тестирования добавим в проект файл, содержщий примеры как ошибочного, так и корректного кода. Файл <code>SemicolonPresenceDiagnostic.bsl</code> с фикстурами разместим в каталоге <code>src/test/resources</code> в пакете <code>diagnostics</code>.<br />
 В качестве данных для тестирвоания, внесем в файл следующий код</p>
 <div class="codehilite"><pre><span></span><span class="nv">А</span> <span class="o">=</span> <span class="m">0</span><span class="p">;</span>
@@ -487,7 +491,7 @@
 
 <p><strong>Внимание!</strong><br />
 Стоит принять за правило выделение комментарями мест, где диагностика должна сработать.</p>
-<h3 id="_8">Написание теста</h3>
+<h3 id="_8">Написание теста<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h3>
 <p>В каталоге <code>src/test/java</code> в пакете <code>com.github._1c_syntax.bsl.languageserver.diagnostics</code> создаем файл <code>SemicolonPresenceDiagnosticTest.java</code> для тестового класса диагностики.<br />
 В файле необходимо создаем одноименный класс, унаследованый от класса <code>AbstractDiagnosticTest</code> для созданного класса диагностики.<br />
 В результате имеем следующее</p>
@@ -532,7 +536,7 @@
 </pre></div>
 
 
-<h3 id="_9">Реализация диагностики</h3>
+<h3 id="_9">Реализация диагностики<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h3>
 <p>В соответствии грамматикой языка, описанной в проекте <a href="https://github.com/1c-syntax/bsl-parser/blob/master/src/main/antlr/BSLParser.g4">BSLParser</a>, для нашего примера необходимо анализировать узлы с типом <code>statement</code>, следовательно нужно использовать визитер <code>visitStatement</code>. Каждый выбранный узел должен содержать конечную "точку с запятой", представленную узлом <code>SEMICOLON</code>.</p>
 <p>Таким образом, проверка будет состоять в том, чтобы в каждом узле <code>statement</code> найти токен <code>SEMICOLON</code>. Если токен не будет найден, то необходимо зарегистрировать замечание.<br />
 После реализации проверки, файл примет следующий вид</p>
@@ -563,9 +567,9 @@
 
 
 <p>Необходимо запустить тест диагностики и убедиться в корректной работе.</p>
-<h3 id="_10">Создание описания диагностики</h3>
+<h3 id="_10">Создание описания диагностики<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h3>
 <p>Для пользователького описания созданной диагностики создаем два файла <code>SemicolonPresence.md</code>: в каталоге <code>docs/diagnostics</code> на русском языке, в каталоге <code>docs/en/diagnostics</code> на английском языке, и описываем диагностику.  </p>
-<h2 id="_11">Завершение</h2>
+<h2 id="_11">Завершение<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h2>
 <p>После успешного тестирования диагностики добавляем ее в список реализованных диагностик проекта путем редактирования файлов <code>docs/index.md</code> для русского описания и <code>docs/en/index.md</code> для английского.<br />
 Обновление индекса справки можно выполнить автоматически, запустив gradle-задачу updateDiagnosticsIndex (из командной строки или IDE) <code>gradlew updateDiagnosticsIndex</code>.</p>
                 
