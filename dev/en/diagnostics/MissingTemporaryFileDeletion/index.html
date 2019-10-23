@@ -11,6 +11,8 @@
       <meta http-equiv="x-ua-compatible" content="ie=edge">
       
       
+        <link rel="canonical" href="https://1c-syntax.github.io/bsl-language-server/dev/diagnostics/MissingTemporaryFileDeletion/">
+      
       
       
         <meta name="lang:clipboard.copy" content="Copy to clipboard">
@@ -62,6 +64,8 @@
     
     <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
     
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/extra.css">
     
     
       
@@ -119,7 +123,7 @@
   <nav class="md-header-nav md-grid">
     <div class="md-flex">
       <div class="md-flex__cell md-flex__cell--shrink">
-        <a href="../.." title="BSL Language Server Dev" class="md-header-nav__button md-logo">
+        <a href="https://1c-syntax.github.io/bsl-language-server/dev" title="BSL Language Server Dev" class="md-header-nav__button md-logo">
           
             <img src="../../assets/images/logo.png" width="24" height="24">
           
@@ -211,7 +215,7 @@
                   <div class="md-sidebar__inner">
                     <nav class="md-nav md-nav--primary" data-md-level="0">
   <label class="md-nav__title md-nav__title--site" for="__drawer">
-    <a href="../.." title="BSL Language Server Dev" class="md-nav__button md-logo">
+    <a href="https://1c-syntax.github.io/bsl-language-server/dev" title="BSL Language Server Dev" class="md-nav__button md-logo">
       
         <img src="../../assets/images/logo.png" width="48" height="48">
       
@@ -354,13 +358,13 @@
                   <a href="https://github.com/1c-syntax/bsl-language-server/edit/develop/docs/en/diagnostics/MissingTemporaryFileDeletion.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                <h1 id="missing-temporary-file-deletion-after-using">Missing temporary file deletion after using</h1>
-<h2 id="parameters">Parameters</h2>
+                <h1 id="missing-temporary-file-deletion-after-using">Missing temporary file deletion after using<a class="headerlink" href="#missing-temporary-file-deletion-after-using" title="Permanent link">Link</a></h1>
+<h2 id="parameters">Parameters<a class="headerlink" href="#parameters" title="Permanent link">Link</a></h2>
 <ul>
 <li><code>searchDeleteFileMethod</code> - <code>Строка</code> - Keywords to search methods for move or delete files. 
 Default <code>УдалитьФайлы|DeleteFiles|ПереместитьФайл|MoveFile</code>.</li>
 </ul>
-<h2 id="examples">Examples</h2>
+<h2 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link">Link</a></h2>
 <p>Incorrect:</p>
 <div class="codehilite"><pre><span></span><span class="nv">TempFileName</span> <span class="o">=</span> <span class="nb">GetTempFileName</span><span class="p">(</span><span class="s1">&quot;xml&quot;</span><span class="p">);</span>
 <span class="nv">Data</span><span class="o">.</span><span class="nv">Write</span><span class="p">(</span><span class="nv">TempFileName</span><span class="p">);</span>

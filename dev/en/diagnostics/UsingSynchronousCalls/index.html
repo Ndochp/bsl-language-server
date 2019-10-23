@@ -11,6 +11,8 @@
       <meta http-equiv="x-ua-compatible" content="ie=edge">
       
       
+        <link rel="canonical" href="https://1c-syntax.github.io/bsl-language-server/dev/diagnostics/UsingSynchronousCalls/">
+      
       
       
         <meta name="lang:clipboard.copy" content="Copy to clipboard">
@@ -62,6 +64,8 @@
     
     <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
     
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/extra.css">
     
     
       
@@ -119,7 +123,7 @@
   <nav class="md-header-nav md-grid">
     <div class="md-flex">
       <div class="md-flex__cell md-flex__cell--shrink">
-        <a href="../.." title="BSL Language Server Dev" class="md-header-nav__button md-logo">
+        <a href="https://1c-syntax.github.io/bsl-language-server/dev" title="BSL Language Server Dev" class="md-header-nav__button md-logo">
           
             <img src="../../assets/images/logo.png" width="24" height="24">
           
@@ -211,7 +215,7 @@
                   <div class="md-sidebar__inner">
                     <nav class="md-nav md-nav--primary" data-md-level="0">
   <label class="md-nav__title md-nav__title--site" for="__drawer">
-    <a href="../.." title="BSL Language Server Dev" class="md-nav__button md-logo">
+    <a href="https://1c-syntax.github.io/bsl-language-server/dev" title="BSL Language Server Dev" class="md-nav__button md-logo">
       
         <img src="../../assets/images/logo.png" width="48" height="48">
       
@@ -347,7 +351,7 @@
                   <a href="https://github.com/1c-syntax/bsl-language-server/edit/develop/docs/en/diagnostics/UsingSynchronousCalls.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                <h1 id="using-synchronous-calls">Using synchronous calls</h1>
+                <h1 id="using-synchronous-calls">Using synchronous calls<a class="headerlink" href="#using-synchronous-calls" title="Permanent link">Link</a></h1>
 <p>При разработке конфигураций, предназначенных для работы в веб-клиенте, запрещено использовать модальные формы и диалоги и синхронные вызовы. В противном случае, конфигурация окажется неработоспособной в ряде веб-браузеров, так как модальные окна не входят в стандарт веб-разработки, а для обеспечения взаимодействия с пользователем требуются асинхронные средства.</p>
 <p>Источник: <a href="https://its.1c.ru/db/v8std/content/703/hdoc/">Ограничение на использование модальных окон и синхронных вызовов</a></p>
 <p>Полезная информаця:</p>
@@ -356,7 +360,7 @@
 <li><a href="https://its.1c.ru/db/v838doc#bookmark:dev:TI000000438">Соответствие синхронных методов асинхронным аналогам</a></li>
 <li><a href="http://v8.1c.ru/o7/201412async/index.htm">Асинхронные вызовы расширений и внешних компонентов</a></li>
 </ul>
-<h2 id="_1">Ограничение диагностики</h2>
+<h2 id="_1">Ограничение диагностики<a class="headerlink" href="#_1" title="Permanent link">Link</a></h2>
 <p>На данный момент диагностируется <strong>только использование методов глобального контекста</strong>.</p>
 <p>Список методов:</p>
 <table>
