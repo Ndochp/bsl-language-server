@@ -327,6 +327,13 @@
       
         <li class="md-nav__item">
   <a href="#_2" class="md-nav__link">
+    Описание диагностики
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
     Примеры
   </a>
   
@@ -352,13 +359,38 @@
                 
                 
                 <h1 id="_1">Недостижимый код<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<table>
+<thead>
+<tr>
+<th align="center">Тип</th>
+<th align="center">Поддерживаются<br/>языки</th>
+<th align="center">Важность</th>
+<th align="center">Включена<br/>по умолчанию</th>
+<th align="center">Время на<br/>исправление (мин)</th>
+<th align="center">Тэги</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><code>Ошибка</code></td>
+<td align="center"><code>BSL</code><br/><code>OS</code></td>
+<td align="center"><code>Незначительный</code></td>
+<td align="center"><code>Нет</code></td>
+<td align="center"><code>10</code></td>
+<td align="center"><code>design</code><br/><code>suspicious</code></td>
+</tr>
+</tbody>
+</table>
+<!-- Блоки выше заполняются автоматически, не трогать -->
+
+<h2 id="_2">Описание диагностики<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <p>Код, расположенный после операторов "Возврат", "Перейти", "ВызватьИсключение", "Прервать", "Продолжить", никогда не будет исполнен.</p>
 <p>Ошибки недостижимого кода могут возникать в результате невнимательности разработчика, при редактировании "чужого кода".</p>
-<h2 id="_2">Примеры<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<h2 id="_3">Примеры<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
 <div class="codehilite"><pre><span></span><span class="k">Процедура</span> <span class="nv">Пример</span><span class="p">()</span>
     <span class="k">Возврат</span><span class="p">;</span>
     <span class="c c-Singleline">// Код ниже оператора Возврат никогда не будет исполнен</span>
-    <span class="k">Для</span> <span class="k">каждого</span> <span class="nb">Строка</span> <span class="k">Из</span> <span class="nv">Строки</span> <span class="k">Цикл</span>   
+    <span class="k">Для</span> <span class="k">каждого</span> <span class="nb">Строка</span> <span class="k">Из</span> <span class="nv">Строки</span> <span class="k">Цикл</span>
         <span class="k">Если</span> <span class="nv">Условие2</span> <span class="k">Тогда</span>
             <span class="nv">Метод</span><span class="p">();</span>
         <span class="k">КонецЕсли</span><span class="p">;</span>
@@ -371,8 +403,8 @@
     <span class="k">Если</span> <span class="nv">Ошибка</span> <span class="k">Тогда</span>
         <span class="nv">ВызватьИсключение</span> <span class="s1">&quot;Возникла ошибка&quot;</span><span class="p">;</span>
         <span class="c c-Singleline">// После вызова исключения код будет проигнорирован</span>
-        <span class="nv">Параметр1</span> <span class="o">=</span> <span class="nv">Параметр2</span><span class="p">;</span>        
-    <span class="k">КонецЕсли</span><span class="p">;</span> 
+        <span class="nv">Параметр1</span> <span class="o">=</span> <span class="nv">Параметр2</span><span class="p">;</span>
+    <span class="k">КонецЕсли</span><span class="p">;</span>
     <span class="k">Возврат</span> <span class="nv">Параметр1</span><span class="p">;</span>
 <span class="k">КонецПроцедуры</span>
 </pre></div>

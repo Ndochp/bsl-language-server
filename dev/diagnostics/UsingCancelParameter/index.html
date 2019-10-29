@@ -38,7 +38,7 @@
     
     
       
-        <title>Работа с параметром «Отказ» - BSL Language Server Dev</title>
+        <title>Работа с параметром "Отказ" - BSL Language Server Dev</title>
       
     
     
@@ -140,7 +140,7 @@
             </span>
             <span class="md-header-nav__topic">
               
-                Работа с параметром «Отказ»
+                Работа с параметром "Отказ"
               
             </span>
           
@@ -327,14 +327,41 @@
       
         <li class="md-nav__item">
   <a href="#_2" class="md-nav__link">
-    Неправильно:
+    Описание диагностики
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#_3" class="md-nav__link">
-    Правильно:
+    Примеры
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    Неправильно
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    Правильно
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    Источники
   </a>
   
 </li>
@@ -358,18 +385,37 @@
                   <a href="https://github.com/1c-syntax/bsl-language-server/edit/develop/docs/diagnostics/UsingCancelParameter.md" title="Редактировать страницу" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                <h1 id="_1">Работа с параметром «Отказ»<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
-<ol>
-<li>В обработчиках событий модулей объектов, наборов записей, форм и т.п., содержащих параметр Отказ 
-(ПриЗаписи, ОбработкаПроверкиЗаполнения, ТоварыПередНачаломДобавления и т.п.), не следует 
-присваивать этому параметру значение Ложь.<br />
-Это требование обусловлено тем, что, как правило, в коде обработчиков событий параметр Отказ может 
-устанавливаться сразу в нескольких последовательных проверках (или в нескольких подписках на одно и то же событие). 
-В таком случае к моменту выполнения очередной проверки параметр Отказ уже может заранее содержать значение Истина, и 
-можно ошибочно сбросить его обратно в Ложь.
-Кроме того, при доработках конфигурации на внедрении число этих проверок может увеличиться.</li>
-</ol>
-<h4 id="_2">Неправильно:<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h4>
+                <h1 id="_1">Работа с параметром "Отказ"<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<table>
+<thead>
+<tr>
+<th align="center">Тип</th>
+<th align="center">Поддерживаются<br/>языки</th>
+<th align="center">Важность</th>
+<th align="center">Включена<br/>по умолчанию</th>
+<th align="center">Время на<br/>исправление (мин)</th>
+<th align="center">Тэги</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><code>Дефект кода</code></td>
+<td align="center"><code>BSL</code><br/><code>OS</code></td>
+<td align="center"><code>Важный</code></td>
+<td align="center"><code>Нет</code></td>
+<td align="center"><code>10</code></td>
+<td align="center"><code>standard</code><br/><code>badpractice</code></td>
+</tr>
+</tbody>
+</table>
+<!-- Блоки выше заполняются автоматически, не трогать -->
+
+<h2 id="_2">Описание диагностики<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<p>В обработчиках событий модулей объектов, наборов записей, форм и т.п., содержащих параметр Отказ (ПриЗаписи, ОбработкаПроверкиЗаполнения, ТоварыПередНачаломДобавления и т.п.), не следует присваивать этому параметру значение Ложь.<br />
+Это требование обусловлено тем, что, как правило, в коде обработчиков событий параметр Отказ может устанавливаться сразу в нескольких последовательных проверках (или в нескольких подписках на одно и то же событие). В таком случае к моменту выполнения очередной проверки параметр Отказ уже может заранее содержать значение Истина, и можно ошибочно сбросить его обратно в Ложь.<br />
+Кроме того, при доработках конфигурации на внедрении число этих проверок может увеличиться.</p>
+<h2 id="_3">Примеры<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<h3 id="_4">Неправильно<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
 <div class="codehilite"><pre><span></span><span class="k">Процедура</span> <span class="nv">ОбработкаПроверкиЗаполнения</span><span class="p">(</span><span class="nv">Отказ</span><span class="p">,</span> <span class="nv">ПроверяемыеРеквизиты</span><span class="p">)</span>
   <span class="o">...</span>
   <span class="nv">Отказ</span> <span class="o">=</span> <span class="nv">ЕстьОшибкиЗаполнения</span><span class="p">();</span>
@@ -378,7 +424,7 @@
 </pre></div>
 
 
-<h4 id="_3">Правильно:<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h4>
+<h3 id="_5">Правильно<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
 <div class="codehilite"><pre><span></span><span class="k">Процедура</span> <span class="nv">ОбработкаПроверкиЗаполнения</span><span class="p">(</span><span class="nv">Отказ</span><span class="p">,</span> <span class="nv">ПроверяемыеРеквизиты</span><span class="p">)</span>
   <span class="o">...</span>
   <span class="k">Если</span> <span class="nv">ЕстьОшибкиЗаполнения</span><span class="p">()</span> <span class="k">Тогда</span>
@@ -394,7 +440,10 @@
 </pre></div>
 
 
-<p>Источник: <a href="https://its.1c.ru/db/v8std#content:686:hdoc">Работа с параметром "Отказ" в обработчиках событий</a></p>
+<h2 id="_6">Источники<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://its.1c.ru/db/v8std#content:686:hdoc">Работа с параметром "Отказ" в обработчиках событий</a></li>
+</ul>
                 
                   
                 

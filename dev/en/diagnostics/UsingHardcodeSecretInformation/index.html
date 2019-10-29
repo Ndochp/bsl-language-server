@@ -332,6 +332,27 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#description" class="md-nav__link">
+    Description
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#examples" class="md-nav__link">
+    Examples
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sources" class="md-nav__link">
+    Sources
+  </a>
+  
+</li>
+      
       
       
       
@@ -352,17 +373,57 @@
                 
                 
                 <h1 id="storing-confidential-information-in-code">Storing confidential information in code<a class="headerlink" href="#storing-confidential-information-in-code" title="Permanent link">Link</a></h1>
+<table>
+<thead>
+<tr>
+<th align="center">Type</th>
+<th align="center">Scope</th>
+<th align="center">Severity</th>
+<th align="center">Activated<br/>by default</th>
+<th align="center">Minutes<br/>to fix</th>
+<th align="center">Tags</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><code>Vulnerability</code></td>
+<td align="center"><code>BSL</code></td>
+<td align="center"><code>Critical</code></td>
+<td align="center"><code>Нет</code></td>
+<td align="center"><code>15</code></td>
+<td align="center"><code>standard</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="parameters">Parameters<a class="headerlink" href="#parameters" title="Permanent link">Link</a></h2>
+<table>
+<thead>
+<tr>
+<th align="center">Name</th>
+<th align="center">Type</th>
+<th align="left">Description</th>
+<th align="center">Default value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><code>searchWords</code></td>
+<td align="center"><code>Pattern</code></td>
+<td align="left">Ключевые слова поиска конфиденциальной информации в переменных, структурах, соответствиях.</td>
+<td align="center"><code>"Пароль|Password"</code></td>
+</tr>
+</tbody>
+</table>
+<!-- Блоки выше заполняются автоматически, не трогать -->
+
+<h2 id="description">Description<a class="headerlink" href="#description" title="Permanent link">Link</a></h2>
 <p>It is prohibited to store any confidential information in the code. The confidential information is:</p>
 <ul>
 <li>Passwords</li>
 <li>Personal access tokens/keys</li>
 </ul>
-<h2 id="parameters">Parameters<a class="headerlink" href="#parameters" title="Permanent link">Link</a></h2>
-<ul>
-<li><code>searchWords</code> - <code>String</code> - keyword for confidential information search in variables, structures, mappings. By default: <code>Пароль|Password</code></li>
-</ul>
-<p>If the project uses SSL sub-system, then passwords should be stored in safe storage. More information on this topic can be found here:
-<a href="https://its.1c.ru/db/v8std#content:740:hdoc">Standard: Store passwords safe</a></p>
+<p>If the project uses SSL sub-system, then passwords should be stored in safe storage.</p>
+<h2 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link">Link</a></h2>
 <p>Incorrect:</p>
 <div class="codehilite"><pre><span></span><span class="nv">Password</span> <span class="o">=</span> <span class="s1">&quot;12345&quot;</span><span class="p">;</span>
 </pre></div>
@@ -372,6 +433,12 @@
 <div class="codehilite"><pre><span></span><span class="nv">Passwords</span> <span class="o">=</span> <span class="nv">CommonModule</span><span class="o">.</span><span class="nv">ReadDataFromSafeStorage</span><span class="p">(</span><span class="s1">&quot;StoringIdentifier&quot;</span><span class="p">,</span> <span class="s1">&quot;Password&quot;</span><span class="p">);</span>
 <span class="nv">Password</span> <span class="o">=</span> <span class="nv">Passwords</span><span class="o">.</span><span class="nv">Password</span><span class="p">;</span>
 </pre></div>
+
+
+<h2 id="sources">Sources<a class="headerlink" href="#sources" title="Permanent link">Link</a></h2>
+<ul>
+<li><a href="https://its.1c.ru/db/v8std#content:740:hdoc">Standard: Store passwords safe</a></li>
+</ul>
                 
                   
                 

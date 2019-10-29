@@ -322,6 +322,36 @@
     
   
   
+    <label class="md-nav__title" for="__toc">Содержание</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    Параметры
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    Описание диагностики
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    Источники
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -336,6 +366,50 @@
                 
                 
                 <h1 id="_1">Закомментированный фрагмент кода<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<table>
+<thead>
+<tr>
+<th align="center">Тип</th>
+<th align="center">Поддерживаются<br/>языки</th>
+<th align="center">Важность</th>
+<th align="center">Включена<br/>по умолчанию</th>
+<th align="center">Время на<br/>исправление (мин)</th>
+<th align="center">Тэги</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><code>Дефект кода</code></td>
+<td align="center"><code>BSL</code><br/><code>OS</code></td>
+<td align="center"><code>Незначительный</code></td>
+<td align="center"><code>Нет</code></td>
+<td align="center"><code>1</code></td>
+<td align="center"><code>standard</code><br/><code>badpractice</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="_2">Параметры<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th align="center">Имя</th>
+<th align="center">Тип</th>
+<th align="left">Описание</th>
+<th align="center">Значение по умолчанию</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><code>threshold</code></td>
+<td align="center"><code>float</code></td>
+<td align="left">Порог чуствительности</td>
+<td align="center"><code>0.9F</code></td>
+</tr>
+</tbody>
+</table>
+<!-- Блоки выше заполняются автоматически, не трогать -->
+
+<h2 id="_3">Описание диагностики<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
 <p>Программные модули не должны иметь закомментированных фрагментов кода, а также фрагментов,
 которые каким-либо образом связаны с процессом разработки (отладочный код, служебные отметки, например, !!!_, MRG и т.п.)
 и с конкретными разработчиками этого кода.</p>
@@ -358,12 +432,12 @@
 
 
 <p>Правильно: после завершения отладки или рефакторинга удалить обработчик ПередУдалением из кода.</p>
-<p><a href="https://its.1c.ru/db/v8std/content/456/hdoc">Источник</a></p>
-<p><strong>Параметры</strong>:<br />
- * <em>commentedCodeThreshold</em> - порог чуствительности свыше значения которого закомментированный текст считается кодом.
- Указывается в диапазоне от 0 до 1. Значение для каждого закомментированого участка заполняется по налицию ключивых слов в тексте.</p>
 <p><strong>ВНИМАНИЕ</strong>:<br />
 Блок комментарием считается кодом, если хотя бы одна строка внутри блока определяется как код. </p>
+<h2 id="_4">Источники<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://its.1c.ru/db/v8std/content/456/hdoc">Источник</a></li>
+</ul>
                 
                   
                 

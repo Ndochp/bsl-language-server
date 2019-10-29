@@ -327,7 +327,28 @@
       
         <li class="md-nav__item">
   <a href="#_2" class="md-nav__link">
-    Пример
+    Параметры
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    Описание диагностики
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    Примеры
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    Источники
   </a>
   
 </li>
@@ -352,9 +373,53 @@
                 
                 
                 <h1 id="_1">Ограничение на количество значений свойств, передаваемых в конструктор структуры<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<table>
+<thead>
+<tr>
+<th align="center">Тип</th>
+<th align="center">Поддерживаются<br/>языки</th>
+<th align="center">Важность</th>
+<th align="center">Включена<br/>по умолчанию</th>
+<th align="center">Время на<br/>исправление (мин)</th>
+<th align="center">Тэги</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><code>Дефект кода</code></td>
+<td align="center"><code>BSL</code><br/><code>OS</code></td>
+<td align="center"><code>Незначительный</code></td>
+<td align="center"><code>Нет</code></td>
+<td align="center"><code>10</code></td>
+<td align="center"><code>standard</code><br/><code>brainoverload</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="_2">Параметры<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th align="center">Имя</th>
+<th align="center">Тип</th>
+<th align="left">Описание</th>
+<th align="center">Значение по умолчанию</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><code>maxValuesCount</code></td>
+<td align="center"><code>Число</code></td>
+<td align="left">Допустимое количество значений свойств, передаваемых в конструктор структуры</td>
+<td align="center"><code>3</code></td>
+</tr>
+</tbody>
+</table>
+<!-- Блоки выше заполняются автоматически, не трогать -->
+
+<h2 id="_3">Описание диагностики<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
 <p>При создании объекта типа Структура не рекомендуется передавать в конструктор более 3-х значений свойств.
 Вместо этого рекомендуется использовать метод Вставить или присваивать значения свойствам явным образом</p>
-<h2 id="_2">Пример<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<h2 id="_4">Примеры<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
 <p>Неправильно:</p>
 <div class="codehilite"><pre><span></span><span class="nv">ПараметрыФормыКомпоновки</span>  <span class="o">=</span> <span class="k">Новый</span> <span class="nv">Структура</span><span class="p">(</span>
    <span class="s1">&quot;НеПомещатьНастройкиВСхемуКомпоновкиДанных,</span>
@@ -397,7 +462,10 @@
 </pre></div>
 
 
-<p>Источник: <a href="https://its.1c.ru/db/v8std#content:693:hdoc">Стандарт: Использование объектов типа Структура</a></p>
+<h2 id="_5">Источники<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://its.1c.ru/db/v8std#content:693:hdoc">Стандарт: Использование объектов типа Структура</a></li>
+</ul>
                 
                   
                 

@@ -332,6 +332,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    Описание диагностики
+  </a>
+  
+</li>
+      
       
       
       
@@ -352,23 +359,65 @@
                 
                 
                 <h1 id="_1">Использование служебных тегов<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
-<p>Диагностика отлавливает использование служебных тегов в комментариях. Список тегов:
-* TODO
-* FIXME
-* !!
-* @
-* MRG
-* ОТЛАДКА
-* ДЛЯ ОТЛАДКИ
-* КОНСТРУКТОР_ЗАПРОСА_С_ОБРАБОТКОЙ_РЕЗУЛЬТАТА
-* КОНСТРУКТОР_ДВИЖЕНИЙ_РЕГИСТРОВ
-* КОНСТРУКТОР_ПЕЧАТИ
-* КОНСТРУКТОР_ВВОДА_НА_ОСНОВАНИИ</p>
-<p>Список тегов так же можно расширить через настройки.</p>
+<table>
+<thead>
+<tr>
+<th align="center">Тип</th>
+<th align="center">Поддерживаются<br/>языки</th>
+<th align="center">Важность</th>
+<th align="center">Включена<br/>по умолчанию</th>
+<th align="center">Время на<br/>исправление (мин)</th>
+<th align="center">Тэги</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><code>Дефект кода</code></td>
+<td align="center"><code>BSL</code><br/><code>OS</code></td>
+<td align="center"><code>Информационный</code></td>
+<td align="center"><code>Нет</code></td>
+<td align="center"><code>0</code></td>
+<td align="center"><code>badpractice</code></td>
+</tr>
+</tbody>
+</table>
 <h2 id="_2">Параметры<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th align="center">Имя</th>
+<th align="center">Тип</th>
+<th align="left">Описание</th>
+<th align="center">Значение по умолчанию</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><code>serviceTags</code></td>
+<td align="center"><code>Строка</code></td>
+<td align="left">Служебные теги</td>
+<td align="center"><code>"todo|fixme|!!|mrg|@|отладка|debug|для\\s*отладки|(\\{\\{|\\}\\})КОНСТРУКТОР_|(\\{\\{|\\}\\})MRG"</code></td>
+</tr>
+</tbody>
+</table>
+<!-- Блоки выше заполняются автоматически, не трогать -->
+
+<h2 id="_3">Описание диагностики<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<p>Диагностика отлавливает использование служебных тегов в комментариях. Список тегов:</p>
 <ul>
-<li><code>serviceTags</code> - <code>Строка</code> - ключевые слово для поиска. По-умолчанию: "todo|fixme|!!|mrg|@|отладка|debug|для\s*отладки|({{|}})КОНСТРУКТОР_|({{|}})MRG".</li>
+<li>TODO</li>
+<li>FIXME</li>
+<li>!!</li>
+<li>@</li>
+<li>MRG</li>
+<li>ОТЛАДКА</li>
+<li>ДЛЯ ОТЛАДКИ</li>
+<li>КОНСТРУКТОР_ЗАПРОСА_С_ОБРАБОТКОЙ_РЕЗУЛЬТАТА</li>
+<li>КОНСТРУКТОР_ДВИЖЕНИЙ_РЕГИСТРОВ</li>
+<li>КОНСТРУКТОР_ПЕЧАТИ</li>
+<li>КОНСТРУКТОР_ВВОДА_НА_ОСНОВАНИИ</li>
 </ul>
+<p>Список тегов так же можно расширить через настройки.</p>
                 
                   
                 

@@ -333,8 +333,28 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#description" class="md-nav__link">
+    Description
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#characteristic" class="md-nav__link">
     Characteristic
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#examples" class="md-nav__link">
+    Examples
   </a>
   
 </li>
@@ -359,16 +379,66 @@
                 
                 
                 <h1 id="using-hardcode-file-paths-and-ip-addresses-in-code">Using hardcode file paths and ip addresses in code<a class="headerlink" href="#using-hardcode-file-paths-and-ip-addresses-in-code" title="Permanent link">Link</a></h1>
+<table>
+<thead>
+<tr>
+<th align="center">Type</th>
+<th align="center">Scope</th>
+<th align="center">Severity</th>
+<th align="center">Activated<br/>by default</th>
+<th align="center">Minutes<br/>to fix</th>
+<th align="center">Tags</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><code>Error</code></td>
+<td align="center"><code>BSL</code></td>
+<td align="center"><code>Critical</code></td>
+<td align="center"><code>Нет</code></td>
+<td align="center"><code>15</code></td>
+<td align="center"><code>standard</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="parameters">Parameters<a class="headerlink" href="#parameters" title="Permanent link">Link</a></h2>
+<table>
+<thead>
+<tr>
+<th align="center">Name</th>
+<th align="center">Type</th>
+<th align="left">Description</th>
+<th align="center">Default value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><code>searchWordsExclusion</code></td>
+<td align="center"><code>Pattern</code></td>
+<td align="left">Ключевые слова поиска для исключения выражений при поиске IP адресов</td>
+<td align="center"><code>"Верси|Version|ЗапуститьПриложение|RunApp|Пространств|Namespace|Драйвер|Driver"</code></td>
+</tr>
+<tr>
+<td align="center"><code>searchWordsStdPathsUnix</code></td>
+<td align="center"><code>Pattern</code></td>
+<td align="left">Ключевые слова поиска стандартных корневых каталогов Unix</td>
+<td align="center"><code>"bin|boot|dev|etc|home|lib|lost\\+found|misc|mnt|media|opt|proc|root|run|sbin|tmp|usr|var"</code></td>
+</tr>
+<tr>
+<td align="center"><code>enableSearchNetworkAddresses</code></td>
+<td align="center"><code>boolean</code></td>
+<td align="left">Использовать поиск сетевых адресов</td>
+<td align="center">``</td>
+</tr>
+</tbody>
+</table>
+<!-- Блоки выше заполняются автоматически, не трогать -->
+
+<h2 id="description">Description<a class="headerlink" href="#description" title="Permanent link">Link</a></h2>
 <p>It's forbidden to store in code:</p>
 <ul>
 <li>Paths to files and folders (Windows, Unix)</li>
 <li>Network addresses (ip6, ip4)</li>
-</ul>
-<h2 id="parameters">Parameters<a class="headerlink" href="#parameters" title="Permanent link">Link</a></h2>
-<ul>
-<li><code>searchWordsExclusion</code> - <code>string</code> - Keywords to exclude expressions when searching for IP addresses. Default<code>Верси|Version|ЗапуститьПриложение|RunApp|Пространств|Namespace|Драйвер|Driver</code>.</li>
-<li><code>searchWordsStdPathsUnix</code> - <code>string</code> - Keywords to search standard root directory Unix.Default <code>bin|boot|dev|etc|home|lib|lost\\+found|misc|mnt|media|opt|proc|root|run|sbin|tmp|usr|var</code>.</li>
-<li><code>enableSearchNetworkAddresses</code> - <code>boolean</code> - Use network address search. Default <code>Yes</code>.</li>
 </ul>
 <p>There are several ways to properly store such information:</p>
 <ul>
@@ -377,6 +447,14 @@
 <li>Store in separate module, where this diagnostic is disabled (not recommended).</li>
 <li>Store in Catalog, Exchange plan node and etc.</li>
 </ul>
+<h3 id="characteristic">Characteristic<a class="headerlink" href="#characteristic" title="Permanent link">Link</a></h3>
+<p>When search for Windows / Unix  paths, also check for URL in a string. URL search keywords:</p>
+<ul>
+<li><code>http</code></li>
+<li><code>https</code></li>
+<li><code>ftp</code></li>
+</ul>
+<h2 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link">Link</a></h2>
 <p><strong>Incorrect:</strong></p>
 <div class="codehilite"><pre><span></span><span class="nv">EchangeFolder</span> <span class="o">=</span> <span class="s1">&quot;c:/exchange/dataexchange&quot;</span><span class="p">;</span>
 </pre></div>
@@ -390,15 +468,6 @@
 <p>or</p>
 <div class="codehilite"><pre><span></span><span class="nv">ExchangeFolder</span> <span class="o">=</span> <span class="nv">DataExchangeReuse</span><span class="o">.</span><span class="nv">ExchangeFolder</span><span class="p">();</span>
 </pre></div>
-
-
-<h2 id="characteristic">Characteristic<a class="headerlink" href="#characteristic" title="Permanent link">Link</a></h2>
-<p>When search for Windows / Unix  paths, also check for URL in a string. URL search keywords:</p>
-<ul>
-<li><code>http</code></li>
-<li><code>https</code></li>
-<li><code>ftp</code></li>
-</ul>
                 
                   
                 

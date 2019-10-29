@@ -322,6 +322,29 @@
     
   
   
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#description" class="md-nav__link">
+    Description
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#examples" class="md-nav__link">
+    Examples
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -336,7 +359,33 @@
                 
                 
                 <h1 id="nested-constructors-with-parameters-in-structure-declaration">Nested constructors with parameters in structure declaration<a class="headerlink" href="#nested-constructors-with-parameters-in-structure-declaration" title="Permanent link">Link</a></h1>
+<table>
+<thead>
+<tr>
+<th align="center">Type</th>
+<th align="center">Scope</th>
+<th align="center">Severity</th>
+<th align="center">Activated<br/>by default</th>
+<th align="center">Minutes<br/>to fix</th>
+<th align="center">Tags</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><code>Code smell</code></td>
+<td align="center"><code>BSL</code><br/><code>OS</code></td>
+<td align="center"><code>Minor</code></td>
+<td align="center"><code>Нет</code></td>
+<td align="center"><code>10</code></td>
+<td align="center"><code>badpractice</code><br/><code>brainoverload</code></td>
+</tr>
+</tbody>
+</table>
+<!-- Блоки выше заполняются автоматически, не трогать -->
+
+<h2 id="description">Description<a class="headerlink" href="#description" title="Permanent link">Link</a></h2>
 <p>It is not recommended to use constructors of other objects in the structure constructor if these constructors accept parameters. In particular, in the constructor of one structure it is not recommended to create other structures with the declaration of property values.</p>
+<h2 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link">Link</a></h2>
 <p>Incorrect:</p>
 <div class="codehilite"><pre><span></span><span class="nv">НоменклатураСервер</span><span class="o">.</span><span class="nv">ЗаполнитьСлужебныеРеквизитыПоНоменклатуреВКоллекции</span><span class="p">(</span>
   <span class="nv">Объект</span><span class="o">.</span><span class="nv">Товары</span><span class="p">,</span>

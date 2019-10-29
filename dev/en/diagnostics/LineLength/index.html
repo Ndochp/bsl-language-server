@@ -332,6 +332,20 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#description" class="md-nav__link">
+    Description
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sources" class="md-nav__link">
+    Sources
+  </a>
+  
+</li>
+      
       
       
       
@@ -352,11 +366,54 @@
                 
                 
                 <h1 id="line-length-limit">Line Length limit<a class="headerlink" href="#line-length-limit" title="Permanent link">Link</a></h1>
-<p>If the line length is grater than 120 characters you should you line break. It is not recommended to have lines longer than 120 characters, except when line break is impossible (example, in code we have a string constant which is displayed without line breaks in message window using object MessageToUser).</p>
-<p>Source: <a href="https://its.1c.ru/db/v8std#content:456:hdoc">Standart: Modules texts(RU)</a></p>
+<table>
+<thead>
+<tr>
+<th align="center">Type</th>
+<th align="center">Scope</th>
+<th align="center">Severity</th>
+<th align="center">Activated<br/>by default</th>
+<th align="center">Minutes<br/>to fix</th>
+<th align="center">Tags</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><code>Code smell</code></td>
+<td align="center"><code>BSL</code><br/><code>OS</code></td>
+<td align="center"><code>Minor</code></td>
+<td align="center"><code>Нет</code></td>
+<td align="center"><code>1</code></td>
+<td align="center"><code>standard</code><br/><code>badpractice</code></td>
+</tr>
+</tbody>
+</table>
 <h2 id="parameters">Parameters<a class="headerlink" href="#parameters" title="Permanent link">Link</a></h2>
+<table>
+<thead>
+<tr>
+<th align="center">Name</th>
+<th align="center">Type</th>
+<th align="left">Description</th>
+<th align="center">Default value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><code>maxLineLength</code></td>
+<td align="center"><code>int</code></td>
+<td align="left">Максимальная длина строки в символах</td>
+<td align="center"><code>120</code></td>
+</tr>
+</tbody>
+</table>
+<!-- Блоки выше заполняются автоматически, не трогать -->
+
+<h2 id="description">Description<a class="headerlink" href="#description" title="Permanent link">Link</a></h2>
+<p>If the line length is grater than 120 characters you should you line break. It is not recommended to have lines longer than 120 characters, except when line break is impossible (example, in code we have a string constant which is displayed without line breaks in message window using object MessageToUser).</p>
+<h2 id="sources">Sources<a class="headerlink" href="#sources" title="Permanent link">Link</a></h2>
 <ul>
-<li><code>maxLineLength</code> - <code>Integer</code> - max line length in characters. By default set to 120.</li>
+<li><a href="https://its.1c.ru/db/v8std#content:456:hdoc">Standart: Modules texts(RU)</a></li>
 </ul>
                 
                   

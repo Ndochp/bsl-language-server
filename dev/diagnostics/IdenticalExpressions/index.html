@@ -38,7 +38,7 @@
     
     
       
-        <title>Одинаковые выражения слева и справа от 'foo' оператора - BSL Language Server Dev</title>
+        <title>Одинаковые выражения слева и справа от "foo" оператора - BSL Language Server Dev</title>
       
     
     
@@ -140,7 +140,7 @@
             </span>
             <span class="md-header-nav__topic">
               
-                Одинаковые выражения слева и справа от 'foo' оператора
+                Одинаковые выражения слева и справа от "foo" оператора
               
             </span>
           
@@ -322,6 +322,29 @@
     
   
   
+    <label class="md-nav__title" for="__toc">Содержание</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    Описание диагностики
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    Примеры
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -335,11 +358,34 @@
                   <a href="https://github.com/1c-syntax/bsl-language-server/edit/develop/docs/diagnostics/IdenticalExpressions.md" title="Редактировать страницу" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                <h1 id="foo">Одинаковые выражения слева и справа от 'foo' оператора<a class="headerlink" href="#foo" title="Permanent link">&para;</a></h1>
-<p>Если в тексте программы имеется оператор (&lt;, &gt;, &lt;=, &gt;=, =, &lt;&gt;, И, ИЛИ, -, /),
-слева и справа от которого расположены одинаковые подвыражения фрагмент кода, который, скорее всего,
-содержит логическую ошибку.</p>
-<p>Например:</p>
+                <h1 id="foo">Одинаковые выражения слева и справа от "foo" оператора<a class="headerlink" href="#foo" title="Permanent link">&para;</a></h1>
+<table>
+<thead>
+<tr>
+<th align="center">Тип</th>
+<th align="center">Поддерживаются<br/>языки</th>
+<th align="center">Важность</th>
+<th align="center">Включена<br/>по умолчанию</th>
+<th align="center">Время на<br/>исправление (мин)</th>
+<th align="center">Тэги</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><code>Ошибка</code></td>
+<td align="center"><code>BSL</code><br/><code>OS</code></td>
+<td align="center"><code>Важный</code></td>
+<td align="center"><code>Нет</code></td>
+<td align="center"><code>5</code></td>
+<td align="center"><code>suspicious</code></td>
+</tr>
+</tbody>
+</table>
+<!-- Блоки выше заполняются автоматически, не трогать -->
+
+<h2 id="_1">Описание диагностики<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<p>Если в тексте программы имеется оператор (&lt;, &gt;, &lt;=, &gt;=, =, &lt;&gt;, И, ИЛИ, -, /), слева и справа от которого расположены одинаковые подвыражения фрагмент кода, который, скорее всего, содержит логическую ошибку.</p>
+<h2 id="_2">Примеры<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <div class="codehilite"><pre><span></span><span class="k">Если</span> <span class="nv">Сумма</span> <span class="o">&lt;&gt;</span> <span class="m">0</span> <span class="k">И</span> <span class="nv">Сумма</span> <span class="o">&lt;&gt;</span> <span class="m">0</span> <span class="k">Тогда</span>
 
     <span class="c c-Singleline">// Тут код</span>

@@ -334,7 +334,34 @@
       
         <li class="md-nav__item">
   <a href="#_3" class="md-nav__link">
+    Описание диагностики
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
     Дополнительно
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    Примеры
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    Источники
   </a>
   
 </li>
@@ -359,15 +386,61 @@
                 
                 
                 <h1 id="_1">Хранение конфиденциальной информации в коде<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<table>
+<thead>
+<tr>
+<th align="center">Тип</th>
+<th align="center">Поддерживаются<br/>языки</th>
+<th align="center">Важность</th>
+<th align="center">Включена<br/>по умолчанию</th>
+<th align="center">Время на<br/>исправление (мин)</th>
+<th align="center">Тэги</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><code>Уязвимость</code></td>
+<td align="center"><code>BSL</code></td>
+<td align="center"><code>Критичный</code></td>
+<td align="center"><code>Нет</code></td>
+<td align="center"><code>15</code></td>
+<td align="center"><code>standard</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="_2">Параметры<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th align="center">Имя</th>
+<th align="center">Тип</th>
+<th align="left">Описание</th>
+<th align="center">Значение по умолчанию</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><code>searchWords</code></td>
+<td align="center"><code>Регулярное выражение</code></td>
+<td align="left">Ключевые слова поиска конфиденциальной информации в переменных, структурах, соответствиях.</td>
+<td align="center"><code>"Пароль|Password"</code></td>
+</tr>
+</tbody>
+</table>
+<!-- Блоки выше заполняются автоматически, не трогать -->
+
+<h2 id="_3">Описание диагностики<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
 <p>Запрещено хранить конфиденциальную информацию в коде. Список конфиденциальной информации:
 * Пароли
 * Персональные ключи доступа</p>
-<h2 id="_2">Параметры<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
-<ul>
-<li><code>searchWords</code> - <code>Строка</code> - ключевые слова для поиска конфиденциальной информации в переменных, структурах, соответствиях. По умолчанию: <code>Пароль|Password</code>.</li>
-</ul>
-<p>Если в проекте 1С используется подсистема БСП, то хранение паролей можно организовать через безопасное хранилище. Более подробнее можно изучить здесь: 
-<a href="https://its.1c.ru/db/v8std#content:740:hdoc">Стандарт: Безопасное хранение паролей</a></p>
+<p>Если в проекте 1С используется подсистема БСП, то хранение паролей можно организовать через безопасное хранилище.</p>
+<h3 id="_4">Дополнительно<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
+<p>В значений паролей исключаются строки, где все символы <code>*</code>:</p>
+<div class="codehilite"><pre><span></span><span class="nv">Пароль</span> <span class="o">=</span> <span class="s1">&quot;**********&quot;</span><span class="p">;</span>
+</pre></div>
+
+
+<h2 id="_5">Примеры<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
 <p>Неправильно:</p>
 <div class="codehilite"><pre><span></span><span class="nv">Пароль</span> <span class="o">=</span> <span class="s1">&quot;12345&quot;</span><span class="p">;</span>
 </pre></div>
@@ -379,10 +452,10 @@
 </pre></div>
 
 
-<h2 id="_3">Дополнительно<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
-<p>В значений паролей исключаются строки, где все символы <code>*</code>. Например:</p>
-<div class="codehilite"><pre><span></span><span class="nv">Пароль</span> <span class="o">=</span> <span class="s1">&quot;**********&quot;</span><span class="p">;</span>
-</pre></div>
+<h2 id="_6">Источники<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://its.1c.ru/db/v8std#content:740:hdoc">Стандарт: Безопасное хранение паролей</a></li>
+</ul>
                 
                   
                 

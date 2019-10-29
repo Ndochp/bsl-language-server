@@ -332,6 +332,20 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    Описание диагностики
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    Источники
+  </a>
+  
+</li>
+      
       
       
       
@@ -352,12 +366,55 @@
                 
                 
                 <h1 id="_1">Пробел в начале комментария<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
-<p>Между символами комментария "//" и текстом комментария должен быть пробел.  </p>
-<p><strong>Источник</strong>: <a href="https://its.1c.ru/db/v8std#content:456:hdoc">Стандарт: Тексты модулей, пункт 7.3</a></p>
-<p>Исключением из правила являются <em><strong>комментарии-аннотации</strong></em>, т.е. комментарии начинающиеся с определенной последовательности символов.</p>
+<table>
+<thead>
+<tr>
+<th align="center">Тип</th>
+<th align="center">Поддерживаются<br/>языки</th>
+<th align="center">Важность</th>
+<th align="center">Включена<br/>по умолчанию</th>
+<th align="center">Время на<br/>исправление (мин)</th>
+<th align="center">Тэги</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><code>Дефект кода</code></td>
+<td align="center"><code>BSL</code><br/><code>OS</code></td>
+<td align="center"><code>Информационный</code></td>
+<td align="center"><code>Нет</code></td>
+<td align="center"><code>1</code></td>
+<td align="center"><code>standard</code></td>
+</tr>
+</tbody>
+</table>
 <h2 id="_2">Параметры<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th align="center">Имя</th>
+<th align="center">Тип</th>
+<th align="left">Описание</th>
+<th align="center">Значение по умолчанию</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><code>commentsAnnotation</code></td>
+<td align="center"><code>Регулярное выражение</code></td>
+<td align="left">Пропускать комментарии-аннотации, начинающиеся с указанных подстрок. Список через запятую. Например: //@,//(c)</td>
+<td align="center"><code>"//@,//(c),//©"</code></td>
+</tr>
+</tbody>
+</table>
+<!-- Блоки выше заполняются автоматически, не трогать -->
+
+<h2 id="_3">Описание диагностики<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<p>Между символами комментария "//" и текстом комментария должен быть пробел.  </p>
+<p>Исключением из правила являются <em><strong>комментарии-аннотации</strong></em>, т.е. комментарии начинающиеся с определенной последовательности символов.</p>
+<h2 id="_4">Источники<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
 <ul>
-<li><code>commentsAnnotation</code> - <code>Строка</code> - Пропускать комментарии, начинающиеся с указанных подстрок. Список через запятую. Значение по-умолчанию: <code>//@,//(c),//©</code>.</li>
+<li><a href="https://its.1c.ru/db/v8std#content:456:hdoc">Стандарт: Тексты модулей, пункт 7.3</a></li>
 </ul>
                 
                   

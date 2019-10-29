@@ -332,6 +332,20 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    Описание диагностики
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    Источники
+  </a>
+  
+</li>
+      
       
       
       
@@ -352,7 +366,51 @@
                 
                 
                 <h1 id="_1">Конструкция "Попытка...Исключение...КонецПопытки" не содержит кода в исключении<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
-<p>Недопустимо перехватывать любые исключения, бесследно для системного администратора</p>
+<table>
+<thead>
+<tr>
+<th align="center">Тип</th>
+<th align="center">Поддерживаются<br/>языки</th>
+<th align="center">Важность</th>
+<th align="center">Включена<br/>по умолчанию</th>
+<th align="center">Время на<br/>исправление (мин)</th>
+<th align="center">Тэги</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><code>Ошибка</code></td>
+<td align="center"><code>BSL</code><br/><code>OS</code></td>
+<td align="center"><code>Важный</code></td>
+<td align="center"><code>Нет</code></td>
+<td align="center"><code>15</code></td>
+<td align="center"><code>standard</code><br/><code>badpractice</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="_2">Параметры<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th align="center">Имя</th>
+<th align="center">Тип</th>
+<th align="left">Описание</th>
+<th align="center">Значение по умолчанию</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><code>commentAsCode</code></td>
+<td align="center"><code>Булево</code></td>
+<td align="left">Считать комментарий в исключении кодом</td>
+<td align="center"><code>false</code></td>
+</tr>
+</tbody>
+</table>
+<!-- Блоки выше заполняются автоматически, не трогать -->
+
+<h2 id="_3">Описание диагностики<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<p>Недопустимо перехватывать любые исключения, бесследно для системного администратора.</p>
 <p><em>Неправильно</em></p>
 <div class="codehilite"><pre><span></span><span class="k">Попытка</span> 
     <span class="c c-Singleline">// код, приводящий к вызову исключения</span>
@@ -378,10 +436,9 @@
 </pre></div>
 
 
-<p>Источник: <a href="https://its.1c.ru/db/v8std#content:499:hdoc">Перехват исключений в коде</a></p>
-<h2 id="_2">Параметры<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<h2 id="_4">Источники<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
 <ul>
-<li><code>commentAsCode</code> - <code>Булево</code> - Считать комментарий в исключении кодом</li>
+<li><a href="https://its.1c.ru/db/v8std#content:499:hdoc">Перехват исключений в коде</a></li>
 </ul>
                 
                   

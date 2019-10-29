@@ -327,14 +327,34 @@
       
         <li class="md-nav__item">
   <a href="#_1" class="md-nav__link">
+    Описание диагностики
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
     Дополнительно
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    Примеры
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    Ссылки
+  <a href="#_4" class="md-nav__link">
+    Источники
   </a>
   
 </li>
@@ -359,13 +379,46 @@
                 
                 
                 <h1 id="unix">Использование объектов недоступных в Unix системах<a class="headerlink" href="#unix" title="Permanent link">&para;</a></h1>
+<table>
+<thead>
+<tr>
+<th align="center">Тип</th>
+<th align="center">Поддерживаются<br/>языки</th>
+<th align="center">Важность</th>
+<th align="center">Включена<br/>по умолчанию</th>
+<th align="center">Время на<br/>исправление (мин)</th>
+<th align="center">Тэги</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><code>Ошибка</code></td>
+<td align="center"><code>BSL</code></td>
+<td align="center"><code>Критичный</code></td>
+<td align="center"><code>Нет</code></td>
+<td align="center"><code>30</code></td>
+<td align="center"><code>standard</code><br/><code>lockinos</code></td>
+</tr>
+</tbody>
+</table>
+<!-- Блоки выше заполняются автоматически, не трогать -->
+
+<h2 id="_1">Описание диагностики<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <p>В ОС Linux недоступны механизмы COM, OLE, ActiveDocument. Для интеграции 
 необходимо использовать другие средства, например файловый обмен в формате XML или web-сервисы. 
 Для внешних компонент, реализованных по COM-технологии, рекомендуется переработать их с использованием технологии NativeAPI.</p>
-<p>Отслеживаемые механизмы, недоступные в Linux:
-* COMОбъект
-* Почта</p>
-<p>Пример:</p>
+<p>Отслеживаемые механизмы, недоступные в Linux:</p>
+<ul>
+<li>COMОбъект</li>
+<li>Почта</li>
+</ul>
+<p><strong>Проверка значение выполнения условия пока не выполняется.</strong></p>
+<h3 id="_2">Дополнительно<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
+<p>При проверке использования недоступных объектов в Linux учитываются условия, в которых можно найти следующий ключевые слова:
+* <code>Linux_x86</code>
+* <code>Windows</code>
+* <code>MacOs</code></p>
+<h2 id="_3">Примеры<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
 <div class="codehilite"><pre><span></span><span class="nv">Компонента</span> <span class="o">=</span> <span class="k">Новый</span> <span class="nv">COMОбъект</span><span class="p">(</span><span class="s1">&quot;System.Text.UTF8Encoding&quot;</span><span class="p">);</span>
 </pre></div>
 
@@ -376,13 +429,6 @@
 
 
 <p>Вместо этого можно использовать <code>ЗапуститьПриложение()</code>.</p>
-<h2 id="_1">Дополнительно<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
-<p>При проверке использования недоступных объектов в Linux учитываются условия, в которых можно найти следующий ключевые слова:
-* <code>Linux_x86</code>
-* <code>Windows</code>
-* <code>MacOs</code></p>
-<p><strong>Проверка значение выполнения условия пока не выполняется.</strong></p>
-<p>Например:</p>
 <div class="codehilite"><pre><span></span><span class="nv">СистемнаяИнформация</span> <span class="o">=</span> <span class="k">Новый</span> <span class="nv">СистемнаяИнформация</span><span class="p">();</span>
 <span class="k">Если</span> <span class="k">Не</span> <span class="nv">СистемнаяИнформация</span><span class="o">.</span><span class="nv">ТипПлатформы</span> <span class="o">=</span> <span class="nv">ТипПлатформы</span><span class="o">.</span><span class="nv">Linux_x86</span> <span class="k">Или</span> <span class="nv">ТипПлатформы</span><span class="o">.</span><span class="nv">Linux_x86_64</span> <span class="k">Тогда</span>
     <span class="nv">Почта</span> <span class="o">=</span> <span class="k">Новый</span> <span class="nv">Почта</span><span class="p">;</span>
@@ -390,10 +436,11 @@
 </pre></div>
 
 
-<h2 id="_2">Ссылки<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
-<p>Более подробную информацию можно изучить на ИТС:
-* <a href="https://its.1c.ru/db/v8314doc#bookmark:dev:TI000001208">Особенности разработки кроссплатформенных прикладных решений</a>
-* <a href="https://its.1c.ru/db/v8314doc#bookmark:dev:TI000001283">Особенности работы клиентского приложения под управлением ОС Linux</a></p>
+<h2 id="_4">Источники<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://its.1c.ru/db/v8314doc#bookmark:dev:TI000001208">Особенности разработки кроссплатформенных прикладных решений</a></li>
+<li><a href="https://its.1c.ru/db/v8314doc#bookmark:dev:TI000001283">Особенности работы клиентского приложения под управлением ОС Linux</a></li>
+</ul>
                 
                   
                 
