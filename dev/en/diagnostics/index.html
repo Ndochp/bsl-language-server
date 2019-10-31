@@ -394,10 +394,10 @@
 <p>Some of diagnostics are disabled by default. Use <a href="/#configuration">configuration file</a> to enable them.</p>
 <p>To escape individual sections of code or files from triggering diagnostics, you can use special comments of the form <code>// BSLLS:DiagnosticKey-off</code> . This functionality is described in more detail in <a href="../features/DiagnosticIgnorance/">Escaping sections of code</a> .</p>
 <h2 id="implemented-diagnostics">Implemented diagnostics<a class="headerlink" href="#implemented-diagnostics" title="Permanent link">Link</a></h2>
-<p>Total: <strong>58</strong></p>
+<p>Total: <strong>59</strong></p>
 <ul>
 <li>Error: <strong>20</strong></li>
-<li>Code smell: <strong>37</strong></li>
+<li>Code smell: <strong>38</strong></li>
 <li>Vulnerability: <strong>1</strong></li>
 </ul>
 <table>
@@ -459,6 +459,14 @@
 <td>Major</td>
 <td>Error</td>
 <td><code>standard</code><br/><code>error</code></td>
+</tr>
+<tr>
+<td><a href="DeprecatedFind/">DeprecatedFind</a></td>
+<td>Using of the deprecated method "Find"</td>
+<td align="center">Yes</td>
+<td>Minor</td>
+<td>Code smell</td>
+<td><code>deprecated</code></td>
 </tr>
 <tr>
 <td><a href="DeprecatedMessage/">DeprecatedMessage</a></td>
