@@ -8,10 +8,10 @@ To escape individual sections of code or files from triggering diagnostics, you 
 
 ## Implemented diagnostics
 
-Total: **63**
+Total: **64**
 
 * Error: **23**
-* Code smell: **38**
+* Code smell: **39**
 * Vulnerability: **2**
 
 | Key | Name| Enabled by default | Severity | Type | Tags |
@@ -65,12 +65,13 @@ Total: **63**
 | [UnknownPreprocessorSymbol](UnknownPreprocessorSymbol.md) | Unknown preprocessor symbol | Yes | Critical | Error | `standard`<br/>`error` |
 | [UnreachableCode](UnreachableCode.md) | Unreachable Code | Yes | Minor | Error | `design`<br/>`suspicious` |
 | [UnusedLocalMethod](UnusedLocalMethod.md) | Unused local method | Yes | Major | Code smell | `standard`<br/>`suspicious` |
+| [UnusedParameters](UnusedParameters.md) | Unused parameter | Yes | Major | Code smell | `design` |
 | [UseLessForEach](UseLessForEach.md) | Useless collection iteration | Yes | Critical | Error | `clumsy` |
 | [UsingCancelParameter](UsingCancelParameter.md) | Using parameter "Cancel" | Yes | Major | Code smell | `standard`<br/>`badpractice` |
 | [UsingFindElementByString](UsingFindElementByString.md) | Using FindByName and FindByCode | Yes | Major | Code smell | `standard`<br/>`badpractice`<br/>`performance` |
 | [UsingGoto](UsingGoto.md) | "goto" statement should not be used | Yes | Critical | Code smell | `standard`<br/>`badpractice` |
 | [UsingHardcodeNetworkAddress](UsingHardcodeNetworkAddress.md) | Using hardcode ip addresses in code | Yes | Critical | Vulnerability | `standard` |
-| [UsingHardcodePath](UsingHardcodePath.md) | Using hardcode file paths and ip addresses in code | Yes | Critical | Error | `standard` |
+| [UsingHardcodePath](UsingHardcodePath.md) | Using hardcode file paths in code | Yes | Critical | Error | `standard` |
 | [UsingHardcodeSecretInformation](UsingHardcodeSecretInformation.md) | Storing confidential information in code | Yes | Critical | Vulnerability | `standard` |
 | [UsingModalWindows](UsingModalWindows.md) | Using modal windows | No | Major | Code smell | `standard` |
 | [UsingObjectNotAvailableUnix](UsingObjectNotAvailableUnix.md) | Using unavailable in Unix objects | Yes | Critical | Error | `standard`<br/>`lockinos` |
