@@ -389,22 +389,22 @@
 <table>
 <thead>
 <tr>
-<th align="center">Type</th>
-<th align="center">Scope</th>
-<th align="center">Severity</th>
-<th align="center">Activated<br/>by default</th>
-<th align="center">Minutes<br/>to fix</th>
-<th align="center">Tags</th>
+<th>Type</th>
+<th>Scope</th>
+<th>Severity</th>
+<th>Activated<br>by default</th>
+<th>Minutes<br>to fix</th>
+<th>Tags</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="center"><code>Code smell</code></td>
-<td align="center"><code>BSL</code><br/><code>OS</code></td>
-<td align="center"><code>Info</code></td>
-<td align="center"><code>Yes</code></td>
-<td align="center"><code>1</code></td>
-<td align="center"><code>badpractice</code></td>
+<td><code>Code smell</code></td>
+<td><code>BSL</code><br><code>OS</code></td>
+<td><code>Info</code></td>
+<td><code>Yes</code></td>
+<td><code>1</code></td>
+<td><code>badpractice</code></td>
 </tr>
 </tbody>
 </table>
@@ -412,42 +412,42 @@
 <table>
 <thead>
 <tr>
-<th align="center">Name</th>
-<th align="center">Type</th>
-<th align="left">Description</th>
-<th align="center">Default value</th>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Default value</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="center"><code>listForCheckLeft</code></td>
-<td align="center"><code>String</code></td>
-<td align="left">Список символов для проверки слева (разделенные пробелом). Например: ) =</td>
-<td align="center"><code>""</code></td>
+<td><code>listForCheckLeft</code></td>
+<td><code>String</code></td>
+<td>Список символов для проверки слева (разделенные пробелом). Например: ) =</td>
+<td><code>""</code></td>
 </tr>
 <tr>
-<td align="center"><code>listForCheckRight</code></td>
-<td align="center"><code>String</code></td>
-<td align="left">Список символов для проверки справа (разделенные пробелом). Например: ( =</td>
-<td align="center"><code>", ;"</code></td>
+<td><code>listForCheckRight</code></td>
+<td><code>String</code></td>
+<td>Список символов для проверки справа (разделенные пробелом). Например: ( =</td>
+<td><code>", ;"</code></td>
 </tr>
 <tr>
-<td align="center"><code>listForCheckLeftAndRight</code></td>
-<td align="center"><code>String</code></td>
-<td align="left">Список символов для проверки с обоих сторон (разделенные пробелом). Например: + - * / = % &lt; &gt;</td>
-<td align="center"><code>"+ - * / = % &lt; &gt; &lt;&gt; &lt;= &gt;="</code></td>
+<td><code>listForCheckLeftAndRight</code></td>
+<td><code>String</code></td>
+<td>Список символов для проверки с обоих сторон (разделенные пробелом). Например: + - * / = % &lt; &gt;</td>
+<td><code>"+ - * / = % &lt; &gt; &lt;&gt; &lt;= &gt;="</code></td>
 </tr>
 <tr>
-<td align="center"><code>checkSpaceToRightOfUnary</code></td>
-<td align="center"><code>Boolean</code></td>
-<td align="left">Проверять наличие пробела справа от унарных знаков (+ -)</td>
-<td align="center"><code>false</code></td>
+<td><code>checkSpaceToRightOfUnary</code></td>
+<td><code>Boolean</code></td>
+<td>Проверять наличие пробела справа от унарных знаков (+ -)</td>
+<td><code>false</code></td>
 </tr>
 <tr>
-<td align="center"><code>allowMultipleCommas</code></td>
-<td align="center"><code>Boolean</code></td>
-<td align="left">Разрешать несколько запятых подряд</td>
-<td align="center"><code>false</code></td>
+<td><code>allowMultipleCommas</code></td>
+<td><code>Boolean</code></td>
+<td>Разрешать несколько запятых подряд</td>
+<td><code>false</code></td>
 </tr>
 </tbody>
 </table>
@@ -478,28 +478,28 @@ Also, the space should be to the right of <code>,</code> и <code>;</code></p>
 <h3 id="using-checkspacetorightofunary-parameter">Using <code>checkSpaceToRightOfUnary</code> parameter<a class="headerlink" href="#using-checkspacetorightofunary-parameter" title="Permanent link">Link</a></h3>
 <p>The parameter makes sense only in case the unary operator if listed in one of three base parameters.</p>
 <p>If set to <code>false</code></p>
-<div class="codehilite"><pre><span></span>    <span class="nv">А</span> <span class="o">=</span> <span class="o">-</span><span class="nv">B</span><span class="p">;</span>     <span class="c c-Singleline">// Correct</span>
-    <span class="nv">А</span> <span class="o">=</span> <span class="o">-</span> <span class="nv">B</span><span class="p">;</span>    <span class="c c-Singleline">// Correct</span>
+<div class="codehilite"><pre><span></span><span class="nv">А</span> <span class="o">=</span> <span class="o">-</span><span class="nv">B</span><span class="p">;</span>     <span class="c c-Singleline">// Correct</span>
+<span class="nv">А</span> <span class="o">=</span> <span class="o">-</span> <span class="nv">B</span><span class="p">;</span>    <span class="c c-Singleline">// Correct</span>
 </pre></div>
 
 
 <p>If set to <code>true</code></p>
-<div class="codehilite"><pre><span></span>    <span class="nv">А</span> <span class="o">=</span> <span class="o">-</span><span class="nv">B</span><span class="p">;</span>     <span class="c c-Singleline">// Incorrect</span>
-    <span class="nv">А</span> <span class="o">=</span> <span class="o">-</span> <span class="nv">B</span><span class="p">;</span>    <span class="c c-Singleline">// Correct</span>
+<div class="codehilite"><pre><span></span><span class="nv">А</span> <span class="o">=</span> <span class="o">-</span><span class="nv">B</span><span class="p">;</span>     <span class="c c-Singleline">// Incorrect</span>
+<span class="nv">А</span> <span class="o">=</span> <span class="o">-</span> <span class="nv">B</span><span class="p">;</span>    <span class="c c-Singleline">// Correct</span>
 </pre></div>
 
 
 <h3 id="using-allowmultiplecommas-parameter">Using <code>allowMultipleCommas</code> parameter<a class="headerlink" href="#using-allowmultiplecommas-parameter" title="Permanent link">Link</a></h3>
 <p>The parameter has sense only if <code>,</code> is listed in one of three base parameters</p>
 <p>If set to <code>false</code></p>
-<div class="codehilite"><pre><span></span>    <span class="nv">ОбщегоНазначенияКлиентСервер</span><span class="o">.</span><span class="nv">СообщитьПользователю</span><span class="p">(</span><span class="nv">ТекстСообщения</span><span class="p">,,,,</span> <span class="nv">Отказ</span><span class="p">);</span>        <span class="c c-Singleline">// Incorrect</span>
-    <span class="nv">ОбщегоНазначенияКлиентСервер</span><span class="o">.</span><span class="nv">СообщитьПользователю</span><span class="p">(</span><span class="nv">ТекстСообщения</span><span class="p">,</span> <span class="p">,</span> <span class="p">,</span> <span class="p">,</span> <span class="nv">Отказ</span><span class="p">);</span>     <span class="c c-Singleline">// Correct</span>
+<div class="codehilite"><pre><span></span><span class="nv">ОбщегоНазначенияКлиентСервер</span><span class="o">.</span><span class="nv">СообщитьПользователю</span><span class="p">(</span><span class="nv">ТекстСообщения</span><span class="p">,,,,</span> <span class="nv">Отказ</span><span class="p">);</span>        <span class="c c-Singleline">// Incorrect</span>
+<span class="nv">ОбщегоНазначенияКлиентСервер</span><span class="o">.</span><span class="nv">СообщитьПользователю</span><span class="p">(</span><span class="nv">ТекстСообщения</span><span class="p">,</span> <span class="p">,</span> <span class="p">,</span> <span class="p">,</span> <span class="nv">Отказ</span><span class="p">);</span>     <span class="c c-Singleline">// Correct</span>
 </pre></div>
 
 
 <p>If set to <code>true</code></p>
-<div class="codehilite"><pre><span></span>    <span class="nv">ОбщегоНазначенияКлиентСервер</span><span class="o">.</span><span class="nv">СообщитьПользователю</span><span class="p">(</span><span class="nv">ТекстСообщения</span><span class="p">,,,,</span> <span class="nv">Отказ</span><span class="p">);</span>        <span class="c c-Singleline">// Correct</span>
-    <span class="nv">ОбщегоНазначенияКлиентСервер</span><span class="o">.</span><span class="nv">СообщитьПользователю</span><span class="p">(</span><span class="nv">ТекстСообщения</span><span class="p">,</span> <span class="p">,</span> <span class="p">,</span> <span class="p">,</span> <span class="nv">Отказ</span><span class="p">);</span>     <span class="c c-Singleline">// Correct</span>
+<div class="codehilite"><pre><span></span><span class="nv">ОбщегоНазначенияКлиентСервер</span><span class="o">.</span><span class="nv">СообщитьПользователю</span><span class="p">(</span><span class="nv">ТекстСообщения</span><span class="p">,,,,</span> <span class="nv">Отказ</span><span class="p">);</span>        <span class="c c-Singleline">// Correct</span>
+<span class="nv">ОбщегоНазначенияКлиентСервер</span><span class="o">.</span><span class="nv">СообщитьПользователю</span><span class="p">(</span><span class="nv">ТекстСообщения</span><span class="p">,</span> <span class="p">,</span> <span class="p">,</span> <span class="p">,</span> <span class="nv">Отказ</span><span class="p">);</span>     <span class="c c-Singleline">// Correct</span>
 </pre></div>
                 
                   
