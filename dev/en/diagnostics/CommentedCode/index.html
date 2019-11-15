@@ -340,13 +340,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#examples" class="md-nav__link">
-    Examples
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#sources" class="md-nav__link">
     Sources
   </a>
@@ -376,22 +369,22 @@
 <table>
 <thead>
 <tr>
-<th align="center">Type</th>
-<th align="center">Scope</th>
-<th align="center">Severity</th>
-<th align="center">Activated<br/>by default</th>
-<th align="center">Minutes<br/>to fix</th>
-<th align="center">Tags</th>
+<th>Type</th>
+<th>Scope</th>
+<th>Severity</th>
+<th>Activated<br>by default</th>
+<th>Minutes<br>to fix</th>
+<th>Tags</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="center"><code>Code smell</code></td>
-<td align="center"><code>BSL</code><br/><code>OS</code></td>
-<td align="center"><code>Minor</code></td>
-<td align="center"><code>Yes</code></td>
-<td align="center"><code>1</code></td>
-<td align="center"><code>standard</code><br/><code>badpractice</code></td>
+<td><code>Code smell</code></td>
+<td><code>BSL</code><br><code>OS</code></td>
+<td><code>Minor</code></td>
+<td><code>Yes</code></td>
+<td><code>1</code></td>
+<td><code>standard</code><br><code>badpractice</code></td>
 </tr>
 </tbody>
 </table>
@@ -399,47 +392,48 @@
 <table>
 <thead>
 <tr>
-<th align="center">Name</th>
-<th align="center">Type</th>
-<th align="left">Description</th>
-<th align="center">Default value</th>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Default value</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="center"><code>threshold</code></td>
-<td align="center"><code>float</code></td>
-<td align="left">Порог чуствительности</td>
-<td align="center"><code>0.9F</code></td>
+<td><code>threshold</code></td>
+<td><code>float</code></td>
+<td>Порог чуствительности</td>
+<td><code>0.9F</code></td>
 </tr>
 </tbody>
 </table>
 <!-- Блоки выше заполняются автоматически, не трогать -->
 
 <h2 id="description">Description<a class="headerlink" href="#description" title="Permanent link">Link</a></h2>
-<p>Software modules should not have commented out code fragments, as well as fragments, which are in any way connected with the development process (debugging code, service marks, i.e. !!! _, MRG, etc.) and with specific developers of this code.</p>
+<p>Software modules should not have commented out code fragments, as well as fragments,
+which are in any way connected with the development process (debugging code, service marks, i.e. !!! _, MRG, etc.)
+and with specific developers of this code.</p>
 <p>For example, it is unacceptable to leave such fragments in the code after debugging or refactoring is completed:</p>
-<p><strong>ATTENTION</strong> :</p>
-<p>A code block is considered commented, if at least one line inside the block is defined as code.</p>
-<h2 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link">Link</a></h2>
-<div class="codehilite"><pre><span></span><span class="nv">Procedure</span> <span class="nv">BeforeDelete</span><span class="ss">(</span><span class="nv">Failure</span><span class="ss">)</span>
-    <span class="o">//</span><span class="k">If</span> <span class="nv">True</span> <span class="k">Then</span>
-    <span class="o">//</span>  <span class="nv">Message</span><span class="ss">(</span><span class="s2">&quot;</span><span class="s">For debugging</span><span class="s2">&quot;</span><span class="ss">)</span><span class="c1">;</span>
-    <span class="o">//</span><span class="k">EndIf</span><span class="c1">;</span>
-<span class="nv">EndProcedure</span>
+<div class="codehilite"><pre><span></span><span class="nv">Procedure</span> <span class="nv">BeforeDelete</span><span class="p">(</span><span class="nv">Failure</span><span class="p">)</span>
+    <span class="c c-Singleline">//If True Then</span>
+    <span class="c c-Singleline">//  Message(&quot;For debugging&quot;);</span>
+    <span class="c c-Singleline">//EndIf;</span>
+<span class="k">EndProcedure</span>
 </pre></div>
 
 
 <p>also wrong:</p>
-<div class="codehilite"><pre><span></span><span class="nv">Procedure</span> <span class="nv">BeforeDelete</span><span class="ss">(</span><span class="nv">Failure</span><span class="ss">)</span>
-    <span class="k">If</span> <span class="nv">True</span> <span class="k">Then</span>
-        <span class="o">//</span> <span class="nv">Ivanov</span>: <span class="nv">need</span> <span class="nv">fix</span>
-    <span class="k">EndIf</span><span class="c1">;</span>
-<span class="nv">EndProcedure</span>
+<div class="codehilite"><pre><span></span><span class="nv">Procedure</span> <span class="nv">BeforeDelete</span><span class="p">(</span><span class="nv">Failure</span><span class="p">)</span>
+    <span class="nv">If</span> <span class="kc">True</span> <span class="k">Then</span>
+        <span class="c c-Singleline">// Ivanov: need fix</span>
+    <span class="nv">EndIf</span><span class="p">;</span>
+<span class="k">EndProcedure</span>
 </pre></div>
 
 
 <p>Correct: after debugging or refactoring is completed, remove the handler BeforeDelete from the code.</p>
+<p><strong>ATTENTION</strong> : </p>
+<p>A code block is considered commented , if at least one line inside the block is defined as code.</p>
 <h2 id="sources">Sources<a class="headerlink" href="#sources" title="Permanent link">Link</a></h2>
 <ul>
 <li><a href="https://its.1c.ru/db/v8std/content/456/hdoc">Source</a></li>
