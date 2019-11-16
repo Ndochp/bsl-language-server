@@ -330,6 +330,26 @@
     Description
   </a>
   
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagnostic-restrictions" class="md-nav__link">
+    Diagnostic restrictions
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sources" class="md-nav__link">
+    Sources
+  </a>
+  
 </li>
       
       
@@ -355,28 +375,149 @@
 <table>
 <thead>
 <tr>
-<th align="center">Type</th>
-<th align="center">Scope</th>
-<th align="center">Severity</th>
-<th align="center">Activated<br/>by default</th>
-<th align="center">Minutes<br/>to fix</th>
-<th align="center">Tags</th>
+<th>Type</th>
+<th>Scope</th>
+<th>Severity</th>
+<th>Activated<br>by default</th>
+<th>Minutes<br>to fix</th>
+<th>Tags</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="center"><code>Code smell</code></td>
-<td align="center"><code>BSL</code></td>
-<td align="center"><code>Major</code></td>
-<td align="center"><code>No</code></td>
-<td align="center"><code>15</code></td>
-<td align="center"><code>standard</code></td>
+<td><code>Code smell</code></td>
+<td><code>BSL</code></td>
+<td><code>Major</code></td>
+<td><code>No</code></td>
+<td><code>15</code></td>
+<td><code>standard</code></td>
 </tr>
 </tbody>
 </table>
 <!-- Блоки выше заполняются автоматически, не трогать -->
 
 <h2 id="description">Description<a class="headerlink" href="#description" title="Permanent link">Link</a></h2>
+<p>When developing configurations designed to work in the web client, it is forbidden to use modal forms and dialogs and synchronous calls. Otherwise, the configuration will be inoperative in a number of web browsers, since modal windows are not part of the web development standard, and asynchronous tools are required to ensure user interaction.</p>
+<h3 id="diagnostic-restrictions">Diagnostic restrictions<a class="headerlink" href="#diagnostic-restrictions" title="Permanent link">Link</a></h3>
+<p>Currently, <strong>only the use of global context methods</strong> is diagnosed.</p>
+<p>Method list:</p>
+<table>
+<thead>
+<tr>
+<th>Rusian variant</th>
+<th>English variant</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ВОПРОС</td>
+<td>DOQUERYBOX</td>
+</tr>
+<tr>
+<td>ОТКРЫТЬФОРМУМОДАЛЬНО</td>
+<td>OPENFORMMODAL</td>
+</tr>
+<tr>
+<td>ОТКРЫТЬЗНАЧЕНИЕ</td>
+<td>OPENVALUE</td>
+</tr>
+<tr>
+<td>ПРЕДУПРЕЖДЕНИЕ</td>
+<td>DOMESSAGEBOX</td>
+</tr>
+<tr>
+<td>ВВЕСТИДАТУ</td>
+<td>INPUTDATE</td>
+</tr>
+<tr>
+<td>ВВЕСТИЗНАЧЕНИЕ</td>
+<td>INPUTVALUE</td>
+</tr>
+<tr>
+<td>ВВЕСТИСТРОКУ</td>
+<td>INPUTSTRING</td>
+</tr>
+<tr>
+<td>ВВЕСТИЧИСЛО</td>
+<td>INPUTNUMBER</td>
+</tr>
+<tr>
+<td>УСТАНОВИТЬВНЕШНЮЮКОМПОНЕНТУ</td>
+<td>INSTALLADDIN</td>
+</tr>
+<tr>
+<td>УСТАНОВИТЬРАСШИРЕНИЕРАБОТЫСФАЙЛАМИ</td>
+<td>INSTALLFILESYSTEMEXTENSION</td>
+</tr>
+<tr>
+<td>УСТАНОВИТЬРАСШИРЕНИЕРАБОТЫСКРИПТОГРАФИЕЙ</td>
+<td>INSTALLCRYPTOEXTENSION</td>
+</tr>
+<tr>
+<td>ПОДКЛЮЧИТЬРАСШИРЕНИЕРАБОТЫСКРИПТОГРАФИЕЙ</td>
+<td>ATTACHCRYPTOEXTENSION</td>
+</tr>
+<tr>
+<td>ПОДКЛЮЧИТЬРАСШИРЕНИЕРАБОТЫСФАЙЛАМИ</td>
+<td>ATTACHFILESYSTEMEXTENSION</td>
+</tr>
+<tr>
+<td>ПОМЕСТИТЬФАЙЛ</td>
+<td>PUTFILE</td>
+</tr>
+<tr>
+<td>КОПИРОВАТЬФАЙЛ</td>
+<td>FILECOPY</td>
+</tr>
+<tr>
+<td>ПЕРЕМЕСТИТЬФАЙЛ</td>
+<td>MOVEFILE</td>
+</tr>
+<tr>
+<td>НАЙТИФАЙЛЫ</td>
+<td>FINDFILES</td>
+</tr>
+<tr>
+<td>УДАЛИТЬФАЙЛЫ</td>
+<td>DELETEFILES</td>
+</tr>
+<tr>
+<td>СОЗДАТЬКАТАЛОГ</td>
+<td>CREATEDIRECTORY</td>
+</tr>
+<tr>
+<td>КАТАЛОГВРЕМЕННЫХФАЙЛОВ</td>
+<td>TEMPFILESDIR</td>
+</tr>
+<tr>
+<td>КАТАЛОГДОКУМЕНТОВ</td>
+<td>DOCUMENTSDIR</td>
+</tr>
+<tr>
+<td>РАБОЧИЙКАТАЛОГДАННЫХПОЛЬЗОВАТЕЛЯ</td>
+<td>USERDATAWORKDIR</td>
+</tr>
+<tr>
+<td>ПОЛУЧИТЬФАЙЛЫ</td>
+<td>GETFILES</td>
+</tr>
+<tr>
+<td>ЗАПРОСИТЬРАЗРЕШЕНИЕПОЛЬЗОВАТЕЛЯ</td>
+<td>REQUESTUSERPERMISSION</td>
+</tr>
+<tr>
+<td>ЗАПУСТИТЬПРИЛОЖЕНИЕ</td>
+<td>RUNAPP</td>
+</tr>
+</tbody>
+</table>
+<h2 id="sources">Sources<a class="headerlink" href="#sources" title="Permanent link">Link</a></h2>
+<ul>
+<li><a href="https://its.1c.ru/db/v8std/content/703/hdoc/">Ограничение на использование модальных окон и синхронных вызовов</a></li>
+<li><a href="https://its.1c.ru/db/metod8dev#content:5272:hdoc">Opt out of modal windows (RU)</a></li>
+<li><a href="https://its.1c.ru/db/v838doc#bookmark:dev:TI000000438">Correspondence of synchronous methods to asynchronous analogues (RU)</a></li>
+<li><a href="http://v8.1c.ru/o7/201412async/index.htm">Asynchronous calls to extensions and external components (RU)</a></li>
+</ul>
                 
                   
                 

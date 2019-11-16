@@ -38,7 +38,7 @@
     
     
       
-        <title>Using unavailable in Unix objects - BSL Language Server Dev</title>
+        <title>Using unavailable objects in Unix - BSL Language Server Dev</title>
       
     
     
@@ -114,7 +114,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#using-unavailable-in-unix-objects" tabindex="1" class="md-skip">
+      <a href="#using-unavailable-objects-in-unix" tabindex="1" class="md-skip">
         Skip to content
       </a>
     
@@ -140,7 +140,7 @@
             </span>
             <span class="md-header-nav__topic">
               
-                Using unavailable in Unix objects
+                Using unavailable objects in Unix
               
             </span>
           
@@ -378,26 +378,26 @@
                   <a href="https://github.com/1c-syntax/bsl-language-server/edit/develop/docs/en/diagnostics/UsingObjectNotAvailableUnix.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                <h1 id="using-unavailable-in-unix-objects">Using unavailable in Unix objects<a class="headerlink" href="#using-unavailable-in-unix-objects" title="Permanent link">Link</a></h1>
+                <h1 id="using-unavailable-objects-in-unix">Using unavailable objects in Unix<a class="headerlink" href="#using-unavailable-objects-in-unix" title="Permanent link">Link</a></h1>
 <table>
 <thead>
 <tr>
-<th align="center">Type</th>
-<th align="center">Scope</th>
-<th align="center">Severity</th>
-<th align="center">Activated<br/>by default</th>
-<th align="center">Minutes<br/>to fix</th>
-<th align="center">Tags</th>
+<th>Type</th>
+<th>Scope</th>
+<th>Severity</th>
+<th>Activated<br>by default</th>
+<th>Minutes<br>to fix</th>
+<th>Tags</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="center"><code>Error</code></td>
-<td align="center"><code>BSL</code></td>
-<td align="center"><code>Critical</code></td>
-<td align="center"><code>Yes</code></td>
-<td align="center"><code>30</code></td>
-<td align="center"><code>standard</code><br/><code>lockinos</code></td>
+<td><code>Error</code></td>
+<td><code>BSL</code></td>
+<td><code>Critical</code></td>
+<td><code>Yes</code></td>
+<td><code>30</code></td>
+<td><code>standard</code><br><code>lockinos</code></td>
 </tr>
 </tbody>
 </table>
@@ -405,14 +405,20 @@
 
 <h2 id="description">Description<a class="headerlink" href="#description" title="Permanent link">Link</a></h2>
 <p>In Linux COM, OLE, ActiveDocument are not available. For integration use other options, for example XML file exchange or web-services.
-For external components, using COM, it is recommended to change them to NativeAPI AddIn.</p>
+For COM AddIns, it is recommended to change them to NativeAPI AddIn.</p>
 <p>Checked the use of unavailable in :</p>
 <ul>
 <li>COMObject</li>
 <li>Mail</li>
 </ul>
+<p><strong>Checking the value of the condition is not satisfied.</strong></p>
 <h3 id="addition">Addition<a class="headerlink" href="#addition" title="Permanent link">Link</a></h3>
 <p>When found unavailable in Linux objects, the method is checked to include condition flow for platform type.</p>
+<ul>
+<li><code>Linux_x86</code></li>
+<li><code>Windows</code></li>
+<li><code>MacOs</code></li>
+</ul>
 <h2 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link">Link</a></h2>
 <div class="codehilite"><pre><span></span><span class="nv">Component</span> <span class="o">=</span> <span class="k">New</span> <span class="nv">COMObject</span><span class="p">(</span><span class="s1">&quot;System.Text.UTF8Encoding&quot;</span><span class="p">);</span>
 </pre></div>
@@ -424,7 +430,6 @@ For external components, using COM, it is recommended to change them to NativeAP
 
 
 <p>Instead of this you can use <code>StartApplication()</code>.</p>
-<p>For example:</p>
 <div class="codehilite"><pre><span></span><span class="nv">SystemInformation</span> <span class="o">=</span> <span class="k">New</span> <span class="nv">SystemInformation</span><span class="p">();</span>
 <span class="nv">If</span> <span class="nv">Not</span> <span class="nv">SystemInformation</span><span class="o">.</span><span class="nv">PlatformType</span> <span class="o">=</span> <span class="nv">PlatformType</span><span class="o">.</span><span class="nv">Linux_x86</span> <span class="nv">OR</span> <span class="nv">PlatformType</span><span class="o">.</span><span class="nv">Linux_x86_64</span> <span class="k">Then</span>
     <span class="nv">Mail</span> <span class="o">=</span> <span class="k">New</span> <span class="nv">Mail</span><span class="p">;</span>
