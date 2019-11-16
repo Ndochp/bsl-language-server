@@ -332,6 +332,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#sources" class="md-nav__link">
+    Sources
+  </a>
+  
+</li>
+      
       
       
       
@@ -355,28 +362,50 @@
 <table>
 <thead>
 <tr>
-<th align="center">Type</th>
-<th align="center">Scope</th>
-<th align="center">Severity</th>
-<th align="center">Activated<br/>by default</th>
-<th align="center">Minutes<br/>to fix</th>
-<th align="center">Tags</th>
+<th>Type</th>
+<th>Scope</th>
+<th>Severity</th>
+<th>Activated<br>by default</th>
+<th>Minutes<br>to fix</th>
+<th>Tags</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="center"><code>Error</code></td>
-<td align="center"><code>BSL</code><br/><code>OS</code></td>
-<td align="center"><code>Major</code></td>
-<td align="center"><code>Yes</code></td>
-<td align="center"><code>1</code></td>
-<td align="center"><code>error</code><br/><code>standard</code><br/><code>unpredictable</code></td>
+<td><code>Error</code></td>
+<td><code>BSL</code><br><code>OS</code></td>
+<td><code>Major</code></td>
+<td><code>Yes</code></td>
+<td><code>1</code></td>
+<td><code>error</code><br><code>standard</code><br><code>unpredictable</code></td>
 </tr>
 </tbody>
 </table>
 <!-- Блоки выше заполняются автоматически, не трогать -->
 
 <h2 id="description">Description<a class="headerlink" href="#description" title="Permanent link">Link</a></h2>
+<p>In the texts of modules (including comments) it is not allowed to use inextricable spaces and the minus sign "-" in other encodings (short, long dash, soft hyphen, etc.).</p>
+<p>Such characters often appear in the text of the modules when copying from office documents and lead to a number of difficulties in the development.</p>
+<p>Example:</p>
+<ul>
+<li>the search for fragments of text that includes “wrong” minuses and spaces does not work</li>
+<li>hints of types of parameters of procedures and functions in the configurator and extended verification in 1C: EDT are incorrectly displayed</li>
+<li>specifying a “wrong” minus in expressions will result in a syntax error</li>
+</ul>
+<p>Diagnostics detects the following invalid characters</p>
+<ul>
+<li>En Dash</li>
+<li>Figure Dash</li>
+<li>Em Dash</li>
+<li>Horizontal Bar</li>
+<li>"Wrong" Minus</li>
+<li>Soft Hyphen</li>
+<li>Non-breaking Space</li>
+</ul>
+<h2 id="sources">Sources<a class="headerlink" href="#sources" title="Permanent link">Link</a></h2>
+<ul>
+<li><a href="https://its.1c.ru/db/v8std#content:456:hdoc">Standard: Modules</a></li>
+</ul>
                 
                   
                 
