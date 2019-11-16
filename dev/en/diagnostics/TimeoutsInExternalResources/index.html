@@ -340,8 +340,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#sources" class="md-nav__link">
-    Sources
+  <a href="#reference" class="md-nav__link">
+    Reference
   </a>
   
 </li>
@@ -369,35 +369,43 @@
 <table>
 <thead>
 <tr>
-<th align="center">Type</th>
-<th align="center">Scope</th>
-<th align="center">Severity</th>
-<th align="center">Activated<br/>by default</th>
-<th align="center">Minutes<br/>to fix</th>
-<th align="center">Tags</th>
+<th>Type</th>
+<th>Scope</th>
+<th>Severity</th>
+<th>Activated<br>by default</th>
+<th>Minutes<br>to fix</th>
+<th>Tags</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="center"><code>Error</code></td>
-<td align="center"><code>BSL</code><br/><code>OS</code></td>
-<td align="center"><code>Critical</code></td>
-<td align="center"><code>Yes</code></td>
-<td align="center"><code>5</code></td>
-<td align="center"><code>unpredictable</code><br/><code>standard</code></td>
+<td><code>Error</code></td>
+<td><code>BSL</code><br><code>OS</code></td>
+<td><code>Critical</code></td>
+<td><code>Yes</code></td>
+<td><code>5</code></td>
+<td><code>unpredictable</code><br><code>standard</code></td>
 </tr>
 </tbody>
 </table>
 <!-- Блоки выше заполняются автоматически, не трогать -->
 
 <h2 id="description">Description<a class="headerlink" href="#description" title="Permanent link">Link</a></h2>
+<p>When working with external resources using the objects WSDefinitions, WSProxy, HTTPConnection, FTPConnection, InternetMailProfile, a timeout should be set - the time limit for the operation to be completed. Otherwise, as a result of endless waiting, the program will freeze or some of the functionality of the program will become unavailable.</p>
+<p>Setting a timeout protects against external factors:</p>
+<ul>
+<li>unstable Internet connection, when the connection is interrupted regularly, and the system cannot receive a complete response from the server to which the connection is made;</li>
+<li>when anti-virus programs are enabled or if the firewall settings are incorrect;</li>
+<li>incorrect proxy-server settings;</li>
+<li>unreliable operation of the web server due to increased load or incorrect operation of scripts.</li>
+</ul>
 <h2 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link">Link</a></h2>
 <p>Incorrect:</p>
 <div class="codehilite"><pre><span></span><span class="nv">HTTPConnection</span> <span class="o">=</span> <span class="k">New</span> <span class="nv">HTTPConnection</span><span class="p">(</span><span class="s1">&quot;zabbix.localhost&quot;</span><span class="p">,</span> <span class="m">80</span><span class="p">);</span>
 </pre></div>
 
 
-<p>или</p>
+<p>or</p>
 <div class="codehilite"><pre><span></span><span class="nv">FTPConnection</span> <span class="o">=</span> <span class="k">New</span> <span class="nv">FTPConnection</span><span class="p">(</span><span class="nv">Server</span><span class="p">,</span> <span class="nv">Port</span><span class="p">,</span> <span class="nv">Login</span><span class="p">,</span> <span class="nv">Password</span><span class="p">,</span> <span class="nv">Proxy</span><span class="p">,</span> <span class="nv">PassiveMode</span><span class="p">);</span>
 </pre></div>
 
@@ -407,15 +415,15 @@
 </pre></div>
 
 
-<p>или</p>
+<p>or</p>
 <div class="codehilite"><pre><span></span><span class="nv">HTTPConnection</span> <span class="o">=</span> <span class="k">New</span> <span class="nv">HTTPConnection</span><span class="p">(</span><span class="s1">&quot;zabbix.localhost&quot;</span><span class="p">,</span> <span class="m">80</span><span class="p">);</span>
 <span class="nv">HTTPConnection</span><span class="o">.</span><span class="nv">Timeout</span> <span class="o">=</span> <span class="m">1</span><span class="p">;</span>
 </pre></div>
 
 
-<h2 id="sources">Sources<a class="headerlink" href="#sources" title="Permanent link">Link</a></h2>
+<h2 id="reference">Reference<a class="headerlink" href="#reference" title="Permanent link">Link</a></h2>
 <ul>
-<li><a href="https://its.1c.ru/db/v8std#content:748:hdoc">Таймауты при работе с внешними ресурсами</a></li>
+<li><a href="https://its.1c.ru/db/v8std#content:748:hdoc">Timeouts when working with external resources</a></li>
 </ul>
                 
                   
