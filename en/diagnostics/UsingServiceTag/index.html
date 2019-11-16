@@ -332,6 +332,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#description" class="md-nav__link">
+    Description
+  </a>
+  
+</li>
+      
       
       
       
@@ -352,6 +359,50 @@
                 
                 
                 <h1 id="using-service-tags">Using service tags<a class="headerlink" href="#using-service-tags" title="Permanent link">Link</a></h1>
+<table>
+<thead>
+<tr>
+<th align="center">Type</th>
+<th align="center">Scope</th>
+<th align="center">Severity</th>
+<th align="center">Activated<br/>by default</th>
+<th align="center">Minutes<br/>to fix</th>
+<th align="center">Tags</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><code>Code smell</code></td>
+<td align="center"><code>BSL</code><br/><code>OS</code></td>
+<td align="center"><code>Info</code></td>
+<td align="center"><code>Yes</code></td>
+<td align="center"><code>0</code></td>
+<td align="center"><code>badpractice</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="parameters">Parameters<a class="headerlink" href="#parameters" title="Permanent link">Link</a></h2>
+<table>
+<thead>
+<tr>
+<th align="center">Name</th>
+<th align="center">Type</th>
+<th align="left">Description</th>
+<th align="center">Default value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><code>serviceTags</code></td>
+<td align="center"><code>String</code></td>
+<td align="left">Служебные теги</td>
+<td align="center"><code>"todo|fixme|!!|mrg|@|отладка|debug|для\\s*отладки|(\\{\\{|\\}\\})КОНСТРУКТОР_|(\\{\\{|\\}\\})MRG"</code></td>
+</tr>
+</tbody>
+</table>
+<!-- Блоки выше заполняются автоматически, не трогать -->
+
+<h2 id="description">Description<a class="headerlink" href="#description" title="Permanent link">Link</a></h2>
 <p>The diagnostic finds use of service tags in comments. Tags list:</p>
 <ul>
 <li>TODO</li>
@@ -367,10 +418,6 @@
 <li>КОНСТРУКТОР_ВВОДА_НА_ОСНОВАНИИ</li>
 </ul>
 <p>Tags list can be extended via options.</p>
-<h2 id="parameters">Parameters<a class="headerlink" href="#parameters" title="Permanent link">Link</a></h2>
-<ul>
-<li><code>serviceTags</code> - <code>String</code> - keyword for search. Bu default : "todo|fixme|!!|mrg|@|отладка|debug|для\s*отладки|({{|}})КОНСТРУКТОР_|({{|}})MRG".</li>
-</ul>
                 
                   
                 

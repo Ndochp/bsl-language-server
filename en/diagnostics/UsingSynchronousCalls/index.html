@@ -326,8 +326,28 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    Ограничение диагностики
+  <a href="#description" class="md-nav__link">
+    Description
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagnostic-restrictions" class="md-nav__link">
+    Diagnostic restrictions
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sources" class="md-nav__link">
+    Sources
   </a>
   
 </li>
@@ -352,127 +372,152 @@
                 
                 
                 <h1 id="using-synchronous-calls">Using synchronous calls<a class="headerlink" href="#using-synchronous-calls" title="Permanent link">Link</a></h1>
-<p>При разработке конфигураций, предназначенных для работы в веб-клиенте, запрещено использовать модальные формы и диалоги и синхронные вызовы. В противном случае, конфигурация окажется неработоспособной в ряде веб-браузеров, так как модальные окна не входят в стандарт веб-разработки, а для обеспечения взаимодействия с пользователем требуются асинхронные средства.</p>
-<p>Источник: <a href="https://its.1c.ru/db/v8std/content/703/hdoc/">Ограничение на использование модальных окон и синхронных вызовов</a></p>
-<p>Полезная информаця:</p>
-<ul>
-<li><a href="https://its.1c.ru/db/metod8dev#content:5272:hdoc">Отказ от использования модальных окон</a></li>
-<li><a href="https://its.1c.ru/db/v838doc#bookmark:dev:TI000000438">Соответствие синхронных методов асинхронным аналогам</a></li>
-<li><a href="http://v8.1c.ru/o7/201412async/index.htm">Асинхронные вызовы расширений и внешних компонентов</a></li>
-</ul>
-<h2 id="_1">Ограничение диагностики<a class="headerlink" href="#_1" title="Permanent link">Link</a></h2>
-<p>На данный момент диагностируется <strong>только использование методов глобального контекста</strong>.</p>
-<p>Список методов:</p>
 <table>
 <thead>
 <tr>
-<th align="left">Метод</th>
-<th align="left">Английский вариант</th>
+<th>Type</th>
+<th>Scope</th>
+<th>Severity</th>
+<th>Activated<br>by default</th>
+<th>Minutes<br>to fix</th>
+<th>Tags</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="left">ВОПРОС</td>
-<td align="left">DOQUERYBOX</td>
-</tr>
-<tr>
-<td align="left">ОТКРЫТЬФОРМУМОДАЛЬНО</td>
-<td align="left">OPENFORMMODAL</td>
-</tr>
-<tr>
-<td align="left">ОТКРЫТЬЗНАЧЕНИЕ</td>
-<td align="left">OPENVALUE</td>
-</tr>
-<tr>
-<td align="left">ПРЕДУПРЕЖДЕНИЕ</td>
-<td align="left">DOMESSAGEBOX</td>
-</tr>
-<tr>
-<td align="left">ВВЕСТИДАТУ</td>
-<td align="left">INPUTDATE</td>
-</tr>
-<tr>
-<td align="left">ВВЕСТИЗНАЧЕНИЕ</td>
-<td align="left">INPUTVALUE</td>
-</tr>
-<tr>
-<td align="left">ВВЕСТИСТРОКУ</td>
-<td align="left">INPUTSTRING</td>
-</tr>
-<tr>
-<td align="left">ВВЕСТИЧИСЛО</td>
-<td align="left">INPUTNUMBER</td>
-</tr>
-<tr>
-<td align="left">УСТАНОВИТЬВНЕШНЮЮКОМПОНЕНТУ</td>
-<td align="left">INSTALLADDIN</td>
-</tr>
-<tr>
-<td align="left">УСТАНОВИТЬРАСШИРЕНИЕРАБОТЫСФАЙЛАМИ</td>
-<td align="left">INSTALLFILESYSTEMEXTENSION</td>
-</tr>
-<tr>
-<td align="left">УСТАНОВИТЬРАСШИРЕНИЕРАБОТЫСКРИПТОГРАФИЕЙ</td>
-<td align="left">INSTALLCRYPTOEXTENSION</td>
-</tr>
-<tr>
-<td align="left">ПОДКЛЮЧИТЬРАСШИРЕНИЕРАБОТЫСКРИПТОГРАФИЕЙ</td>
-<td align="left">ATTACHCRYPTOEXTENSION</td>
-</tr>
-<tr>
-<td align="left">ПОДКЛЮЧИТЬРАСШИРЕНИЕРАБОТЫСФАЙЛАМИ</td>
-<td align="left">ATTACHFILESYSTEMEXTENSION</td>
-</tr>
-<tr>
-<td align="left">ПОМЕСТИТЬФАЙЛ</td>
-<td align="left">PUTFILE</td>
-</tr>
-<tr>
-<td align="left">КОПИРОВАТЬФАЙЛ</td>
-<td align="left">FILECOPY</td>
-</tr>
-<tr>
-<td align="left">ПЕРЕМЕСТИТЬФАЙЛ</td>
-<td align="left">MOVEFILE</td>
-</tr>
-<tr>
-<td align="left">НАЙТИФАЙЛЫ</td>
-<td align="left">FINDFILES</td>
-</tr>
-<tr>
-<td align="left">УДАЛИТЬФАЙЛЫ</td>
-<td align="left">DELETEFILES</td>
-</tr>
-<tr>
-<td align="left">СОЗДАТЬКАТАЛОГ</td>
-<td align="left">CREATEDIRECTORY</td>
-</tr>
-<tr>
-<td align="left">КАТАЛОГВРЕМЕННЫХФАЙЛОВ</td>
-<td align="left">TEMPFILESDIR</td>
-</tr>
-<tr>
-<td align="left">КАТАЛОГДОКУМЕНТОВ</td>
-<td align="left">DOCUMENTSDIR</td>
-</tr>
-<tr>
-<td align="left">РАБОЧИЙКАТАЛОГДАННЫХПОЛЬЗОВАТЕЛЯ</td>
-<td align="left">USERDATAWORKDIR</td>
-</tr>
-<tr>
-<td align="left">ПОЛУЧИТЬФАЙЛЫ</td>
-<td align="left">GETFILES</td>
-</tr>
-<tr>
-<td align="left">ЗАПРОСИТЬРАЗРЕШЕНИЕПОЛЬЗОВАТЕЛЯ</td>
-<td align="left">REQUESTUSERPERMISSION</td>
-</tr>
-<tr>
-<td align="left">ЗАПУСТИТЬПРИЛОЖЕНИЕ</td>
-<td align="left">RUNAPP</td>
+<td><code>Code smell</code></td>
+<td><code>BSL</code></td>
+<td><code>Major</code></td>
+<td><code>No</code></td>
+<td><code>15</code></td>
+<td><code>standard</code></td>
 </tr>
 </tbody>
 </table>
+<!-- Блоки выше заполняются автоматически, не трогать -->
+
+<h2 id="description">Description<a class="headerlink" href="#description" title="Permanent link">Link</a></h2>
+<p>When developing configurations designed to work in the web client, it is forbidden to use modal forms and dialogs and synchronous calls. Otherwise, the configuration will be inoperative in a number of web browsers, since modal windows are not part of the web development standard, and asynchronous tools are required to ensure user interaction.</p>
+<h3 id="diagnostic-restrictions">Diagnostic restrictions<a class="headerlink" href="#diagnostic-restrictions" title="Permanent link">Link</a></h3>
+<p>Currently, <strong>only the use of global context methods</strong> is diagnosed.</p>
+<p>Method list:</p>
+<table>
+<thead>
+<tr>
+<th>Rusian variant</th>
+<th>English variant</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ВОПРОС</td>
+<td>DOQUERYBOX</td>
+</tr>
+<tr>
+<td>ОТКРЫТЬФОРМУМОДАЛЬНО</td>
+<td>OPENFORMMODAL</td>
+</tr>
+<tr>
+<td>ОТКРЫТЬЗНАЧЕНИЕ</td>
+<td>OPENVALUE</td>
+</tr>
+<tr>
+<td>ПРЕДУПРЕЖДЕНИЕ</td>
+<td>DOMESSAGEBOX</td>
+</tr>
+<tr>
+<td>ВВЕСТИДАТУ</td>
+<td>INPUTDATE</td>
+</tr>
+<tr>
+<td>ВВЕСТИЗНАЧЕНИЕ</td>
+<td>INPUTVALUE</td>
+</tr>
+<tr>
+<td>ВВЕСТИСТРОКУ</td>
+<td>INPUTSTRING</td>
+</tr>
+<tr>
+<td>ВВЕСТИЧИСЛО</td>
+<td>INPUTNUMBER</td>
+</tr>
+<tr>
+<td>УСТАНОВИТЬВНЕШНЮЮКОМПОНЕНТУ</td>
+<td>INSTALLADDIN</td>
+</tr>
+<tr>
+<td>УСТАНОВИТЬРАСШИРЕНИЕРАБОТЫСФАЙЛАМИ</td>
+<td>INSTALLFILESYSTEMEXTENSION</td>
+</tr>
+<tr>
+<td>УСТАНОВИТЬРАСШИРЕНИЕРАБОТЫСКРИПТОГРАФИЕЙ</td>
+<td>INSTALLCRYPTOEXTENSION</td>
+</tr>
+<tr>
+<td>ПОДКЛЮЧИТЬРАСШИРЕНИЕРАБОТЫСКРИПТОГРАФИЕЙ</td>
+<td>ATTACHCRYPTOEXTENSION</td>
+</tr>
+<tr>
+<td>ПОДКЛЮЧИТЬРАСШИРЕНИЕРАБОТЫСФАЙЛАМИ</td>
+<td>ATTACHFILESYSTEMEXTENSION</td>
+</tr>
+<tr>
+<td>ПОМЕСТИТЬФАЙЛ</td>
+<td>PUTFILE</td>
+</tr>
+<tr>
+<td>КОПИРОВАТЬФАЙЛ</td>
+<td>FILECOPY</td>
+</tr>
+<tr>
+<td>ПЕРЕМЕСТИТЬФАЙЛ</td>
+<td>MOVEFILE</td>
+</tr>
+<tr>
+<td>НАЙТИФАЙЛЫ</td>
+<td>FINDFILES</td>
+</tr>
+<tr>
+<td>УДАЛИТЬФАЙЛЫ</td>
+<td>DELETEFILES</td>
+</tr>
+<tr>
+<td>СОЗДАТЬКАТАЛОГ</td>
+<td>CREATEDIRECTORY</td>
+</tr>
+<tr>
+<td>КАТАЛОГВРЕМЕННЫХФАЙЛОВ</td>
+<td>TEMPFILESDIR</td>
+</tr>
+<tr>
+<td>КАТАЛОГДОКУМЕНТОВ</td>
+<td>DOCUMENTSDIR</td>
+</tr>
+<tr>
+<td>РАБОЧИЙКАТАЛОГДАННЫХПОЛЬЗОВАТЕЛЯ</td>
+<td>USERDATAWORKDIR</td>
+</tr>
+<tr>
+<td>ПОЛУЧИТЬФАЙЛЫ</td>
+<td>GETFILES</td>
+</tr>
+<tr>
+<td>ЗАПРОСИТЬРАЗРЕШЕНИЕПОЛЬЗОВАТЕЛЯ</td>
+<td>REQUESTUSERPERMISSION</td>
+</tr>
+<tr>
+<td>ЗАПУСТИТЬПРИЛОЖЕНИЕ</td>
+<td>RUNAPP</td>
+</tr>
+</tbody>
+</table>
+<h2 id="sources">Sources<a class="headerlink" href="#sources" title="Permanent link">Link</a></h2>
+<ul>
+<li><a href="https://its.1c.ru/db/v8std/content/703/hdoc/">Ограничение на использование модальных окон и синхронных вызовов</a></li>
+<li><a href="https://its.1c.ru/db/metod8dev#content:5272:hdoc">Opt out of modal windows (RU)</a></li>
+<li><a href="https://its.1c.ru/db/v838doc#bookmark:dev:TI000000438">Correspondence of synchronous methods to asynchronous analogues (RU)</a></li>
+<li><a href="http://v8.1c.ru/o7/201412async/index.htm">Asynchronous calls to extensions and external components (RU)</a></li>
+</ul>
                 
                   
                 

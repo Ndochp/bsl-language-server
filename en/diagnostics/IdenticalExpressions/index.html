@@ -38,7 +38,7 @@
     
     
       
-        <title>There are identical sub-expressions to the left and to the right of the 'foo' operator - BSL Language Server</title>
+        <title>There are identical sub-expressions to the left and to the right of the "foo" operator - BSL Language Server</title>
       
     
     
@@ -140,7 +140,7 @@
             </span>
             <span class="md-header-nav__topic">
               
-                There are identical sub-expressions to the left and to the right of the 'foo' operator
+                There are identical sub-expressions to the left and to the right of the "foo" operator
               
             </span>
           
@@ -322,6 +322,22 @@
     
   
   
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#description" class="md-nav__link">
+    Description
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -335,7 +351,32 @@
                   <a href="https://github.com/1c-syntax/bsl-language-server/edit/develop/docs/en/diagnostics/IdenticalExpressions.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                <h1 id="there-are-identical-sub-expressions-to-the-left-and-to-the-right-of-the-foo-operator">There are identical sub-expressions to the left and to the right of the 'foo' operator<a class="headerlink" href="#there-are-identical-sub-expressions-to-the-left-and-to-the-right-of-the-foo-operator" title="Permanent link">Link</a></h1>
+                <h1 id="there-are-identical-sub-expressions-to-the-left-and-to-the-right-of-the-foo-operator">There are identical sub-expressions to the left and to the right of the "foo" operator<a class="headerlink" href="#there-are-identical-sub-expressions-to-the-left-and-to-the-right-of-the-foo-operator" title="Permanent link">Link</a></h1>
+<table>
+<thead>
+<tr>
+<th align="center">Type</th>
+<th align="center">Scope</th>
+<th align="center">Severity</th>
+<th align="center">Activated<br/>by default</th>
+<th align="center">Minutes<br/>to fix</th>
+<th align="center">Tags</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><code>Error</code></td>
+<td align="center"><code>BSL</code><br/><code>OS</code></td>
+<td align="center"><code>Major</code></td>
+<td align="center"><code>Yes</code></td>
+<td align="center"><code>5</code></td>
+<td align="center"><code>suspicious</code></td>
+</tr>
+</tbody>
+</table>
+<!-- Блоки выше заполняются автоматически, не трогать -->
+
+<h2 id="description">Description<a class="headerlink" href="#description" title="Permanent link">Link</a></h2>
 <p>The analyzer found a code fragment that most probably has a logic error. There is an operator (, &lt;=, &gt;=, =, &lt;&gt;, AND, OR, -, /) in the program text to the left and to the right of which there are identical subexpressions.</p>
 <p>Consider an example:</p>
 <div class="codehilite"><pre><span></span><span class="nv">If</span> <span class="nv">Summ</span> <span class="o">&lt;&gt;</span> <span class="m">0</span> <span class="k">AND</span> <span class="nv">Summ</span> <span class="o">&lt;&gt;</span> <span class="m">0</span> <span class="k">Then</span>

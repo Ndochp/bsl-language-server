@@ -332,6 +332,20 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    Описание диагностики
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    Примеры
+  </a>
+  
+</li>
+      
       
       
       
@@ -352,7 +366,52 @@
                 
                 
                 <h1 id="_1">Использование сложных выражений в условии оператора "Если"<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<table>
+<thead>
+<tr>
+<th align="center">Тип</th>
+<th align="center">Поддерживаются<br/>языки</th>
+<th align="center">Важность</th>
+<th align="center">Включена<br/>по умолчанию</th>
+<th align="center">Время на<br/>исправление (мин)</th>
+<th align="center">Тэги</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><code>Дефект кода</code></td>
+<td align="center"><code>BSL</code><br/><code>OS</code></td>
+<td align="center"><code>Незначительный</code></td>
+<td align="center"><code>Да</code></td>
+<td align="center"><code>5</code></td>
+<td align="center"><code>brainoverload</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="_2">Параметры<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th align="center">Имя</th>
+<th align="center">Тип</th>
+<th align="left">Описание</th>
+<th align="center">Значение по умолчанию</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><code>maxIfConditionComplexity</code></td>
+<td align="center"><code>Число</code></td>
+<td align="left">Допустимое количество логических конструкций в условии оператора Если</td>
+<td align="center"><code>3</code></td>
+</tr>
+</tbody>
+</table>
+<!-- Блоки выше заполняются автоматически, не трогать -->
+
+<h2 id="_3">Описание диагностики<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
 <p>Сложное выражение (содержащее более 3 логических конструкции) необходимо вынести в отдельный метод или переменную.</p>
+<h2 id="_4">Примеры<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
 <p>Плохо:</p>
 <div class="codehilite"><pre><span></span><span class="k">Если</span> <span class="nv">ИдентификаторОбъекта</span> <span class="o">=</span> <span class="s1">&quot;АнализСубконто&quot;</span>
     <span class="k">ИЛИ</span> <span class="nv">ИдентификаторОбъекта</span> <span class="o">=</span> <span class="s1">&quot;АнализСчета&quot;</span>
@@ -403,12 +462,6 @@
 
 <span class="k">КонецФункции</span>
 </pre></div>
-
-
-<h2 id="_2">Параметры<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
-<ul>
-<li><code>maxIfConditionComplexity</code> - <code>Число</code> - Допустимое число логических конструкций в условии оператора "Если". По умолчанию - 3.</li>
-</ul>
                 
                   
                 

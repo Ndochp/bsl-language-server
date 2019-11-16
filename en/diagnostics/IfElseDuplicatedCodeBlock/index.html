@@ -322,6 +322,29 @@
     
   
   
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#description" class="md-nav__link">
+    Description
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#examples" class="md-nav__link">
+    Examples
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -336,8 +359,33 @@
                 
                 
                 <h1 id="duplicated-code-blocks-in-ifthenelseif-statements">Duplicated code blocks in If...Then...ElseIf... statements<a class="headerlink" href="#duplicated-code-blocks-in-ifthenelseif-statements" title="Permanent link">Link</a></h1>
+<table>
+<thead>
+<tr>
+<th align="center">Type</th>
+<th align="center">Scope</th>
+<th align="center">Severity</th>
+<th align="center">Activated<br/>by default</th>
+<th align="center">Minutes<br/>to fix</th>
+<th align="center">Tags</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><code>Code smell</code></td>
+<td align="center"><code>BSL</code><br/><code>OS</code></td>
+<td align="center"><code>Minor</code></td>
+<td align="center"><code>Yes</code></td>
+<td align="center"><code>10</code></td>
+<td align="center"><code>suspicious</code></td>
+</tr>
+</tbody>
+</table>
+<!-- Блоки выше заполняются автоматически, не трогать -->
+
+<h2 id="description">Description<a class="headerlink" href="#description" title="Permanent link">Link</a></h2>
 <p><strong>If...Then...ElseIf...</strong> statement should not have duplicated code blocks.</p>
-<p>Example:</p>
+<h2 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link">Link</a></h2>
 <div class="codehilite"><pre><span></span><span class="nv">If</span> <span class="nv">p</span> <span class="o">=</span> <span class="m">0</span> <span class="k">Then</span>
     <span class="nv">t</span> <span class="o">=</span> <span class="m">0</span><span class="p">;</span>
 <span class="nv">ElseIf</span> <span class="nv">p</span> <span class="o">=</span> <span class="m">1</span> <span class="k">Then</span>

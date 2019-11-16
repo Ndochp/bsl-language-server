@@ -322,6 +322,36 @@
     
   
   
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#description" class="md-nav__link">
+    Description
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#examples" class="md-nav__link">
+    Examples
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sources" class="md-nav__link">
+    Sources
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -336,9 +366,34 @@
                 
                 
                 <h1 id="deleting-an-item-when-iterating-through-collection-using-the-operator-for-each-in-do">Deleting an item when iterating through collection using the operator "For each ... In ... Do"<a class="headerlink" href="#deleting-an-item-when-iterating-through-collection-using-the-operator-for-each-in-do" title="Permanent link">Link</a></h1>
+<table>
+<thead>
+<tr>
+<th align="center">Type</th>
+<th align="center">Scope</th>
+<th align="center">Severity</th>
+<th align="center">Activated<br/>by default</th>
+<th align="center">Minutes<br/>to fix</th>
+<th align="center">Tags</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><code>Error</code></td>
+<td align="center"><code>BSL</code><br/><code>OS</code></td>
+<td align="center"><code>Major</code></td>
+<td align="center"><code>Yes</code></td>
+<td align="center"><code>5</code></td>
+<td align="center"><code>standard</code><br/><code>error</code></td>
+</tr>
+</tbody>
+</table>
+<!-- Блоки выше заполняются автоматически, не трогать -->
+
+<h2 id="description">Description<a class="headerlink" href="#description" title="Permanent link">Link</a></h2>
 <p>Don't delete elements of collection %s when iterating through collection using the 
 operator <strong>For each ... In ... Do</strong>. Because it change index of next element.</p>
-<p>Example:</p>
+<h2 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link">Link</a></h2>
 <div class="codehilite"><pre><span></span><span class="nv">For</span> <span class="k">each</span> <span class="nv">Element</span> <span class="nv">In</span> <span class="nv">Collection</span> <span class="k">Do</span>
    <span class="nv">Collection</span><span class="o">.</span><span class="nv">Delete</span><span class="p">(</span><span class="nv">Element</span><span class="p">)</span>
 <span class="k">EndDo</span><span class="p">;</span>
@@ -356,7 +411,10 @@ operator <strong>For each ... In ... Do</strong>. Because it change index of nex
 </pre></div>
 
 
-<p>Refference: <a href="https://its.1c.ru/db/pubprogforbeginners#content:88:hdoc">1С:Программирование для начинающих. Разработка в системе "1С:Предприятие 8.3" (RU)</a></p>
+<h2 id="sources">Sources<a class="headerlink" href="#sources" title="Permanent link">Link</a></h2>
+<ul>
+<li><a href="https://its.1c.ru/db/pubprogforbeginners#content:88:hdoc">1С:Программирование для начинающих. Разработка в системе "1С:Предприятие 8.3" (RU)</a></li>
+</ul>
                 
                   
                 

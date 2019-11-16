@@ -38,7 +38,7 @@
     
     
       
-        <title>Процедура не может возвращать значение - BSL Language Server</title>
+        <title>Процедура не должна возвращать значение - BSL Language Server</title>
       
     
     
@@ -140,7 +140,7 @@
             </span>
             <span class="md-header-nav__topic">
               
-                Процедура не может возвращать значение
+                Процедура не должна возвращать значение
               
             </span>
           
@@ -322,6 +322,22 @@
     
   
   
+    <label class="md-nav__title" for="__toc">Содержание</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    Описание диагностики
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -335,7 +351,32 @@
                   <a href="https://github.com/1c-syntax/bsl-language-server/edit/develop/docs/diagnostics/ProcedureReturnsValue.md" title="Редактировать страницу" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                <h1 id="_1">Процедура не может возвращать значение<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+                <h1 id="_1">Процедура не должна возвращать значение<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<table>
+<thead>
+<tr>
+<th align="center">Тип</th>
+<th align="center">Поддерживаются<br/>языки</th>
+<th align="center">Важность</th>
+<th align="center">Включена<br/>по умолчанию</th>
+<th align="center">Время на<br/>исправление (мин)</th>
+<th align="center">Тэги</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><code>Ошибка</code></td>
+<td align="center"><code>BSL</code><br/><code>OS</code></td>
+<td align="center"><code>Блокирующий</code></td>
+<td align="center"><code>Да</code></td>
+<td align="center"><code>5</code></td>
+<td align="center"><code>error</code></td>
+</tr>
+</tbody>
+</table>
+<!-- Блоки выше заполняются автоматически, не трогать -->
+
+<h2 id="_2">Описание диагностики<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <p>Диагностика отлавливает процедуры, где есть "Возврат" со значением.</p>
                 
                   

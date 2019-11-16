@@ -327,15 +327,36 @@
       
         <li class="md-nav__item">
   <a href="#_1" class="md-nav__link">
-    Основные параметры
+    Параметры
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    Описание диагностики
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    Примеры
   </a>
   
     <nav class="md-nav">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    Дополнительные параметры
+  <a href="#checkspacetorightofunary" class="md-nav__link">
+    Использование параметра checkSpaceToRightOfUnary
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#allowmultiplecommas" class="md-nav__link">
+    Использование параметра allowMultipleCommas
   </a>
   
 </li>
@@ -365,24 +386,77 @@
                 
                 
                 <h1 id="-lt-gt-ltgt-lt-gt">Пропущены пробелы слева или справа от операторов <code>+ - * / = % &lt; &gt; &lt;&gt; &lt;= &gt;=</code>, а так же справа от <code>,</code> и <code>;</code><a class="headerlink" href="#-lt-gt-ltgt-lt-gt" title="Permanent link">&para;</a></h1>
+<table>
+<thead>
+<tr>
+<th align="center">Тип</th>
+<th align="center">Поддерживаются<br/>языки</th>
+<th align="center">Важность</th>
+<th align="center">Включена<br/>по умолчанию</th>
+<th align="center">Время на<br/>исправление (мин)</th>
+<th align="center">Тэги</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><code>Дефект кода</code></td>
+<td align="center"><code>BSL</code><br/><code>OS</code></td>
+<td align="center"><code>Информационный</code></td>
+<td align="center"><code>Да</code></td>
+<td align="center"><code>1</code></td>
+<td align="center"><code>badpractice</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="_1">Параметры<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th align="center">Имя</th>
+<th align="center">Тип</th>
+<th align="left">Описание</th>
+<th align="center">Значение по умолчанию</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><code>listForCheckLeft</code></td>
+<td align="center"><code>Строка</code></td>
+<td align="left">Список символов для проверки слева (разделенные пробелом). Например: ) =</td>
+<td align="center"><code>""</code></td>
+</tr>
+<tr>
+<td align="center"><code>listForCheckRight</code></td>
+<td align="center"><code>Строка</code></td>
+<td align="left">Список символов для проверки справа (разделенные пробелом). Например: ( =</td>
+<td align="center"><code>", ;"</code></td>
+</tr>
+<tr>
+<td align="center"><code>listForCheckLeftAndRight</code></td>
+<td align="center"><code>Строка</code></td>
+<td align="left">Список символов для проверки с обоих сторон (разделенные пробелом). Например: + - * / = % &lt; &gt;</td>
+<td align="center"><code>"+ - * / = % &lt; &gt; &lt;&gt; &lt;= &gt;="</code></td>
+</tr>
+<tr>
+<td align="center"><code>checkSpaceToRightOfUnary</code></td>
+<td align="center"><code>Число</code></td>
+<td align="left">Проверять наличие пробела справа от унарных знаков (+ -)</td>
+<td align="center"><code>false</code></td>
+</tr>
+<tr>
+<td align="center"><code>allowMultipleCommas</code></td>
+<td align="center"><code>Число</code></td>
+<td align="left">Разрешать несколько запятых подряд</td>
+<td align="center"><code>false</code></td>
+</tr>
+</tbody>
+</table>
+<!-- Блоки выше заполняются автоматически, не трогать -->
+
+<h2 id="_2">Описание диагностики<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <p>Для улучшения читаемости кода слева и справа от операторов <code>+ - * / = % &lt; &gt; &lt;&gt; &lt;= &gt;=</code> должны быть пробелы.
-Так же пробел должен быть справа от <code>,</code> и <code>;</code>  </p>
-<h2 id="_1">Основные параметры<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
-<p>Символы (или группы символов) для проверки задаются тремя списками. Символы в списках необходимо разделять пробелами.</p>
-<ul>
-<li>
-<p><strong><code>listForCheckLeft</code></strong> - <code>Строка</code> - Символы  слева от которых нужно проверять пробел.
- Список по-умолчанию пустой.</p>
-</li>
-<li>
-<p><strong><code>listForCheckRight</code></strong> - <code>Строка</code> - Символы справа от которых нужно проверять пробел.
- Значение по-умолчанию <code>, ;</code></p>
-</li>
-<li>
-<p><strong><code>listForCheckLeftAndRight</code></strong> - <code>Строка</code> - Символы справа от которых нужно проверять пробел.
- Значение по-умолчанию <code>+ - * / = % &lt; &gt; &lt;&gt; &lt;= &gt;=</code></p>
-</li>
-</ul>
+Так же пробел должен быть справа от <code>,</code> и <code>;</code></p>
+<h2 id="_3">Примеры<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
 <p>Плохо</p>
 <div class="codehilite"><pre><span></span><span class="k">Процедура</span> <span class="nv">ВычислитьСумму</span><span class="p">(</span><span class="nv">Параметр1</span><span class="p">,</span><span class="nv">Параметр2</span><span class="p">)</span>
     <span class="k">Если</span> <span class="nv">Параметр1</span><span class="o">=</span><span class="nv">Параметр2</span> <span class="k">Тогда</span>
@@ -401,31 +475,32 @@
 </pre></div>
 
 
-<h3 id="_2">Дополнительные параметры<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
-<ul>
-<li>
-<p><strong><code>checkSpaceToRightOfUnary</code></strong> - <code>Булево</code> - Проверять пробел справа от унарного оператора (+ и -).
-Парметр имеет смысл, только если оператор присутствует в одном из трех основных параметров. Значение по-умолчанию <code>false</code></p>
-<p>При значении <code>false</code> 
-<code>bsl
-А = -Б;     // Хорошо
-А = - Б;    // Хорошо</code>
-При значении <code>true</code> 
-<code>bsl
-А = -Б;     // Плохо
-А = - Б;    // Хорошо</code>
-* <strong><code>allowMultipleCommas</code></strong> - <code>Булево</code> - Разрешить несколько запятых подряд.
-Парметр имеет смысл, только если <code>,</code> присутствует в одном из трех основных параметров. Значение по-умолчанию <code>false</code></p>
-<p>При значении <code>false</code> 
-<code>bsl
-ОбщегоНазначенияКлиентСервер.СообщитьПользователю(ТекстСообщения,,,, Отказ);        // Плохо
-ОбщегоНазначенияКлиентСервер.СообщитьПользователю(ТекстСообщения, , , , Отказ);     // Хорошо</code>
-При значении <code>true</code> 
-<code>bsl
-ОбщегоНазначенияКлиентСервер.СообщитьПользователю(ТекстСообщения,,,, Отказ);        // Хорошо
-ОбщегоНазначенияКлиентСервер.СообщитьПользователю(ТекстСообщения, , , , Отказ);     // Хорошо</code></p>
-</li>
-</ul>
+<h3 id="checkspacetorightofunary">Использование параметра <code>checkSpaceToRightOfUnary</code><a class="headerlink" href="#checkspacetorightofunary" title="Permanent link">&para;</a></h3>
+<p>Параметр имеет смысл, только если унарный оператор присутствует в одном из трех основных параметров.</p>
+<p>При значении <code>false</code> </p>
+<div class="codehilite"><pre><span></span><span class="nv">А</span> <span class="o">=</span> <span class="o">-</span><span class="nv">Б</span><span class="p">;</span>     <span class="c c-Singleline">// Хорошо</span>
+<span class="nv">А</span> <span class="o">=</span> <span class="o">-</span> <span class="nv">Б</span><span class="p">;</span>    <span class="c c-Singleline">// Хорошо</span>
+</pre></div>
+
+
+<p>При значении <code>true</code></p>
+<div class="codehilite"><pre><span></span><span class="nv">А</span> <span class="o">=</span> <span class="o">-</span><span class="nv">Б</span><span class="p">;</span>     <span class="c c-Singleline">// Плохо</span>
+<span class="nv">А</span> <span class="o">=</span> <span class="o">-</span> <span class="nv">Б</span><span class="p">;</span>    <span class="c c-Singleline">// Хорошо</span>
+</pre></div>
+
+
+<h3 id="allowmultiplecommas">Использование параметра <code>allowMultipleCommas</code><a class="headerlink" href="#allowmultiplecommas" title="Permanent link">&para;</a></h3>
+<p>Параметр имеет смысл, только если <code>,</code> присутствует в одном из трех основных параметров. Значение по-умолчанию <code>false</code></p>
+<p>При значении <code>false</code></p>
+<div class="codehilite"><pre><span></span>    <span class="nv">ОбщегоНазначенияКлиентСервер</span><span class="o">.</span><span class="nv">СообщитьПользователю</span><span class="p">(</span><span class="nv">ТекстСообщения</span><span class="p">,,,,</span> <span class="nv">Отказ</span><span class="p">);</span>        <span class="c c-Singleline">// Плохо</span>
+    <span class="nv">ОбщегоНазначенияКлиентСервер</span><span class="o">.</span><span class="nv">СообщитьПользователю</span><span class="p">(</span><span class="nv">ТекстСообщения</span><span class="p">,</span> <span class="p">,</span> <span class="p">,</span> <span class="p">,</span> <span class="nv">Отказ</span><span class="p">);</span>     <span class="c c-Singleline">// Хорошо</span>
+</pre></div>
+
+
+<p>При значении <code>true</code></p>
+<div class="codehilite"><pre><span></span>    <span class="nv">ОбщегоНазначенияКлиентСервер</span><span class="o">.</span><span class="nv">СообщитьПользователю</span><span class="p">(</span><span class="nv">ТекстСообщения</span><span class="p">,,,,</span> <span class="nv">Отказ</span><span class="p">);</span>        <span class="c c-Singleline">// Хорошо</span>
+    <span class="nv">ОбщегоНазначенияКлиентСервер</span><span class="o">.</span><span class="nv">СообщитьПользователю</span><span class="p">(</span><span class="nv">ТекстСообщения</span><span class="p">,</span> <span class="p">,</span> <span class="p">,</span> <span class="p">,</span> <span class="nv">Отказ</span><span class="p">);</span>     <span class="c c-Singleline">// Хорошо</span>
+</pre></div>
                 
                   
                 

@@ -322,6 +322,29 @@
     
   
   
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#description" class="md-nav__link">
+    Description
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sources" class="md-nav__link">
+    Sources
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -336,7 +359,33 @@
                 
                 
                 <h1 id="commas-without-a-parameter-at-the-end-of-a-method-call">Commas without a parameter at the end of a method call<a class="headerlink" href="#commas-without-a-parameter-at-the-end-of-a-method-call" title="Permanent link">Link</a></h1>
-<p>Do not include a comma at the end of a method call without specifying a parameter. It is difficult to understand and does not carry important information.</p>
+<table>
+<thead>
+<tr>
+<th align="center">Type</th>
+<th align="center">Scope</th>
+<th align="center">Severity</th>
+<th align="center">Activated<br/>by default</th>
+<th align="center">Minutes<br/>to fix</th>
+<th align="center">Tags</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><code>Code smell</code></td>
+<td align="center"><code>BSL</code><br/><code>OS</code></td>
+<td align="center"><code>Major</code></td>
+<td align="center"><code>Yes</code></td>
+<td align="center"><code>1</code></td>
+<td align="center"><code>standard</code><br/><code>badpractice</code></td>
+</tr>
+</tbody>
+</table>
+<!-- Блоки выше заполняются автоматически, не трогать -->
+
+<h2 id="description">Description<a class="headerlink" href="#description" title="Permanent link">Link</a></h2>
+<p>Do not include a comma at the end of a method call without specifying a parameter. It is difficult to understand and does not carry important information.<br />
+Not required parameters under the principle of Occam's Razor "Do not multiply entities without need", since the "hanging" comma is not very informative.</p>
 <p>Bad:</p>
 <div class="codehilite"><pre><span></span><span class="nv">Result</span> <span class="o">=</span> <span class="nv">Action</span> <span class="p">(</span><span class="nv">P1</span><span class="p">,</span> <span class="nv">P2</span> <span class="p">,,);</span>
 </pre></div>
@@ -347,9 +396,10 @@
 </pre></div>
 
 
-<p>Base:
-Required parameters fall under the recommendation of <a href="https://its.1c.ru/db/v8std#content:640:hdoc">"Code-writing conventions. Parameters of procedures and functions. Item 7"</a>.
-Not required parameters under the principle of Occam's Razor "Do not multiply entities without need", since the "hanging" comma is not very informative.</p>
+<h2 id="sources">Sources<a class="headerlink" href="#sources" title="Permanent link">Link</a></h2>
+<ul>
+<li><a href="https://its.1c.ru/db/v8std#content:640:hdoc">"Code-writing conventions. Parameters of procedures and functions. Item 7"</a></li>
+</ul>
                 
                   
                 

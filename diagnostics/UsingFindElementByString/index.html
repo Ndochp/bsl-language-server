@@ -38,7 +38,7 @@
     
     
       
-        <title>Использование НайтиПоНаименованию и НайтиПоКоду - BSL Language Server</title>
+        <title>Использование методов "НайтиПоНаименованию" и "НайтиПоКоду" - BSL Language Server</title>
       
     
     
@@ -140,7 +140,7 @@
             </span>
             <span class="md-header-nav__topic">
               
-                Использование НайтиПоНаименованию и НайтиПоКоду
+                Использование методов "НайтиПоНаименованию" и "НайтиПоКоду"
               
             </span>
           
@@ -322,6 +322,29 @@
     
   
   
+    <label class="md-nav__title" for="__toc">Содержание</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    Описание диагностики
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    Примеры
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -335,14 +358,34 @@
                   <a href="https://github.com/1c-syntax/bsl-language-server/edit/develop/docs/diagnostics/UsingFindElementByString.md" title="Редактировать страницу" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                <h1 id="_1">Использование НайтиПоНаименованию и НайтиПоКоду<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
-<ul>
-<li><strong>Применимость:</strong> BSL (только для BSL)</li>
-<li><strong>Тип:</strong> CODE_SMELL (дефект кода)</li>
-<li><strong>Серьезность:</strong> MAJOR (важная)</li>
-</ul>
+                <h1 id="_1">Использование методов "НайтиПоНаименованию" и "НайтиПоКоду"<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<table>
+<thead>
+<tr>
+<th align="center">Тип</th>
+<th align="center">Поддерживаются<br/>языки</th>
+<th align="center">Важность</th>
+<th align="center">Включена<br/>по умолчанию</th>
+<th align="center">Время на<br/>исправление (мин)</th>
+<th align="center">Тэги</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><code>Дефект кода</code></td>
+<td align="center"><code>BSL</code></td>
+<td align="center"><code>Важный</code></td>
+<td align="center"><code>Да</code></td>
+<td align="center"><code>2</code></td>
+<td align="center"><code>standard</code><br/><code>badpractice</code><br/><code>performance</code></td>
+</tr>
+</tbody>
+</table>
+<!-- Блоки выше заполняются автоматически, не трогать -->
+
+<h2 id="_2">Описание диагностики<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <p>Диагностика отлавливает использование методов "НайтиПоНаименованию" или "НайтиПоКоду", используюя "хардкод".</p>
-<p>Например:</p>
+<h2 id="_3">Примеры<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
 <div class="codehilite"><pre><span></span><span class="nv">Должность</span> <span class="o">=</span> <span class="nb">Справочники</span><span class="o">.</span><span class="nv">Должности</span><span class="o">.</span><span class="nv">НайтиПоНаименованию</span><span class="p">(</span><span class="s1">&quot;Ведущий бухгалтер&quot;</span><span class="p">);</span>
 </pre></div>
 

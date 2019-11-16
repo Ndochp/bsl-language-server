@@ -332,6 +332,20 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#description" class="md-nav__link">
+    Description
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sources" class="md-nav__link">
+    Sources
+  </a>
+  
+</li>
+      
       
       
       
@@ -352,6 +366,50 @@
                 
                 
                 <h1 id="missing-code-in-raise-block-in-try-raise-endtry">Missing code in Raise block in "Try ... Raise ... EndTry"<a class="headerlink" href="#missing-code-in-raise-block-in-try-raise-endtry" title="Permanent link">Link</a></h1>
+<table>
+<thead>
+<tr>
+<th align="center">Type</th>
+<th align="center">Scope</th>
+<th align="center">Severity</th>
+<th align="center">Activated<br/>by default</th>
+<th align="center">Minutes<br/>to fix</th>
+<th align="center">Tags</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><code>Error</code></td>
+<td align="center"><code>BSL</code><br/><code>OS</code></td>
+<td align="center"><code>Major</code></td>
+<td align="center"><code>Yes</code></td>
+<td align="center"><code>15</code></td>
+<td align="center"><code>standard</code><br/><code>badpractice</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="parameters">Parameters<a class="headerlink" href="#parameters" title="Permanent link">Link</a></h2>
+<table>
+<thead>
+<tr>
+<th align="center">Name</th>
+<th align="center">Type</th>
+<th align="left">Description</th>
+<th align="center">Default value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><code>commentAsCode</code></td>
+<td align="center"><code>boolean</code></td>
+<td align="left">Считать комментарий в исключении кодом</td>
+<td align="center"><code>false</code></td>
+</tr>
+</tbody>
+</table>
+<!-- Блоки выше заполняются автоматически, не трогать -->
+
+<h2 id="description">Description<a class="headerlink" href="#description" title="Permanent link">Link</a></h2>
 <p>It is unacceptable to catch any exceptions without a trace for the system administrator</p>
 <p><em>Wrong</em></p>
 <div class="codehilite"><pre><span></span><span class="k">Попытка</span> 
@@ -378,10 +436,9 @@
 </pre></div>
 
 
-<p>Source: <a href="https://its.1c.ru/db/v8std#content:499:hdoc">Catching Exceptions in Code (RU)</a></p>
-<h2 id="parameters">Parameters<a class="headerlink" href="#parameters" title="Permanent link">Link</a></h2>
+<h2 id="sources">Sources<a class="headerlink" href="#sources" title="Permanent link">Link</a></h2>
 <ul>
-<li><code>commentAsCode</code> - <code>Boolean</code> - Consider the comment in the exception as code</li>
+<li><a href="https://its.1c.ru/db/v8std#content:499:hdoc">Catching Exceptions in Code (RU)</a></li>
 </ul>
                 
                   

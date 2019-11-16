@@ -332,6 +332,27 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    Описание диагностики
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    Примеры
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    Источники
+  </a>
+  
+</li>
+      
       
       
       
@@ -352,16 +373,54 @@
                 
                 
                 <h1 id="_1">Отсутствует удаление временного файла после использования<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<table>
+<thead>
+<tr>
+<th align="center">Тип</th>
+<th align="center">Поддерживаются<br/>языки</th>
+<th align="center">Важность</th>
+<th align="center">Включена<br/>по умолчанию</th>
+<th align="center">Время на<br/>исправление (мин)</th>
+<th align="center">Тэги</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><code>Ошибка</code></td>
+<td align="center"><code>BSL</code><br/><code>OS</code></td>
+<td align="center"><code>Важный</code></td>
+<td align="center"><code>Да</code></td>
+<td align="center"><code>5</code></td>
+<td align="center"><code>badpractice</code><br/><code>standard</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="_2">Параметры<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th align="center">Имя</th>
+<th align="center">Тип</th>
+<th align="left">Описание</th>
+<th align="center">Значение по умолчанию</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><code>searchDeleteFileMethod</code></td>
+<td align="center"><code>Регулярное выражение</code></td>
+<td align="left">Ключевые слова поиска методов удаления / перемещения файлов</td>
+<td align="center"><code>"УдалитьФайлы|DeleteFiles|ПереместитьФайл|MoveFile"</code></td>
+</tr>
+</tbody>
+</table>
+<!-- Блоки выше заполняются автоматически, не трогать -->
+
+<h2 id="_3">Описание диагностики<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
 <p>После окончания работы с временным файлом или каталогом, его необходимо удалить самостоятельно. 
 Нельзя рассчитывать на автоматическое удаление файлов и каталогов при следующем запуске платформы, 
-это может привести к исчерпанию свободного места в каталоге временных файлов.
-С помощью параметра <code>searchDeleteFileMethod</code> можно расширять список методов для удаления / перемешения файлов.</p>
-<p>ИТС: <a href="https://its.1c.ru/db/v8std#content:542:hdoc">Доступ к файловой системе из кода конфигурации</a></p>
-<h2 id="_2">Параметры<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
-<ul>
-<li><code>searchDeleteFileMethod</code> - <code>Строка</code> - Ключевые слова поиска методов удаления/перемещения файлов. 
-По умолчанию <code>УдалитьФайлы|DeleteFiles|ПереместитьФайл|MoveFile</code>.</li>
-</ul>
+это может привести к исчерпанию свободного места в каталоге временных файлов.</p>
+<h2 id="_4">Примеры<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
 <p>Неправильно:</p>
 <div class="codehilite"><pre><span></span><span class="nv">ИмяПромежуточногоФайла</span> <span class="o">=</span> <span class="nb">ПолучитьИмяВременногоФайла</span><span class="p">(</span><span class="s1">&quot;xml&quot;</span><span class="p">);</span>
 <span class="nv">Данные</span><span class="o">.</span><span class="nv">Записать</span><span class="p">(</span><span class="nv">ИмяПромежуточногоФайла</span><span class="p">);</span>
@@ -383,6 +442,12 @@
    <span class="nb">ЗаписьЖурналаРегистрации</span><span class="p">(</span><span class="nb">НСтр</span><span class="p">(</span><span class="s1">&quot;ru = &#39;Мой механизм.Действие&#39;&quot;</span><span class="p">),</span> <span class="nv">УровеньЖурналаРегистрации</span><span class="o">.</span><span class="nv">Ошибка</span><span class="p">,</span> <span class="p">,</span> <span class="p">,</span> <span class="nb">ПодробноеПредставлениеОшибки</span><span class="p">(</span><span class="nb">ИнформацияОбОшибке</span><span class="p">()));</span>
 <span class="k">КонецПопытки</span><span class="p">;</span>
 </pre></div>
+
+
+<h2 id="_5">Источники<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://its.1c.ru/db/v8std#content:542:hdoc">Доступ к файловой системе из кода конфигурации</a></li>
+</ul>
                 
                   
                 

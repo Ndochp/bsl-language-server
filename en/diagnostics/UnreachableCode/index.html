@@ -326,6 +326,13 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#description" class="md-nav__link">
+    Description
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#examples" class="md-nav__link">
     Examples
   </a>
@@ -352,6 +359,31 @@
                 
                 
                 <h1 id="unreachable-code">Unreachable Code<a class="headerlink" href="#unreachable-code" title="Permanent link">Link</a></h1>
+<table>
+<thead>
+<tr>
+<th align="center">Type</th>
+<th align="center">Scope</th>
+<th align="center">Severity</th>
+<th align="center">Activated<br/>by default</th>
+<th align="center">Minutes<br/>to fix</th>
+<th align="center">Tags</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><code>Error</code></td>
+<td align="center"><code>BSL</code><br/><code>OS</code></td>
+<td align="center"><code>Minor</code></td>
+<td align="center"><code>Yes</code></td>
+<td align="center"><code>10</code></td>
+<td align="center"><code>design</code><br/><code>suspicious</code></td>
+</tr>
+</tbody>
+</table>
+<!-- Блоки выше заполняются автоматически, не трогать -->
+
+<h2 id="description">Description<a class="headerlink" href="#description" title="Permanent link">Link</a></h2>
 <p>Code located after operators "Return", "GoTo", "Raise", "Break", "Continue" never will be executed.</p>
 <p>Errors of unreachable code can be caused by developer carelessness when editing another's code.</p>
 <h2 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link">Link</a></h2>
@@ -371,7 +403,7 @@
     <span class="nv">If</span> <span class="nv">Error</span> <span class="k">Then</span>
         <span class="k">Raise</span> <span class="s1">&quot;Error occurred&quot;</span><span class="p">;</span>
         <span class="c c-Singleline">// After rise exception the code bellow will be ignored</span>
-        <span class="nv">Parameter1</span> <span class="o">=</span> <span class="nv">Parameter2</span><span class="p">;</span>        
+        <span class="nv">Parameter1</span> <span class="o">=</span> <span class="nv">Parameter2</span><span class="p">;</span>
     <span class="nv">EndIf</span><span class="p">;</span> 
     <span class="k">Return</span> <span class="nv">Parameter1</span><span class="p">;</span>
 <span class="k">EndFunction</span>

@@ -322,6 +322,22 @@
     
   
   
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#description" class="md-nav__link">
+    Description
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -336,11 +352,37 @@
                 
                 
                 <h1 id="goto-statement-should-not-be-used">"goto" statement should not be used<a class="headerlink" href="#goto-statement-should-not-be-used" title="Permanent link">Link</a></h1>
-<p><code>goto</code> is an unstructured control flow statement. It makes code less readable and maintainable.
+<table>
+<thead>
+<tr>
+<th align="center">Type</th>
+<th align="center">Scope</th>
+<th align="center">Severity</th>
+<th align="center">Activated<br/>by default</th>
+<th align="center">Minutes<br/>to fix</th>
+<th align="center">Tags</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><code>Code smell</code></td>
+<td align="center"><code>BSL</code><br/><code>OS</code></td>
+<td align="center"><code>Critical</code></td>
+<td align="center"><code>Yes</code></td>
+<td align="center"><code>5</code></td>
+<td align="center"><code>standard</code><br/><code>badpractice</code></td>
+</tr>
+</tbody>
+</table>
+<!-- Блоки выше заполняются автоматически, не трогать -->
+
+<h2 id="description">Description<a class="headerlink" href="#description" title="Permanent link">Link</a></h2>
+<p><code>goto</code> is an unstructured control flow statement. It makes code less readable and maintainable.<br />
 Structured control flow statements such as <code>if</code>, <code>for</code>, <code>while</code>, <code>continue</code> or <code>break</code>
  should be used instead.</p>
-<p>Bad
- ```bsl
+<p>## Examples</p>
+<p>Bad</p>
+<p>```bsl
  i = 0;
   ~loop: Message("i = " + i);
   i = i + 1;</p>

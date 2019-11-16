@@ -322,6 +322,36 @@
     
   
   
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#description" class="md-nav__link">
+    Description
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#examples" class="md-nav__link">
+    Examples
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sources" class="md-nav__link">
+    Sources
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -336,15 +366,41 @@
                 
                 
                 <h1 id="order-of-parameters-in-method">Order of Parameters in method<a class="headerlink" href="#order-of-parameters-in-method" title="Permanent link">Link</a></h1>
-<ol>
-<li>Optional parameters (parameters with default values) should follow mandatory parameters (the ones without default values).</li>
-</ol>
-<p>Example:</p>
+<table>
+<thead>
+<tr>
+<th align="center">Type</th>
+<th align="center">Scope</th>
+<th align="center">Severity</th>
+<th align="center">Activated<br/>by default</th>
+<th align="center">Minutes<br/>to fix</th>
+<th align="center">Tags</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><code>Code smell</code></td>
+<td align="center"><code>BSL</code><br/><code>OS</code></td>
+<td align="center"><code>Major</code></td>
+<td align="center"><code>Yes</code></td>
+<td align="center"><code>30</code></td>
+<td align="center"><code>standard</code><br/><code>design</code></td>
+</tr>
+</tbody>
+</table>
+<!-- Блоки выше заполняются автоматически, не трогать -->
+
+<h2 id="description">Description<a class="headerlink" href="#description" title="Permanent link">Link</a></h2>
+<p>Optional parameters (parameters with default values) should follow mandatory parameters (the ones without default values).</p>
+<h2 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link">Link</a></h2>
 <div class="codehilite"><pre><span></span><span class="k">Функция</span> <span class="nv">КурсВалютыНаДату</span><span class="p">(</span><span class="nv">Валюта</span><span class="p">,</span> <span class="nb">Дата</span> <span class="o">=</span> <span class="kc">Неопределено</span><span class="p">)</span> <span class="k">Экспорт</span>
 </pre></div>
 
 
-<p>Reference: <a href="https://its.1c.ru/db/v8std#content:640:hdoc">Standard: Parameters of procedures and functions (RU)</a></p>
+<h2 id="sources">Sources<a class="headerlink" href="#sources" title="Permanent link">Link</a></h2>
+<ul>
+<li><a href="https://its.1c.ru/db/v8std#content:640:hdoc">Standard: Parameters of procedures and functions (RU)</a></li>
+</ul>
                 
                   
                 

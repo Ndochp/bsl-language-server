@@ -322,6 +322,29 @@
     
   
   
+    <label class="md-nav__title" for="__toc">Содержание</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    Описание диагностики
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    Примеры
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -336,9 +359,35 @@
                 
                 
                 <h1 id="_1">Оператор "Перейти" не должен использоваться<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
-<p><code>goto</code> является неструктурированным оператором потока управления. Это делает код менее читаемым и обслуживаемым.
+<table>
+<thead>
+<tr>
+<th align="center">Тип</th>
+<th align="center">Поддерживаются<br/>языки</th>
+<th align="center">Важность</th>
+<th align="center">Включена<br/>по умолчанию</th>
+<th align="center">Время на<br/>исправление (мин)</th>
+<th align="center">Тэги</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><code>Дефект кода</code></td>
+<td align="center"><code>BSL</code><br/><code>OS</code></td>
+<td align="center"><code>Критичный</code></td>
+<td align="center"><code>Да</code></td>
+<td align="center"><code>5</code></td>
+<td align="center"><code>standard</code><br/><code>badpractice</code></td>
+</tr>
+</tbody>
+</table>
+<!-- Блоки выше заполняются автоматически, не трогать -->
+
+<h2 id="_2">Описание диагностики<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<p><code>goto</code> является неструктурированным оператором потока управления. Это делает код менее читаемым и обслуживаемым.<br />
 Вместо этого следует использовать структурированные операторы управления потоком, например
 <code>Если</code>, <code>Пока</code>, <code>Для</code> <code>Продолжить</code> или <code>Прервать</code>.</p>
+<h2 id="_3">Примеры<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
 <p>Плохо:</p>
 <div class="codehilite"><pre><span></span><span class="nv">Сч</span> <span class="o">=</span> <span class="m">0</span><span class="p">;</span>
 <span class="err">~</span><span class="nv">Петля</span><span class="p">:</span> <span class="nb">Сообщить</span><span class="p">(</span><span class="nb">СтрШаблон</span><span class="p">(</span><span class="s1">&quot;Сч = %1&quot;</span><span class="p">,</span> <span class="nv">Сч</span><span class="p">));</span>

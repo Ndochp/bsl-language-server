@@ -38,7 +38,7 @@
     
     
       
-        <title>Nested constructors with parameters in structure declaration - BSL Language Server</title>
+        <title>Using constructors with parameters when declaring a structure - BSL Language Server</title>
       
     
     
@@ -114,7 +114,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#nested-constructors-with-parameters-in-structure-declaration" tabindex="1" class="md-skip">
+      <a href="#using-constructors-with-parameters-when-declaring-a-structure" tabindex="1" class="md-skip">
         Skip to content
       </a>
     
@@ -140,7 +140,7 @@
             </span>
             <span class="md-header-nav__topic">
               
-                Nested constructors with parameters in structure declaration
+                Using constructors with parameters when declaring a structure
               
             </span>
           
@@ -322,6 +322,29 @@
     
   
   
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#description" class="md-nav__link">
+    Description
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#examples" class="md-nav__link">
+    Examples
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -335,8 +358,34 @@
                   <a href="https://github.com/1c-syntax/bsl-language-server/edit/develop/docs/en/diagnostics/NestedConstructorsInStructureDeclaration.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                <h1 id="nested-constructors-with-parameters-in-structure-declaration">Nested constructors with parameters in structure declaration<a class="headerlink" href="#nested-constructors-with-parameters-in-structure-declaration" title="Permanent link">Link</a></h1>
+                <h1 id="using-constructors-with-parameters-when-declaring-a-structure">Using constructors with parameters when declaring a structure<a class="headerlink" href="#using-constructors-with-parameters-when-declaring-a-structure" title="Permanent link">Link</a></h1>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Scope</th>
+<th>Severity</th>
+<th>Activated<br>by default</th>
+<th>Minutes<br>to fix</th>
+<th>Tags</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Code smell</code></td>
+<td><code>BSL</code><br><code>OS</code></td>
+<td><code>Minor</code></td>
+<td><code>Yes</code></td>
+<td><code>10</code></td>
+<td><code>badpractice</code><br><code>brainoverload</code></td>
+</tr>
+</tbody>
+</table>
+<!-- Блоки выше заполняются автоматически, не трогать -->
+
+<h2 id="description">Description<a class="headerlink" href="#description" title="Permanent link">Link</a></h2>
 <p>It is not recommended to use constructors of other objects in the structure constructor if these constructors accept parameters. In particular, in the constructor of one structure it is not recommended to create other structures with the declaration of property values.</p>
+<h2 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link">Link</a></h2>
 <p>Incorrect:</p>
 <div class="codehilite"><pre><span></span><span class="nv">НоменклатураСервер</span><span class="o">.</span><span class="nv">ЗаполнитьСлужебныеРеквизитыПоНоменклатуреВКоллекции</span><span class="p">(</span>
   <span class="nv">Объект</span><span class="o">.</span><span class="nv">Товары</span><span class="p">,</span>

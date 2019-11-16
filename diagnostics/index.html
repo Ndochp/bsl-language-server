@@ -394,11 +394,11 @@
 <p>Некоторые диагностики выключены по умолчанию. Для их включения используйте <a href="/#configuration">конфигурационный файл</a>.</p>
 <p>Для экранирования отдельных участков кода или файлов от срабатывания диагностик можно воспользоваться специальными комментариями вида <code>// BSLLS:КлючДиагностики-выкл</code>. Более подробно данная функциональность описана в <a href="../features/DiagnosticIgnorance/">Экранирование участков кода</a>.</p>
 <h2 id="_2">Список реализованных диагностик<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
-<p>Общее количество:<strong>57</strong></p>
+<p>Общее количество: <strong>63</strong></p>
 <ul>
-<li>Уязвимость: <strong>1</strong></li>
-<li>Ошибка: <strong>20</strong></li>
-<li>Дефект кода: <strong>36</strong></li>
+<li>Дефект кода: <strong>38</strong></li>
+<li>Уязвимость: <strong>2</strong></li>
+<li>Ошибка: <strong>23</strong></li>
 </ul>
 <table>
 <thead>
@@ -461,6 +461,14 @@
 <td><code>standard</code><br/><code>error</code></td>
 </tr>
 <tr>
+<td><a href="DeprecatedFind/">DeprecatedFind</a></td>
+<td>Использование устаревшего метода "Найти"</td>
+<td align="center">Да</td>
+<td>Незначительный</td>
+<td>Дефект кода</td>
+<td><code>deprecated</code></td>
+</tr>
+<tr>
 <td><a href="DeprecatedMessage/">DeprecatedMessage</a></td>
 <td>Ограничение на использование устаревшего метода "Сообщить"</td>
 <td align="center">Да</td>
@@ -486,7 +494,7 @@
 </tr>
 <tr>
 <td><a href="ExtraCommas/">ExtraCommas</a></td>
-<td>Лишние запятые при вызове метода</td>
+<td>Запятые без указания параметра в конце вызова метода</td>
 <td align="center">Да</td>
 <td>Важный</td>
 <td>Дефект кода</td>
@@ -510,7 +518,7 @@
 </tr>
 <tr>
 <td><a href="IfConditionComplexity/">IfConditionComplexity</a></td>
-<td>Слишком сложное условие оператора Если</td>
+<td>Использование сложных выражений в условии оператора "Если"</td>
 <td align="center">Да</td>
 <td>Незначительный</td>
 <td>Дефект кода</td>
@@ -518,7 +526,7 @@
 </tr>
 <tr>
 <td><a href="IfElseDuplicatedCodeBlock/">IfElseDuplicatedCodeBlock</a></td>
-<td>Повторяющиеся блоки кода в синтаксической конструкции Если…Тогда…ИначеЕсли…</td>
+<td>Повторяющиеся блоки кода в синтаксической конструкции Если...Тогда...ИначеЕсли...</td>
 <td align="center">Да</td>
 <td>Незначительный</td>
 <td>Дефект кода</td>
@@ -526,7 +534,7 @@
 </tr>
 <tr>
 <td><a href="IfElseDuplicatedCondition/">IfElseDuplicatedCondition</a></td>
-<td>Повторяющиеся условия в синтаксической конструкции Если…Тогда…ИначеЕсли…</td>
+<td>Повторяющиеся условия в синтаксической конструкции Если...Тогда...ИначеЕсли...</td>
 <td align="center">Да</td>
 <td>Важный</td>
 <td>Дефект кода</td>
@@ -539,6 +547,14 @@
 <td>Важный</td>
 <td>Дефект кода</td>
 <td><code>badpractice</code></td>
+</tr>
+<tr>
+<td><a href="InvalidCharacterInFile/">InvalidCharacterInFile</a></td>
+<td>Недопустимый символ</td>
+<td align="center">Да</td>
+<td>Важный</td>
+<td>Ошибка</td>
+<td><code>error</code><br/><code>standard</code><br/><code>unpredictable</code></td>
 </tr>
 <tr>
 <td><a href="LineLength/">LineLength</a></td>
@@ -574,7 +590,7 @@
 </tr>
 <tr>
 <td><a href="MissingSpace/">MissingSpace</a></td>
-<td>Пропущен пробел</td>
+<td>Пропущены пробелы слева или справа от операторов <code>+ - * / = % &lt; &gt; &lt;&gt; &lt;= &gt;=</code>, а так же справа от <code>,</code> и <code>;</code></td>
 <td align="center">Да</td>
 <td>Информационный</td>
 <td>Дефект кода</td>
@@ -587,6 +603,22 @@
 <td>Важный</td>
 <td>Ошибка</td>
 <td><code>badpractice</code><br/><code>standard</code></td>
+</tr>
+<tr>
+<td><a href="MultilingualStringHasAllDeclaredLanguages/">MultilingualStringHasAllDeclaredLanguages</a></td>
+<td>Есть локализованный текст для всех заявленных в конфигурации языков</td>
+<td align="center">Да</td>
+<td>Незначительный</td>
+<td>Ошибка</td>
+<td><code>error</code></td>
+</tr>
+<tr>
+<td><a href="MultilingualStringUsingWithTemplate/">MultilingualStringUsingWithTemplate</a></td>
+<td>Частично локализованный текст используется в функции СтрШаблон</td>
+<td align="center">Да</td>
+<td>Важный</td>
+<td>Ошибка</td>
+<td><code>error</code></td>
 </tr>
 <tr>
 <td><a href="NestedConstructorsInStructureDeclaration/">NestedConstructorsInStructureDeclaration</a></td>
@@ -702,7 +734,7 @@
 </tr>
 <tr>
 <td><a href="SemicolonPresence/">SemicolonPresence</a></td>
-<td>Выражение должно заканчиваться ";"</td>
+<td>Выражение должно заканчиваться символом ";"</td>
 <td align="center">Да</td>
 <td>Незначительный</td>
 <td>Дефект кода</td>
@@ -731,6 +763,14 @@
 <td>Незначительный</td>
 <td>Дефект кода</td>
 <td><code>brainoverload</code></td>
+</tr>
+<tr>
+<td><a href="TimeoutsInExternalResources/">TimeoutsInExternalResources</a></td>
+<td>Таймауты при работе с внешними ресурсами</td>
+<td align="center">Да</td>
+<td>Критичный</td>
+<td>Ошибка</td>
+<td><code>unpredictable</code><br/><code>standard</code></td>
 </tr>
 <tr>
 <td><a href="TryNumber/">TryNumber</a></td>
@@ -765,6 +805,14 @@
 <td><code>design</code><br/><code>suspicious</code></td>
 </tr>
 <tr>
+<td><a href="UnusedLocalMethod/">UnusedLocalMethod</a></td>
+<td>Неиспользуемый локальный метод</td>
+<td align="center">Да</td>
+<td>Важный</td>
+<td>Дефект кода</td>
+<td><code>standard</code><br/><code>suspicious</code></td>
+</tr>
+<tr>
 <td><a href="UseLessForEach/">UseLessForEach</a></td>
 <td>Бесполезный перебор коллекции</td>
 <td align="center">Да</td>
@@ -790,15 +838,23 @@
 </tr>
 <tr>
 <td><a href="UsingGoto/">UsingGoto</a></td>
-<td>Использование "Перейти"</td>
+<td>Оператор "Перейти" не должен использоваться</td>
 <td align="center">Да</td>
 <td>Критичный</td>
 <td>Дефект кода</td>
 <td><code>standard</code><br/><code>badpractice</code></td>
 </tr>
 <tr>
+<td><a href="UsingHardcodeNetworkAddress/">UsingHardcodeNetworkAddress</a></td>
+<td>Хранение ip-адресов в коде</td>
+<td align="center">Да</td>
+<td>Критичный</td>
+<td>Уязвимость</td>
+<td><code>standard</code></td>
+</tr>
+<tr>
 <td><a href="UsingHardcodePath/">UsingHardcodePath</a></td>
-<td>Хранение путей к файлам и ip-адресов в коде</td>
+<td>Хранение путей к файлам в коде</td>
 <td align="center">Да</td>
 <td>Критичный</td>
 <td>Ошибка</td>
@@ -846,23 +902,15 @@
 </tr>
 <tr>
 <td><a href="UsingThisForm/">UsingThisForm</a></td>
-<td>Использование свойства "ЭтаФорма"</td>
+<td>Использование устаревшего свойства "ЭтаФорма"</td>
 <td align="center">Да</td>
 <td>Незначительный</td>
 <td>Дефект кода</td>
 <td><code>standard</code><br/><code>deprecated</code></td>
 </tr>
 <tr>
-<td><a href="WorkingTimeoutWithExternalResources/">WorkingTimeoutWithExternalResources</a></td>
-<td>Таймауты при работе с внешними ресурсами</td>
-<td align="center">Да</td>
-<td>Критичный</td>
-<td>Ошибка</td>
-<td><code>unpredictable</code><br/><code>standard</code></td>
-</tr>
-<tr>
 <td><a href="YoLetterUsage/">YoLetterUsage</a></td>
-<td>Использование буквы “ё” в текстах модулей</td>
+<td>Использование буквы "ё" в текстах модулей</td>
 <td align="center">Да</td>
 <td>Информационный</td>
 <td>Дефект кода</td>

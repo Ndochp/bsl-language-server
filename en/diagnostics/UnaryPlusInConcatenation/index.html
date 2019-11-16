@@ -322,6 +322,22 @@
     
   
   
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#description" class="md-nav__link">
+    Description
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -336,7 +352,32 @@
                 
                 
                 <h1 id="unary-plus-sign-in-string-concatenation">Unary Plus sign in string concatenation<a class="headerlink" href="#unary-plus-sign-in-string-concatenation" title="Permanent link">Link</a></h1>
-<p>When concatenating string developer may accidentally write something like "String1 + + String2" in which platform will recognize second "+" as unary and try to convert string to number - and in most cases it will lead to runtime error. </p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Scope</th>
+<th>Severity</th>
+<th>Activated<br>by default</th>
+<th>Minutes<br>to fix</th>
+<th>Tags</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Error</code></td>
+<td><code>BSL</code><br><code>OS</code></td>
+<td><code>Blocker</code></td>
+<td><code>Yes</code></td>
+<td><code>1</code></td>
+<td><code>suspicious</code><br><code>brainoverload</code></td>
+</tr>
+</tbody>
+</table>
+<!-- Блоки выше заполняются автоматически, не трогать -->
+
+<h2 id="description">Description<a class="headerlink" href="#description" title="Permanent link">Link</a></h2>
+<p>When concatenating strings, a developer may mistakenly write code  String + + String2, i.e. the second plus, the platform recognizes as unary and tries to cast to a number, which in most cases will lead to a runtime exception.</p>
                 
                   
                 

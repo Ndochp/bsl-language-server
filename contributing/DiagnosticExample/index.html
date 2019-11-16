@@ -439,10 +439,14 @@
 После определения цели, необходимо придумать уникальный ключ диагностики, под которым она будет добавлена в общий список. Для создаваемой диагностики возьмем имя <code>SemicolonPresence</code>.</p>
 <h3 id="_5">Класс реализации диагностики<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
 <p>В соответствии с правилами, каталоге <code>src/main/java</code> в пакете <code>com.github._1c_syntax.bsl.languageserver.diagnostics</code> создадим файл <code>SemicolonPresenceDiagnostic.java</code> класса диагностики.<br />
-В файле создаем одноименный класс, унаследованный от класса <code>AbstractVisitorDiagnostic</code>.  В результате имеем следующее</p>
+В файле создаем одноименный класс, унаследованный от класса <code>AbstractVisitorDiagnostic</code>. Обратите внимание, что для каждого класса диагностики необходимо создать конструктор. В результате имеем следующее</p>
 <div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nn">com.github._1c_syntax.bsl.languageserver.diagnostics</span><span class="o">;</span>
 
-<span class="kd">public</span> <span class="kd">class</span> <span class="nc">SemicolonPresenceDiagnostic</span> <span class="kd">extends</span> <span class="n">AbstractVisitorDiagnostic</span> <span class="o">{}</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">SemicolonPresenceDiagnostic</span> <span class="kd">extends</span> <span class="n">AbstractVisitorDiagnostic</span> <span class="o">{</span>
+  <span class="kd">public</span> <span class="nf">SemicolonPresenceDiagnostic</span><span class="o">(</span><span class="n">DiagnosticInfo</span> <span class="n">info</span><span class="o">)</span> <span class="o">{</span>
+    <span class="kd">super</span><span class="o">(</span><span class="n">info</span><span class="o">);</span>
+  <span class="o">}</span>
+<span class="o">}</span>
 </pre></div>
 
 
@@ -458,7 +462,11 @@
     <span class="n">DiagnosticTag</span><span class="o">.</span><span class="na">STANDARD</span>
   <span class="o">}</span>
 <span class="o">)</span>
-<span class="kd">public</span> <span class="kd">class</span> <span class="nc">SemicolonPresenceDiagnostic</span> <span class="kd">extends</span> <span class="n">AbstractVisitorDiagnostic</span> <span class="o">{}</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">SemicolonPresenceDiagnostic</span> <span class="kd">extends</span> <span class="n">AbstractVisitorDiagnostic</span> <span class="o">{</span>
+  <span class="kd">public</span> <span class="nf">SemicolonPresenceDiagnostic</span><span class="o">(</span><span class="n">DiagnosticInfo</span> <span class="n">info</span><span class="o">)</span> <span class="o">{</span>
+    <span class="kd">super</span><span class="o">(</span><span class="n">info</span><span class="o">);</span>
+  <span class="o">}</span>
+<span class="o">}</span>
 </pre></div>
 
 
@@ -515,7 +523,7 @@
 <ul>
 <li>Для получения диагностик по фикстуре используется метод <code>getDiagnostics()</code> реализованный в абстрактном классе <code>AbstractDiagnosticTest</code>. Он возвращает список сработавших диагностик текущего типа.</li>
 <li>Для проверки количество срабатываний необходимо проверить размер массива утверждением <code>hasSize</code>, куда передать количество ожидаемых элементов.</li>
-<li>Для проверки каждого обнаруженного элемента, необходимо сравнить найденный диапазон символов с ожидаемым, используя возможности класса <code>RangeHelper</code>.</li>
+<li>Для проверки каждого обнаруженного элемента, необходимо сравнить найденный диапазон символов с ожидаемым.</li>
 </ul>
 <p>Полученный класс теста выглядит следующим образом</p>
 <div class="codehilite"><pre><span></span><span class="kd">class</span> <span class="nc">SemicolonPresenceDiagnosticTest</span> <span class="kd">extends</span> <span class="n">AbstractDiagnosticTest</span><span class="o">&lt;</span><span class="n">SemicolonPresenceDiagnostic</span><span class="o">&gt;</span> <span class="o">{</span>
@@ -529,8 +537,9 @@
     <span class="n">List</span><span class="o">&lt;</span><span class="n">Diagnostic</span><span class="o">&gt;</span> <span class="n">diagnostics</span> <span class="o">=</span> <span class="n">getDiagnostics</span><span class="o">();</span> <span class="c1">// Получение диагностик</span>
 
     <span class="n">assertThat</span><span class="o">(</span><span class="n">diagnostics</span><span class="o">).</span><span class="na">hasSize</span><span class="o">(</span><span class="mi">2</span><span class="o">);</span> <span class="c1">// Проверка количества</span>
-    <span class="n">assertThat</span><span class="o">(</span><span class="n">diagnostics</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="mi">0</span><span class="o">).</span><span class="na">getRange</span><span class="o">()).</span><span class="na">isEqualTo</span><span class="o">(</span><span class="n">Ranges</span><span class="o">.</span><span class="na">create</span><span class="o">(</span><span class="mi">4</span><span class="o">,</span> <span class="mi">0</span><span class="o">,</span> <span class="mi">4</span><span class="o">,</span> <span class="mi">9</span><span class="o">));</span> <span class="c1">// Проверка конкретного случая</span>
-    <span class="n">assertThat</span><span class="o">(</span><span class="n">diagnostics</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="mi">1</span><span class="o">).</span><span class="na">getRange</span><span class="o">()).</span><span class="na">isEqualTo</span><span class="o">(</span><span class="n">Ranges</span><span class="o">.</span><span class="na">create</span><span class="o">(</span><span class="mi">3</span><span class="o">,</span> <span class="mi">6</span><span class="o">,</span> <span class="mi">3</span><span class="o">,</span> <span class="mi">7</span><span class="o">));</span> <span class="c1">// Проверка конкретного случая</span>
+    <span class="n">assertThat</span><span class="o">(</span><span class="n">diagnostics</span><span class="o">,</span> <span class="kc">true</span><span class="o">)</span>
+      <span class="o">.</span><span class="na">hasRange</span><span class="o">(</span><span class="mi">4</span><span class="o">,</span> <span class="mi">0</span><span class="o">,</span> <span class="mi">4</span><span class="o">,</span> <span class="mi">9</span><span class="o">)</span>  <span class="c1">// Проверка конкретного случая</span>
+      <span class="o">.</span><span class="na">hasRange</span><span class="o">(</span><span class="mi">3</span><span class="o">,</span> <span class="mi">6</span><span class="o">,</span> <span class="mi">3</span><span class="o">,</span> <span class="mi">7</span><span class="o">);</span> <span class="c1">// Проверка конкретного случая</span>
   <span class="o">}</span>
 <span class="o">}</span>
 </pre></div>
@@ -551,6 +560,9 @@
   <span class="o">}</span>
 <span class="o">)</span>
 <span class="kd">public</span> <span class="kd">class</span> <span class="nc">SemicolonPresenceDiagnostic</span> <span class="kd">extends</span> <span class="n">AbstractVisitorDiagnostic</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="nf">SemicolonPresenceDiagnostic</span><span class="o">(</span><span class="n">DiagnosticInfo</span> <span class="n">info</span><span class="o">)</span> <span class="o">{</span>
+      <span class="kd">super</span><span class="o">(</span><span class="n">info</span><span class="o">);</span>
+    <span class="o">}</span>
 
     <span class="nd">@Override</span>
     <span class="kd">public</span> <span class="n">ParseTree</span> <span class="nf">visitStatement</span><span class="o">(</span><span class="n">BSLParser</span><span class="o">.</span><span class="na">StatementContext</span> <span class="n">ctx</span><span class="o">)</span> <span class="o">{</span> <span class="c1">// выбранный визитер</span>

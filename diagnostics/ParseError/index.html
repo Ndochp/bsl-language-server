@@ -322,6 +322,36 @@
     
   
   
+    <label class="md-nav__title" for="__toc">Содержание</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    Описание диагностики
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    Примеры
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    Источники
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -336,10 +366,34 @@
                 
                 
                 <h1 id="_1">Ошибка разбора исходного кода<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
-<p>Ошибка возникает если исходный код модуля написан с нарушением синтаксиса языка или при 
-неправильном использовании инструкций препроцессора.</p>
-<p>3. Не следует разрывать инструкциями препроцессора и областями отдельные грамматические конструкции, выражения, 
-а также объявления и места вызова процедур и функций.</p>
+<table>
+<thead>
+<tr>
+<th align="center">Тип</th>
+<th align="center">Поддерживаются<br/>языки</th>
+<th align="center">Важность</th>
+<th align="center">Включена<br/>по умолчанию</th>
+<th align="center">Время на<br/>исправление (мин)</th>
+<th align="center">Тэги</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><code>Ошибка</code></td>
+<td align="center"><code>BSL</code><br/><code>OS</code></td>
+<td align="center"><code>Критичный</code></td>
+<td align="center"><code>Да</code></td>
+<td align="center"><code>5</code></td>
+<td align="center"><code>error</code></td>
+</tr>
+</tbody>
+</table>
+<!-- Блоки выше заполняются автоматически, не трогать -->
+
+<h2 id="_2">Описание диагностики<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<p>Ошибка возникает если исходный код модуля написан с нарушением синтаксиса языка или при неправильном использовании инструкций препроцессора.</p>
+<p>Не следует разрывать инструкциями препроцессора и областями отдельные грамматические конструкции, выражения, а также объявления и места вызова процедур и функций.</p>
+<h2 id="_3">Примеры<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
 <p>Неправильно:</p>
 <div class="codehilite"><pre><span></span><span class="k">Процедура</span> <span class="nv">Пример1</span><span class="p">()</span>
   <span class="nv">а</span> <span class="o">=</span> <span class="m">1</span>
@@ -370,7 +424,10 @@
 </pre></div>
 
 
-<p>Источник: <a href="https://its.1c.ru/db/v8std#content:439:hdoc">Стандарт: #439 Использование директив компиляции и инструкций препроцессора</a></p>
+<h2 id="_4">Источники<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://its.1c.ru/db/v8std#content:439:hdoc">Стандарт: #439 Использование директив компиляции и инструкций препроцессора</a></li>
+</ul>
                 
                   
                 

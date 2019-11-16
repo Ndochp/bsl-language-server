@@ -385,7 +385,7 @@
 <p>Для реализации параметра диагностики, необходимо внести следующие изменения в файлы, реализующие диагностику.</p>
 <h3 id="_3">Доработка класса диагностики<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
 <p>В класс диагностики необходимо добавить константное поле, в котором будет сохранено значение параметра по-умолчанию.
-Например <code>private static final String DEFAULT_COMMENTS_ANNOTATION = "//@";</code>. </p>
+Например <code>private static final String DEFAULT_COMMENTS_ANNOTATION = "//@";</code>.</p>
 <p>Необходимо добавить приватное поле, в котором будет хранится значение параметра. Поле необходимо аннотировать <code>@DiagnosticParameter</code> и указать тип параметра, значение по умолчанию (значение всегда строкового типа), а также описание параметра.<br />
 Например</p>
 <div class="codehilite"><pre><span></span><span class="nd">@DiagnosticParameter</span><span class="o">(</span>
@@ -413,25 +413,21 @@
 <h3 id="_4">Доработка тестов<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
 <p>Обязательно нужно добавить тест для случая изменения настроек диагностики.<br />
 Тест добавляется во все тот же класс теста диагностики <em>(отдельный метод для каждой комбинации вариантов настроек диагностики)</em>. В начале теста необходимо выполнить установку значения параметра диагностики, последующие действия аналогичны общим правилам написания тестов.<br />
-Для установки параметра диагностики из теста необходимо получить конфигурацию диагностики по-умолчанию, используя метод <code>DiagnosticProvider.getDefaultDiagnosticConfiguration()</code> для текущей диагностики <code>getDiagnosticInstance()</code>. Затем выполнить изменение значения параметра, путем добавления в коллекцию конфигурации, а затем переконфигурировать текущую диагностику, обратившись к методу <code>configure</code>.<br />
+Для установки параметра диагностики из теста необходимо получить конфигурацию диагностики по-умолчанию, используя метод <code>getDefaultDiagnosticConfiguration()</code> из метаданных текущей диагностики <code>diagnosticInstance.getInfo()</code>. Затем выполнить изменение значения параметра, путем добавления в коллекцию конфигурации, а затем переконфигурировать текущую диагностику, обратившись к методу <code>configure</code>.<br />
 Пример</p>
 <div class="codehilite"><pre><span></span><span class="c1">// получение текущей конфигурации диагностики</span>
-<span class="n">Map</span><span class="o">&lt;</span><span class="n">String</span><span class="o">,</span> <span class="n">Object</span><span class="o">&gt;</span> <span class="n">configuration</span> <span class="o">=</span> <span class="n">DiagnosticProvider</span><span class="o">.</span><span class="na">getDefaultDiagnosticConfiguration</span><span class="o">(</span><span class="n">getDiagnosticInstance</span><span class="o">());</span>
+<span class="n">Map</span><span class="o">&lt;</span><span class="n">String</span><span class="o">,</span> <span class="n">Object</span><span class="o">&gt;</span> <span class="n">configuration</span> <span class="o">=</span> <span class="n">diagnosticInstance</span><span class="o">.</span><span class="na">getInfo</span><span class="o">().</span><span class="na">getDefaultDiagnosticConfiguration</span><span class="o">();</span>
 
 <span class="c1">// установка нового значения</span>
 <span class="n">configuration</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">&quot;commentsAnnotation&quot;</span><span class="o">,</span> <span class="s">&quot;//(с)&quot;</span><span class="o">);</span>
 
 <span class="c1">// переконфигурирование</span>
-<span class="n">getDiagnosticInstance</span><span class="o">().</span><span class="na">configure</span><span class="o">(</span><span class="n">configuration</span><span class="o">);</span>
+<span class="n">diagnosticInstance</span><span class="o">.</span><span class="na">configure</span><span class="o">(</span><span class="n">configuration</span><span class="o">);</span>
 </pre></div>
 
 
 <h3 id="_5">Доработка документации<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
-<p>Все параметры диагностики в обязательном порядке должны быть отражены в ее описании (для обоих поддерживаемых языков). В соответствии с шаблоном, это может выглядеть так  </p>
-<div class="codehilite"><pre><span></span><span class="gu">##</span> Параметры
-
-<span class="k">*</span> <span class="sb">`commentsAnnotation`</span> - <span class="sb">`Строка`</span> - Пропускать комментарии, начинающиеся с указанных подстрок. Список через запятую. Значение по-умолчанию: <span class="sb">`//@`</span>.
-</pre></div>
+<p>Добавление информации о параметрах диагностики в документацию вручную не требуется: после добавления/изменения параметров диагностики необходимо запустить gradlew задачу <code>updateDiagnosticDocs</code>, которая самостоятельно выполнит необходимые правки.</p>
                 
                   
                 

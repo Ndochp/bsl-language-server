@@ -332,6 +332,40 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#description" class="md-nav__link">
+    Description
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#additionally" class="md-nav__link">
+    Additionally
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#examples" class="md-nav__link">
+    Examples
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reference" class="md-nav__link">
+    Reference
+  </a>
+  
+</li>
+      
       
       
       
@@ -352,17 +386,63 @@
                 
                 
                 <h1 id="storing-confidential-information-in-code">Storing confidential information in code<a class="headerlink" href="#storing-confidential-information-in-code" title="Permanent link">Link</a></h1>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Scope</th>
+<th>Severity</th>
+<th>Activated<br>by default</th>
+<th>Minutes<br>to fix</th>
+<th>Tags</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Vulnerability</code></td>
+<td><code>BSL</code></td>
+<td><code>Critical</code></td>
+<td><code>Yes</code></td>
+<td><code>15</code></td>
+<td><code>standard</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="parameters">Parameters<a class="headerlink" href="#parameters" title="Permanent link">Link</a></h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Default value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>searchWords</code></td>
+<td><code>Pattern</code></td>
+<td>Ключевые слова поиска конфиденциальной информации в переменных, структурах, соответствиях.</td>
+<td>`"Пароль</td>
+</tr>
+</tbody>
+</table>
+<!-- Блоки выше заполняются автоматически, не трогать -->
+
+<h2 id="description">Description<a class="headerlink" href="#description" title="Permanent link">Link</a></h2>
 <p>It is prohibited to store any confidential information in the code. The confidential information is:</p>
 <ul>
 <li>Passwords</li>
 <li>Personal access tokens/keys</li>
 </ul>
-<h2 id="parameters">Parameters<a class="headerlink" href="#parameters" title="Permanent link">Link</a></h2>
-<ul>
-<li><code>searchWords</code> - <code>String</code> - keyword for confidential information search in variables, structures, mappings. By default: <code>Пароль|Password</code></li>
-</ul>
-<p>If the project uses SSL sub-system, then passwords should be stored in safe storage. More information on this topic can be found here:
-<a href="https://its.1c.ru/db/v8std#content:740:hdoc">Standard: Store passwords safe</a></p>
+<p>If the project uses SSL sub-system, then passwords should be stored in safe storage.</p>
+<h3 id="additionally">Additionally<a class="headerlink" href="#additionally" title="Permanent link">Link</a></h3>
+<p>Strings with all symbols <code>*</code> are excluded from the chech:</p>
+<div class="codehilite"><pre><span></span><span class="nv">Password</span> <span class="o">=</span> <span class="s1">&quot;**********&quot;</span><span class="p">;</span>
+</pre></div>
+
+
+<h2 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link">Link</a></h2>
 <p>Incorrect:</p>
 <div class="codehilite"><pre><span></span><span class="nv">Password</span> <span class="o">=</span> <span class="s1">&quot;12345&quot;</span><span class="p">;</span>
 </pre></div>
@@ -372,6 +452,12 @@
 <div class="codehilite"><pre><span></span><span class="nv">Passwords</span> <span class="o">=</span> <span class="nv">CommonModule</span><span class="o">.</span><span class="nv">ReadDataFromSafeStorage</span><span class="p">(</span><span class="s1">&quot;StoringIdentifier&quot;</span><span class="p">,</span> <span class="s1">&quot;Password&quot;</span><span class="p">);</span>
 <span class="nv">Password</span> <span class="o">=</span> <span class="nv">Passwords</span><span class="o">.</span><span class="nv">Password</span><span class="p">;</span>
 </pre></div>
+
+
+<h2 id="reference">Reference<a class="headerlink" href="#reference" title="Permanent link">Link</a></h2>
+<ul>
+<li><a href="https://its.1c.ru/db/v8std#content:740:hdoc">Standard: Store passwords safe</a></li>
+</ul>
                 
                   
                 

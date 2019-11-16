@@ -334,6 +334,14 @@
       
         <li class="md-nav__item">
   <a href="#_3" class="md-nav__link">
+    Описание диагностики
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
     Подсчет Когнитивной сложности
   </a>
   
@@ -348,14 +356,14 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
+  <a href="#_5" class="md-nav__link">
     За каждый уровень вложенности, следующие блоки получают дополнительную единицу сложности
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
+  <a href="#_6" class="md-nav__link">
     Альтернативные ветки, бинарные операции и переход на метку не увеличивают когнитивную сложность при вложении
   </a>
   
@@ -365,10 +373,22 @@
     </nav>
   
 </li>
+        
+      </ul>
+    </nav>
+  
+</li>
       
         <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
-    Когнитивная сложность на примерах
+  <a href="#_7" class="md-nav__link">
+    Примеры
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    Источники
   </a>
   
 </li>
@@ -393,18 +413,62 @@
                 
                 
                 <h1 id="_1">Когнитивная сложность<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<table>
+<thead>
+<tr>
+<th align="center">Тип</th>
+<th align="center">Поддерживаются<br/>языки</th>
+<th align="center">Важность</th>
+<th align="center">Включена<br/>по умолчанию</th>
+<th align="center">Время на<br/>исправление (мин)</th>
+<th align="center">Тэги</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><code>Дефект кода</code></td>
+<td align="center"><code>BSL</code><br/><code>OS</code></td>
+<td align="center"><code>Критичный</code></td>
+<td align="center"><code>Да</code></td>
+<td align="center"><code>15</code></td>
+<td align="center"><code>brainoverload</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="_2">Параметры<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th align="center">Имя</th>
+<th align="center">Тип</th>
+<th align="left">Описание</th>
+<th align="center">Значение по умолчанию</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><code>complexityThreshold</code></td>
+<td align="center"><code>Число</code></td>
+<td align="left">Допустимая когнитивная сложность метода</td>
+<td align="center"><code>15</code></td>
+</tr>
+<tr>
+<td align="center"><code>checkModuleBody</code></td>
+<td align="center"><code>Булево</code></td>
+<td align="left">Проверять тело модуля</td>
+<td align="center"><code>true</code></td>
+</tr>
+</tbody>
+</table>
+<!-- Блоки выше заполняются автоматически, не трогать -->
+
+<h2 id="_3">Описание диагностики<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
 <p>Когнитивная сложность показывает на сколько сложно воспринимать написанный код.<br />
 Высокая когнитивная сложность явно указывает на необходимость проведения рефакторинга кода для облегчения его будущей поддержки.<br />
 Наиболее эффективным способом снижения когнитивной сложности является декомпозиция кода, дробление методов на более простые, а также оптимизация логических выражений.</p>
-<h2 id="_2">Параметры<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
-<ul>
-<li><code>complexityThreshold</code> - <code>Число</code> - Допустимая когнитивная сложность метода. Значение по-умолчанию: 15.</li>
-<li><code>checkModuleBody</code> - <code>Булево</code> - Проверять тело модуля. Значение по-умолчанию: Да.</li>
-</ul>
-<h2 id="_3">Подсчет Когнитивной сложности<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
-<p>Ниже приведены правила анализа когда, условия повышения когнитивной сложности.
-<strong>Источник</strong>: <a href="https://www.sonarsource.com/docs/CognitiveComplexity.pdf">Cognitive complexity, ver. 1.4</a></p>
-<h3 id="1">Каждый следующий блок увеличивает сложность на 1<a class="headerlink" href="#1" title="Permanent link">&para;</a></h3>
+<h3 id="_4">Подсчет Когнитивной сложности<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
+<p>Ниже приведены правила анализа когда, условия повышения когнитивной сложности.</p>
+<h4 id="1">Каждый следующий блок увеличивает сложность на 1<a class="headerlink" href="#1" title="Permanent link">&para;</a></h4>
 <div class="codehilite"><pre><span></span><span class="c c-Singleline">// Цикл `Для каждого`</span>
 <span class="k">Для</span> <span class="k">каждого</span> <span class="nv">Элемент</span> <span class="k">Из</span> <span class="nv">Коллекция</span> <span class="k">Цикл</span>                <span class="c c-Singleline">// +1</span>
 <span class="k">КонецЦикла</span><span class="p">;</span>
@@ -460,7 +524,7 @@
 </pre></div>
 
 
-<h3 id="_4">За каждый уровень вложенности, следующие блоки получают дополнительную единицу сложности<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
+<h4 id="_5">За каждый уровень вложенности, следующие блоки получают дополнительную единицу сложности<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h4>
 <div class="codehilite"><pre><span></span><span class="c c-Singleline">// Цикл `Для каждого`</span>
 <span class="k">Для</span> <span class="k">каждого</span> <span class="nv">Элемент</span> <span class="k">Из</span> <span class="nv">Коллекция</span> <span class="k">Цикл</span>
 <span class="k">КонецЦикла</span><span class="p">;</span>
@@ -490,8 +554,8 @@
 </pre></div>
 
 
-<h3 id="_5">Альтернативные ветки, бинарные операции и переход на метку не увеличивают когнитивную сложность при вложении<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
-<h2 id="_6"><code>Когнитивная сложность</code> на примерах<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
+<h4 id="_6">Альтернативные ветки, бинарные операции и переход на метку не увеличивают когнитивную сложность при вложении<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h4>
+<h2 id="_7">Примеры<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h2>
 <p>Ниже на примерах кода произведен рассчет когнитивной сложности методов.</p>
 <div class="codehilite"><pre><span></span><span class="k">Функция</span> <span class="nv">Пример1</span><span class="p">(</span><span class="nv">ТипКласса</span><span class="p">)</span>
     <span class="k">Если</span> <span class="nv">ТипКласса</span><span class="o">.</span><span class="nv">Неизвестен</span><span class="p">()</span> <span class="k">Тогда</span>                                                  <span class="c c-Singleline">// +1, условие, вложенности нет</span>
@@ -581,6 +645,12 @@
     <span class="k">Возврат</span> <span class="kc">Неопределено</span><span class="p">;</span>
 <span class="k">КонецФункции</span>
 </pre></div>
+
+
+<h2 id="_8">Источники<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://www.sonarsource.com/docs/CognitiveComplexity.pdf">Cognitive complexity, ver. 1.4</a></li>
+</ul>
                 
                   
                 

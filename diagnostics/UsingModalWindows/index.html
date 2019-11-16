@@ -327,7 +327,34 @@
       
         <li class="md-nav__item">
   <a href="#_2" class="md-nav__link">
-    Ограничение диагностики
+    Описание диагностики
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    Ограничения диагностики
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    Примеры
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    Источники
   </a>
   
 </li>
@@ -352,18 +379,33 @@
                 
                 
                 <h1 id="_1">Использование модальных окон<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<table>
+<thead>
+<tr>
+<th align="center">Тип</th>
+<th align="center">Поддерживаются<br/>языки</th>
+<th align="center">Важность</th>
+<th align="center">Включена<br/>по умолчанию</th>
+<th align="center">Время на<br/>исправление (мин)</th>
+<th align="center">Тэги</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><code>Дефект кода</code></td>
+<td align="center"><code>BSL</code></td>
+<td align="center"><code>Важный</code></td>
+<td align="center"><code>Нет</code></td>
+<td align="center"><code>15</code></td>
+<td align="center"><code>standard</code></td>
+</tr>
+</tbody>
+</table>
+<!-- Блоки выше заполняются автоматически, не трогать -->
+
+<h2 id="_2">Описание диагностики<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <p>Модальные и всплывающие окна считаются плохим тоном, пользователи привыкли к работе "в одном окне". При разработке конфигураций, предназначенных для работы в веб-клиенте, запрещено использовать модальные формы и диалоги. В противном случае, конфигурация окажется неработоспособной в ряде веб-браузеров, так как модальные окна не входят в стандарт веб-разработки.</p>
-<div class="codehilite"><pre><span></span><span class="c c-Singleline">// Пример &quot;Плохо&quot;</span>
-<span class="nb">Предупреждение</span><span class="p">(</span><span class="nb">НСтр</span><span class="p">(</span><span class="s1">&quot;ru = &#39;Выберите документ!&#39;; en = &#39;Select a document!&#39;&quot;</span><span class="p">),</span> <span class="m">10</span><span class="p">);</span>
-
-<span class="c c-Singleline">// Пример &quot;Хорошо&quot;</span>
-<span class="nb">ПоказатьПредупреждение</span><span class="p">(,</span> <span class="nb">НСтр</span><span class="p">(</span><span class="s1">&quot;ru = &#39;Выберите документ!&#39;; en = &#39;Select a document!&#39;&quot;</span><span class="p">),</span> <span class="m">10</span><span class="p">);</span>
-</pre></div>
-
-
-<p>Источник: <a href="https://its.1c.ru/db/v8std/content/703/hdoc/">Ограничение на использование модальных окон и синхронных вызовов</a></p>
-<p>Полезная информаця: <a href="https://its.1c.ru/db/metod8dev#content:5272:hdoc">Отказ от использования модальных окон</a></p>
-<h2 id="_2">Ограничение диагностики<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<h3 id="_3">Ограничения диагностики<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
 <p>На данный момент диагностируется <strong>только использование методов глобального контекста</strong>.</p>
 <p>Список методов:</p>
 <table>
@@ -424,6 +466,20 @@
 </tr>
 </tbody>
 </table>
+<h2 id="_4">Примеры<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
+<div class="codehilite"><pre><span></span><span class="c c-Singleline">// Пример &quot;Плохо&quot;</span>
+<span class="nb">Предупреждение</span><span class="p">(</span><span class="nb">НСтр</span><span class="p">(</span><span class="s1">&quot;ru = &#39;Выберите документ!&#39;; en = &#39;Select a document!&#39;&quot;</span><span class="p">),</span> <span class="m">10</span><span class="p">);</span>
+
+<span class="c c-Singleline">// Пример &quot;Хорошо&quot;</span>
+<span class="nb">ПоказатьПредупреждение</span><span class="p">(,</span> <span class="nb">НСтр</span><span class="p">(</span><span class="s1">&quot;ru = &#39;Выберите документ!&#39;; en = &#39;Select a document!&#39;&quot;</span><span class="p">),</span> <span class="m">10</span><span class="p">);</span>
+</pre></div>
+
+
+<h2 id="_5">Источники<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://its.1c.ru/db/v8std/content/703/hdoc/">Ограничение на использование модальных окон и синхронных вызовов</a></li>
+<li>Полезная информаця: <a href="https://its.1c.ru/db/metod8dev#content:5272:hdoc">Отказ от использования модальных окон</a></li>
+</ul>
                 
                   
                 

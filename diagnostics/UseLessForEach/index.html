@@ -322,6 +322,29 @@
     
   
   
+    <label class="md-nav__title" for="__toc">Содержание</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    Описание диагностики
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    Примеры
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -336,9 +359,34 @@
                 
                 
                 <h1 id="_1">Бесполезный перебор коллекции<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
-<p>Отстутствие итератора в теле цикла указывает на бесполезный перебор коллекции либо
-на ошибку в теле цикла.</p>
-<p>Неправильно </p>
+<table>
+<thead>
+<tr>
+<th align="center">Тип</th>
+<th align="center">Поддерживаются<br/>языки</th>
+<th align="center">Важность</th>
+<th align="center">Включена<br/>по умолчанию</th>
+<th align="center">Время на<br/>исправление (мин)</th>
+<th align="center">Тэги</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><code>Ошибка</code></td>
+<td align="center"><code>BSL</code><br/><code>OS</code></td>
+<td align="center"><code>Критичный</code></td>
+<td align="center"><code>Да</code></td>
+<td align="center"><code>2</code></td>
+<td align="center"><code>clumsy</code></td>
+</tr>
+</tbody>
+</table>
+<!-- Блоки выше заполняются автоматически, не трогать -->
+
+<h2 id="_2">Описание диагностики<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<p>Отстутствие итератора в теле цикла указывает на бесполезный перебор коллекции либо на ошибку в теле цикла.</p>
+<h2 id="_3">Примеры<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<p>Неправильно</p>
 <div class="codehilite"><pre><span></span><span class="k">Для</span> <span class="k">Каждого</span> <span class="nv">Итератор</span> <span class="k">Из</span> <span class="nv">Коллекция</span> <span class="k">Цикл</span>
 
     <span class="nv">ВыполнитьДействиеНадЭлементом</span><span class="p">(</span><span class="nv">Коллекция</span><span class="p">);</span>
@@ -347,7 +395,7 @@
 </pre></div>
 
 
-<p>Правильно </p>
+<p>Правильно</p>
 <div class="codehilite"><pre><span></span><span class="k">Для</span> <span class="k">Каждого</span> <span class="nv">Итератор</span> <span class="k">Из</span> <span class="nv">Коллекция</span> <span class="k">Цикл</span>
 
     <span class="nv">ВыполнитьДействиеНадЭлементом</span><span class="p">(</span><span class="nv">Итератор</span><span class="p">);</span>

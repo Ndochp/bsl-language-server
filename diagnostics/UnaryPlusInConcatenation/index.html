@@ -322,6 +322,22 @@
     
   
   
+    <label class="md-nav__title" for="__toc">Содержание</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    Описание диагностики
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -336,7 +352,32 @@
                 
                 
                 <h1 id="_1">Унарный плюс в конкатенации строк<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
-<p>При конкатенации строк разработчик может ошибочно написать код вида Строка + + Строка2, т.е. второй плюс платформа распознает как унарный и попытается выолнить преобразование к числу, что в большинстве случаев приведет к ошибки исполнения</p>
+<table>
+<thead>
+<tr>
+<th align="center">Тип</th>
+<th align="center">Поддерживаются<br/>языки</th>
+<th align="center">Важность</th>
+<th align="center">Включена<br/>по умолчанию</th>
+<th align="center">Время на<br/>исправление (мин)</th>
+<th align="center">Тэги</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><code>Ошибка</code></td>
+<td align="center"><code>BSL</code><br/><code>OS</code></td>
+<td align="center"><code>Блокирующий</code></td>
+<td align="center"><code>Да</code></td>
+<td align="center"><code>1</code></td>
+<td align="center"><code>suspicious</code><br/><code>brainoverload</code></td>
+</tr>
+</tbody>
+</table>
+<!-- Блоки выше заполняются автоматически, не трогать -->
+
+<h2 id="_2">Описание диагностики<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<p>При конкатенации строк разработчик может ошибочно написать код вида Строка + + Строка2, т.е. второй плюс платформа распознает как унарный и попытается выолнить преобразование к числу, что в большинстве случаев приведет к ошибке исполнения</p>
                 
                   
                 
