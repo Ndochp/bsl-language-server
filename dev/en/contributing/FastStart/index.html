@@ -11,7 +11,7 @@
       <meta http-equiv="x-ua-compatible" content="ie=edge">
       
       
-        <link rel="canonical" href="https://1c-syntax.github.io/bsl-language-server/dev/contributing/">
+        <link rel="canonical" href="https://1c-syntax.github.io/bsl-language-server/dev/contributing/FastStart/">
       
       
       
@@ -33,18 +33,18 @@
       
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
-      <link rel="shortcut icon" href="../assets/images/logo.png">
+      <link rel="shortcut icon" href="../../assets/images/logo.png">
       <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.4.3">
     
     
       
-        <title>BSL Language Server Dev</title>
+        <title>Quick start - BSL Language Server Dev</title>
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/application.30686662.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/application.30686662.css">
       
-        <link rel="stylesheet" href="../assets/stylesheets/application-palette.a8b3c06d.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/application-palette.a8b3c06d.css">
       
       
         
@@ -53,7 +53,7 @@
       
     
     
-      <script src="../assets/javascripts/modernizr.74668098.js"></script>
+      <script src="../../assets/javascripts/modernizr.74668098.js"></script>
     
     
       
@@ -62,10 +62,10 @@
         <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
       
     
-    <link rel="stylesheet" href="../assets/fonts/material-icons.css">
+    <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/extra.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/extra.css">
     
     
       
@@ -114,7 +114,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#contributors-guide" tabindex="1" class="md-skip">
+      <a href="#quick-start" tabindex="1" class="md-skip">
         Skip to content
       </a>
     
@@ -125,7 +125,7 @@
       <div class="md-flex__cell md-flex__cell--shrink">
         <a href="https://1c-syntax.github.io/bsl-language-server/dev" title="BSL Language Server Dev" class="md-header-nav__button md-logo">
           
-            <img src="../assets/images/logo.png" width="24" height="24">
+            <img src="../../assets/images/logo.png" width="24" height="24">
           
         </a>
       </div>
@@ -140,7 +140,7 @@
             </span>
             <span class="md-header-nav__topic">
               
-                Contributing
+                Quick start
               
             </span>
           
@@ -217,7 +217,7 @@
   <label class="md-nav__title md-nav__title--site" for="__drawer">
     <a href="https://1c-syntax.github.io/bsl-language-server/dev" title="BSL Language Server Dev" class="md-nav__button md-logo">
       
-        <img src="../assets/images/logo.png" width="48" height="48">
+        <img src="../../assets/images/logo.png" width="48" height="48">
       
     </a>
     BSL Language Server Dev
@@ -251,7 +251,7 @@
 
 
   <li class="md-nav__item">
-    <a href=".." title="Home" class="md-nav__link">
+    <a href="../.." title="Home" class="md-nav__link">
       Home
     </a>
   </li>
@@ -261,49 +261,11 @@
       
       
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-      
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="__toc">
-        Contributing
-      </label>
-    
-    <a href="./" title="Contributing" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../" title="Contributing" class="md-nav__link">
       Contributing
     </a>
-    
-      
-<nav class="md-nav md-nav--secondary">
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">Table of contents</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#instructions" class="md-nav__link">
-    Instructions
-  </a>
-  
-</li>
-      
-      
-      
-      
-      
-    </ul>
-  
-</nav>
-    
   </li>
 
     
@@ -313,7 +275,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../reporters/" title="Reporters" class="md-nav__link">
+    <a href="../../reporters/" title="Reporters" class="md-nav__link">
       Reporters
     </a>
   </li>
@@ -325,7 +287,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../diagnostics/" title="Diagnostics" class="md-nav__link">
+    <a href="../../diagnostics/" title="Diagnostics" class="md-nav__link">
       Diagnostics
     </a>
   </li>
@@ -364,8 +326,15 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#instructions" class="md-nav__link">
-    Instructions
+  <a href="#create-new-diagnostics" class="md-nav__link">
+    Create new diagnostics
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#using-the-ast-debugger" class="md-nav__link">
+    Using the AST Debugger
   </a>
   
 </li>
@@ -386,28 +355,38 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/1c-syntax/bsl-language-server/edit/develop/docs/en/contributing/index.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                  <a href="https://github.com/1c-syntax/bsl-language-server/edit/develop/docs/en/contributing/FastStart.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                <h1 id="contributors-guide">Contributor's Guide<a class="headerlink" href="#contributors-guide" title="Permanent link">Link</a></h1>
-<p>This section contains articles containing information for developers of diagnostics and kernel functionality.</p>
-<h2 id="instructions">Instructions<a class="headerlink" href="#instructions" title="Permanent link">Link</a></h2>
-<ul>
-<li>Start<ul>
-<li><a href="EnvironmentSetting.md">Setting environment</a></li>
-<li><a href="FastStart/">Quick start</a></li>
-</ul>
+                <h1 id="quick-start">Quick start<a class="headerlink" href="#quick-start" title="Permanent link">Link</a></h1>
+<p>The following describes the steps to get started quickly.</p>
+<h2 id="create-new-diagnostics">Create new diagnostics<a class="headerlink" href="#create-new-diagnostics" title="Permanent link">Link</a></h2>
+<ol>
+<li>Create project directory <code>bsl-language-server</code></li>
+<li>Clone the project repository to the created directory <code>https://github.com/1c-syntax/bsl-language-server.git</code></li>
+<li>Set up the environment according to the <a href="EnvironmentSetting.md">instructions</a></li>
+<li>Execute commands to ignore changes in service files<ol>
+<li><code>git update-index --assume-unchanged ./.idea/compiler.xml</code> </li>
+<li><code>git update-index --assume-unchanged ./.idea/encodings.xml</code> </li>
+<li><code>git update-index --assume-unchanged ./.idea/misc.xml</code> </li>
+</ol>
 </li>
-<li>Diagnostics development<ul>
-<li><a href="DiagnosticExample.md">Diagnostic development example</a></li>
-<li><a href="DiagnosticDevWorkFlow.md">Diagnostic development workflow</a></li>
-<li><a href="DiagnosticTypeAndSeverity.md">Diagnostic type and severity description</a></li>
-<li><a href="DiagnosticTag.md">Diagnostic tags</a></li>
-<li><a href="DiagnostcAddSettings.md">Add parameters to Diagnostic</a></li>
-<li><a href="DiagnosticQuickFix.md">Add QuickFix to Diagnostic</a></li>
-</ul>
-</li>
-</ul>
+<li>Open the <code>build.gradle.kts</code> file from the project directory, agree to import the dependencies, wait for them to download</li>
+<li>Run (from context menu or ide console) command <code>gradlew test</code>, if passed then all settings are correct</li>
+<li>Make yourself familiar with  <a href="DiagnosticExample.md">diagnostics development example</a> , <a href="DiagnosticStructure.md">structure and files purpose description,</a> and other articles in the <a href="../">section for developers</a></li>
+</ol>
+<h2 id="using-the-ast-debugger">Using the AST Debugger<a class="headerlink" href="#using-the-ast-debugger" title="Permanent link">Link</a></h2>
+<p>To analyze the AST tree when creating diagnostics, you may need to get a visual representation of the tree. To do this, follow these steps</p>
+<ol>
+<li>Create <code>bsl-parser</code> project directory</li>
+<li>Clone the project repository into the created directory <code>https://github.com/1c-syntax/bsl-parser.git</code></li>
+<li>Set up the environment according to the <a href="EnvironmentSetting.md">instruction</a> <em>(if not previously performed)</em></li>
+<li>Install <code>ANTLR v4 grammar plugin</code></li>
+<li>Open the <code>build.gradle.kts</code> file from the project directory, agree to import the dependencies, wait for them to download</li>
+<li>Open <code>src/main/antlr/BSLParser.g4</code></li>
+<li>Place the cursor on any line with a code <em>(not a comment)</em> and select the <code>Test Rule file</code> context menu item</li>
+<li>In the opened window, select a bsl-file or paste text from the clipboard</li>
+</ol>
                 
                   
                 
@@ -425,41 +404,6 @@
         
 <footer class="md-footer">
   
-    <div class="md-footer-nav">
-      <nav class="md-footer-nav__inner md-grid">
-        
-          <a href=".." title="Home" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
-            <div class="md-flex__cell md-flex__cell--shrink">
-              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
-            </div>
-            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
-              <span class="md-flex__ellipsis">
-                <span class="md-footer-nav__direction">
-                  Previous
-                </span>
-                Home
-              </span>
-            </div>
-          </a>
-        
-        
-          <a href="../reporters/" title="Reporters" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
-            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
-              <span class="md-flex__ellipsis">
-                <span class="md-footer-nav__direction">
-                  Next
-                </span>
-                Reporters
-              </span>
-            </div>
-            <div class="md-flex__cell md-flex__cell--shrink">
-              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
-            </div>
-          </a>
-        
-      </nav>
-    </div>
-  
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
       <div class="md-footer-copyright">
@@ -472,7 +416,7 @@
       </div>
       
   <div class="md-footer-social">
-    <link rel="stylesheet" href="../assets/fonts/font-awesome.css">
+    <link rel="stylesheet" href="../../assets/fonts/font-awesome.css">
     
       <a href="https://github.com/1c-syntax" class="md-footer-social__link fa fa-github"></a>
     
@@ -486,28 +430,28 @@
       
     </div>
     
-      <script src="../assets/javascripts/application.ac79c3b0.js"></script>
+      <script src="../../assets/javascripts/application.ac79c3b0.js"></script>
       
         
         
           
-          <script src="../assets/javascripts/lunr/lunr.stemmer.support.js"></script>
+          <script src="../../assets/javascripts/lunr/lunr.stemmer.support.js"></script>
           
             
           
             
               
               
-                <script src="../assets/javascripts/lunr/lunr.ru.js"></script>
+                <script src="../../assets/javascripts/lunr/lunr.ru.js"></script>
               
             
           
           
-            <script src="../assets/javascripts/lunr/lunr.multi.js"></script>
+            <script src="../../assets/javascripts/lunr/lunr.multi.js"></script>
           
         
       
-      <script>app.initialize({version:"1.0.4",url:{base:".."}})</script>
+      <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
       
     
   </body>
