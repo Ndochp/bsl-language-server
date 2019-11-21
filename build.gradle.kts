@@ -54,12 +54,14 @@ dependencies {
 
     compile("org.reflections", "reflections", "0.9.10")
 
-    compile("com.github.1c-syntax", "bsl-parser", "0.11.0") {
-        exclude("com.github.nixel2007.antlr4", "antlr4-maven-plugin")
-        exclude("com.github.nixel2007.antlr4", "antlr4-runtime-test-annotations")
-        exclude("com.github.nixel2007.antlr4", "antlr4-runtime-test-annotation-processors")
-        exclude("com.github.nixel2007.antlr4", "antlr4-runtime-testsuite")
-        exclude("com.github.nixel2007.antlr4", "antlr4-tool-testsuite")
+    compile("com.github.1c-syntax", "bsl-parser", "c5bf40a0d49deb2e6e77f092dbff49c1cc187272") {
+        exclude("com.github.nixel2007.antlr4-optimized", "antlr4-maven-plugin")
+        exclude("com.github.nixel2007.antlr4-optimized", "antlr4-testgen-maven-plugin")
+        exclude("com.github.nixel2007.antlr4-optimized", "antlr4-runtime-test-annotations")
+        exclude("com.github.nixel2007.antlr4-optimized", "antlr4-runtime-test-annotation-processors")
+        exclude("com.github.nixel2007.antlr4-optimized", "runtime-testsuite")
+        exclude("com.github.nixel2007.antlr4-optimized", "antlr4-tool-testsuite")
+        exclude("com.github.nixel2007.antlr4-optimized", "antlr4-perf-testsuite")
         exclude("com.ibm.icu", "*")
         exclude("org.antlr", "ST4")
         exclude("org.abego.treelayout", "org.abego.treelayout.core")

@@ -169,7 +169,7 @@ public class MissingTemporaryFileDeletionDiagnostic extends AbstractVisitorDiagn
       return false;
     }
 
-    List<BSLParser.CallParamContext> list = callParamListContext.callParam();
+    List<? extends BSLParser.CallParamContext> list = callParamListContext.callParam();
     if (list.isEmpty()) {
       return false;
     }
