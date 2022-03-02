@@ -1,0 +1,16 @@
+{
+  "total": 37,
+  "tools inspection": {
+    "Code Inspection": 37
+  },
+  "attributes": {
+    "vcs": {
+      "sarifIdea": {
+        "repositoryUri": "https://github.com/Ndochp/bsl-language-server",
+        "revisionId": "ce76e5763373d7c4ef048a40766f9e6e81d330c9",
+        "branch": "develop"
+      }
+    },
+    "deviceId": "200820300000000-32ff-bd31-de31-dfaa1575c96b"
+  }
+}
